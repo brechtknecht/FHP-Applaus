@@ -3,8 +3,8 @@
 		<!-- <h1> {{ AbsolventenTitle }} </h1> -->
 		<!-- <p> {{ AbsolventenHeadertext }} </p> -->
 		<h3 class="subtitle">{{ $root.numberOfStudents }} Absolventen</h3>
-		<div class="spoiler" v-for="(item, key) in categories" v-on:click="toggleSpoiler(key)" v-bind:class="{ spoilerActive: spoilerActive[key] }">
-			
+		<div class="spoiler" v-for="(item, key) in categories"  v-bind:class="{ spoilerActive: spoilerActive[key] }">
+			<a class="spoilerToggle" v-on:click="toggleSpoiler(key)"></a>
 			<span> {{ item.slug }} </span>
 
 			<h4><em> {{ item.name }} </em></h4> 
@@ -27,7 +27,7 @@
 		data() {
 			return {
 				categories: this.$root.$options.config.categoryorder,
-				spoilerActive: [true, true, true]
+				spoilerActive: []
 			}
 		},
 		components: {
@@ -59,6 +59,13 @@
 </script>
 
 <style lang="scss">
+	.spoilerToggle {
+		position: absolute;
+		height: 3rem;
+		width: 100%;
+		left: 0;
+		cursor: pointer;
+	}
 	.spoilerActive {
 		&:before{
 			transform: rotate(180deg);
@@ -92,14 +99,16 @@
 				left: calc(50% - 12px);
 				background: var(--color1);
 			}
+			div {
+				padding-top: 3em;
+				padding-bottom: 1.5em;
+			}
 		} 
 		
 	}
 	.toggleSpoiler {
-		padding-top: 3rem;
-		padding-bottom: 1.5rem;
 		opacity: 1 !important;
-		max-height: 3000px !important;
+		max-height: 100px !important;
 		overflow: none !important;
 	}
 	.spoiler {
@@ -109,7 +118,6 @@
 		margin-bottom: 1.5rem;
 		margin-top: 2.5rem;
 		padding-bottom: 1rem;
-		cursor: pointer;
 		&:before {
 			content: '';
 			position: absolute;
