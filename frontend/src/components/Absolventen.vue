@@ -3,12 +3,12 @@
 		<!-- <h1> {{ AbsolventenTitle }} </h1> -->
 		<!-- <p> {{ AbsolventenHeadertext }} </p> -->
 		<h3 class="subtitle">{{ $root.numberOfStudents }} Absolventen</h3>
-		<div class="spoiler" v-for="(item, key) in $root.$options.config.categoryorder" v-on:click="toggleSpoiler">
+		<div class="spoiler" v-for="(item, key) in categories" v-on:click="toggleSpoiler(key)" v-bind:class="{ spoilerActive: spoilerActive[key] }">
 			
 			<span> {{ item.slug }} </span>
 
 			<h4><em> {{ item.name }} </em></h4> 
-			<div class="grid" v-if="item.slug != 'MASTER'">
+			<div class="grid" v-if="item.slug != 'MASTER'" v-bind:class="{ toggleSpoiler: spoilerActive[key]}">
 				<Absolvent 
 					v-for="absolvent in getAbsolventenGroups(item.slug)" 
 					v-bind:data="content.body.list[absolvent]"
@@ -24,6 +24,12 @@
 
 	export default {
 		name: 'Absolventen',
+		data() {
+			return {
+				categories: this.$root.$options.config.categoryorder,
+				spoilerActive: [true, true, true]
+			}
+		},
 		components: {
 			Absolvent
 		},
@@ -37,17 +43,8 @@
 
 		},
 		methods: {
-			toggleSpoiler(event){
-				var grid = event.path;
-				grid.forEach(function(key){
-					if(key.classList.contains('spoiler')){
-						/* Manipulates pseudo-element for arrow rotation */
-						key.classList.toggle('spoilerActive');
-
-						/* Toggles Class for collapsing the clicked spoiler */
-						key.querySelector('.grid').classList.toggle('toggleSpoiler');
-					}
-				});
+			toggleSpoiler(key){
+				this.$set(this.spoilerActive, key, !this.spoilerActive[key]);
 			},
 			getAbsolventenGroups(category) {
 				if(category == 'MASTER') {
