@@ -1,4 +1,4 @@
-# applaus
+# froontend
 
 ## Project setup
 ```
