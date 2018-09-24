@@ -1,12 +1,28 @@
 <template>
-	<div>
+	<div class="aussteller">
 		<!-- Navigation needs to dont be »ScrollActive« -->
 		<Navigation :items="this.$root.$options.navigation"></Navigation>
 		<Header class="header" :content="aussteller" contentIsGiven></Header>
 		
-		{{ aussteller.title }}
-		{{ aussteller.authors }}
-		<p v-html="aussteller.content">
+
+		<section class="content-inner">
+
+			<div class="body">
+
+				<div class="section">
+					<div class="text">
+						<p>
+							<span class="author" v-for="author in aussteller.authors.split(',')" v-html="$root.getAbsolventFullname(author)"></span>
+						</p>
+					</div>
+				</div>
+
+				<div class="section">
+					<div class="text" v-html="aussteller.content"></div>
+				</div>
+
+			</div>
+		</section>
 			
 		</p>
 	</div>
@@ -30,3 +46,9 @@ export default {
 	}
 }
 </script>
+<style lang="scss">
+	.body {
+		display: flex;
+		flex-direction: row;
+	}
+</style>
