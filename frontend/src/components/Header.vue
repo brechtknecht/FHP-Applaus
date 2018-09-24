@@ -51,7 +51,6 @@
 		overflow: hidden;
 		border-top: 1.5rem solid var(--color1);
 		&.aussteller {
-			margin-top: 4rem;
 			border: none;
 			height: calc(100vh - 4rem);
 		} 
