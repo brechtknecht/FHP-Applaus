@@ -3,7 +3,7 @@
 	<scrollactive id="nav" class="nav-main" v-on:itemchanged="onItemChanged" :offset="navheight" :exact="true" :alwaysTrack="true" :duration="800">
 		<div class="nav-inner">
 			<!-- <div class="bars"></div> -->
-			<ul>
+			<ul class="navigation">
 				<transition name="signethide">
 					<li v-show="signetshow" class="signet-item" :style="'--space:'+spaceBetween+'px'" :class="{ 'notReactive': !reactiveNav }">
 						<a :href="relativePath + '#start'" class="signet-hiding is-active" :class="{ 'scrollactive-item': reactiveNav }">
@@ -11,9 +11,12 @@
 						</a>
 					</li>
 				</transition>
-				<li v-for="item in items">
+				<li v-for="item in items" @click="toggleMobileNav">
 					<a :href="relativePath+'#'+item.slug" :title="item.title" :class="{ 'scrollactive-item': reactiveNav }">{{ item.title }}</a>
 				</li>
+				<a class="toggle" @click="toggleMobileNav">
+					<i class="bars"></i>
+				</a>
 			</ul>
 
 			<ul class="fakenav">
@@ -81,7 +84,7 @@
   			},
 			/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 			toggleMobileNav(event) {
-				if(event.target.classList.contains('icon') || event.target.classList.contains('bars') || event.target.classList.contains('responsive')){
+				if(event.target.classList.contains('toggle') || event.target.classList.contains('bars') || event.target.classList.contains('responsive')){
 					console.log("entered");
 					var x = document.getElementById("nav");
 					var listElements = x.getElementsByTagName('a');
@@ -118,9 +121,15 @@
 		top: 0;
 		height: 4rem;
 		z-index: 10;
+		.nav-inner > ul > li:last-child{
+			display: none;
+		}
 	}
 
 	/* When the screen is less than 1219 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+	.toggle {
+		display: none;
+	}
 	@media screen and (max-width: 1219px) {
 		.nav-inner {
 			width: 100% !important;
@@ -136,6 +145,16 @@
 			left: 0;
 			right: 0;
 			z-index: 10;
+		}
+
+		.toggle {
+			position: absolute;
+			top: 0;
+			cursor: pointer;
+			height: 100%;
+			display: block;
+			width: 100%;
+			z-index: 2;
 		}
 	}
 
@@ -204,7 +223,7 @@
 	}
 
 	.show {
-		min-height: 270px;
+		max-height: 400px !important;
 	}
 
 	.responsive {
@@ -254,11 +273,11 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		height: 100%;
-		min-height: 0;
+		max-height: 4rem;
+
 		background: var(--color1);
 		// overflow: hidden;
-		transition: all .35s ease-out;
+		transition: max-height .35s ease-out;
 		z-index: 10;
 
 		li {
