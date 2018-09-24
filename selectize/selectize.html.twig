@@ -1,0 +1,24 @@
+{% extends "forms/field.html.twig" %}
+
+{% block global_attributes %}
+	
+	{% set user_generated_options = [] %}
+	{% if value is defined %}
+		{% if value is not iterable %}
+			{% set delimiter = (field.selectize.delimiter is defined ?  field.selectize.delimiter : ',') %}
+			{% set value = value|split(delimiter) %}
+		{% endif %}
+		{% for item in value %}
+			{% set user_generated_options = user_generated_options|merge({( field.selectize.options|length + loop.index): {'text': item, 'value': item}})%}
+		{% endfor %}
+	{% endif %}
+	{% set all_options = field.selectize.options|merge(user_generated_options) %}
+
+    data-grav-selectize="{{ (field.selectize is defined ? field.selectize|merge({'create': true})|merge({'items':value})|merge({'options' : all_options}) : {'create': true})|json_encode()|e('html_attr') }}"
+    {{ parent() }}
+{% endblock %}
+
+{% block input_attributes %}
+    type="text"
+    {{ parent() }}
+{% endblock %}

@@ -1,0 +1,11 @@
+---
+title: Applaus
+headertext: Applaus<br>Ausstellung
+bodysections:
+    -
+        content: "APPLAUS für die Absolvent*innen des Studienjahres 2017/18!\r\n\r\nAm 19. und 20. Oktober 2017 wird der Fach&shy;bereich Design der Fachhochschule Potsdam seine Absolvent*innen mit einem feierlichen Festakt verab&shy;schieden. Online bieten wir wie in jedem Jahr eine Galerie der Abschluss&shy;arbeiten.\r\nDieses Jahr feiert der Fach&shy;bereich an zwei Tagen auf dem Campus der Fachhochschule Potsdam. Der Festakt der Bachelor&shy;studien&shy;gänge Interface&shy;design, Kommunikations&shy;design, Produkt&shy;design und des Master&shy;studiengangs Design findet am Freitag, den 19.10.2018, und der Festakt des Kooperationsstudiengangs Europäische Medienwissenschaft (BA & MA) mit der Universität Potsdam am Samstag, den 20.10.2018, statt.\r\n\r\nCharakteristisch für den Fachbereich Design ist die enge Verzahnung seiner Studien&shy;gänge Interface-, Kommunikations- und Produkt&shy;design sowie Europäische Medien&shy;wissenschaft, einem Studiengang in Kooperation mit der Universität Potsdam. Diese Vernetzung ermöglicht ein einzigartiges, fächer&shy;übergreifendes Ausbildungs&shy;profil mit starkem Forschungs- und Praxisbezug, das sich in den Abschluss&shy;arbeiten widerspiegelt.\r\n\r\n##### Ort\r\n\r\n_Fachhochschule Potsdam  \r\nCampus Fachhochschule  \r\nKiepenheuerallee 5  \r\n 14469 Potsdam_\r\n"
+    -
+        content: "##### Freier Eintritt\r\n\r\n_zur Ausstellung und zum Symposium_\r\n\r\nDie Web&shy;ausstellung wird an beiden Tagen in Haus D und im Haupt&shy;gebäude präsentiert und zum Erkunden angeboten. Mit Führungen für die Familien und Freunde der Absolvent*innen am 19.10. sowie dem EMW-Symposium mit Vorträgen und Diskussionen zum Thema »Das [Un]Mögliche« am 20.10. erwarten Sie zwei feierliche Tage am Campus der FHP.\r\n\r\nWeitere High&shy;lights am APPLAUS-Wochenende sind die Eröffnung der Ausstellung »Bildfabriken. Infografik 1920–1945. Fritz Kahn, Otto Neurath et al.«, am 19.10. um 20:00 Uhr und die internationale Konferenz »Information+ Inter&shy;disciplinary practices in information design and visualization«, die vom 19.-21.10.2018 parallel auf dem Campus stattfinden wird.\r\n"
+template_format: json
+---
+

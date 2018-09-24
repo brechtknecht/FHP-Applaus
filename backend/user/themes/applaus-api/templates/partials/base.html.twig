@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <title>API</title>
+    {{ assets.css() }}
+        {% do assets.addJs('jquery', 100) %}
+    {{ assets.js() }}
+
+
+</head>
+<body>
+        {% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+title: Applaus Page
+extends@:
+  type: partials/pages
+  context: blueprints://
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          title: Content

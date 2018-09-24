@@ -1,0 +1,8 @@
+{% set collection = [] %}
+{% for section in header.bodysections %}
+	{% set collection = collection|merge({ (loop.index): { name: section.name, content: section.content|markdown } }) %}
+{% endfor %}
+
+{% set template = page.template|split('/_')[1] %}
+
+{{ {template: template, slug: page.slug|ltrim('_'), title: header.title, headertext: header.headertext, body: collection}|json_encode|raw }}

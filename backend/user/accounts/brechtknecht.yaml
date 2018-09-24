@@ -1,0 +1,11 @@
+email: felix.tesche@gmail.com
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+fullname: 'Felix Tesche'
+title: Spasti
+state: enabled
+hashed_password: $2y$10$Q2v7pCiJ.yYic.Ecgc/GOegE4iHKgZGfjGa01fRmrKnn9vRNjX4z6

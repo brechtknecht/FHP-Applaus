@@ -1,0 +1,92 @@
+title: Absolventen Page
+extends@:
+  type: partials/pages
+  context: blueprints://
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    general:
+                      fields:
+                        header.bodysections:
+                          unset@: true;
+                column2:
+                  fields:
+                    specific:
+                      type: section
+                      title: Absolventen
+                      fields:
+                        header.bodysections:
+                          unset@: true
+                        header.absolventen:
+                          name: absolventen
+                          type: list
+                          style: vertical
+                          label:
+                          collapsed: true
+                          btnLabel: Hinzufügen
+                          fields:
+                            .forename:
+                              type: text
+                              label: Vorname
+                              style: vertical
+                            .lastname:
+                              type: text
+                              label: Nachname
+                              style: vertical
+                            .id:
+                              type: text
+                              label: Unique ID
+                              style: vertical
+                              @data-default: '\Grav\Theme\ApplausApi::uniqueid'
+                            .email:
+                              type: email
+                              label: E-Mail
+                              style: vertical
+                            .website:
+                              type: url
+                              label: persönliche Webseite
+                              placeholder: falls vorhanden
+                              style: vertical
+                            .category:
+                              type: radio
+                              label: Studiengang
+                              default: markdown
+                              style: vertical
+                              options:
+                                ID: Interfacedesign
+                                KD: Kommunikationsdesign
+                                PD: Produktdesign
+                                EMW: Europäische Medienwissenschaften
+                                MD: Master Design
+                                MEMW: Master Europäische Medienwissenschaften
+                            .project:
+                              type: fieldset
+                              title: Abschlussarbeit
+                              help: Wenn der Absolvent seine Arbeit nicht ausstellen will, kann hier der Titel usw. eingetragen werden.
+                              info: Bei Nicht-Ausstellen
+                              icon: comments
+                              collapsed: true     
+                              collapsible: true    
+                              fields:
+                                .title:
+                                  type: text
+                                  label: Titel
+                                  style: vertical
+                                  help: Titel der Abschlussarbeit.
+                                  placeholder: Wenn nicht ausgestellt wird
+                                .undertitle:
+                                  type: text
+                                  label: Untertitel
+                                  style: vertical
+                                  help: Untertitel der Abschlussarbeit.
+                                  placeholder: Wenn nicht ausgestellt wird

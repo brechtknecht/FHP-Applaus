@@ -1,0 +1,77 @@
+title: Aussteller Page
+extends@:
+  type: partials/pages
+  context: blueprints://
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    general:
+                      title: Abschlussarbeit
+                      # @replace-fields: true
+                      fields:
+
+                        header.title:
+                          label: Titel
+                          help: Titel der Abschlussarbeit.
+
+                        header.headertext:
+                          label: Untertitel
+                          help: Untertitel der Abschlussarbeit.
+                          
+                        header.bodysections:
+                          @unset: true
+
+                        content:
+                          label: Text
+                          type: markdown
+
+                column2:
+                  fields:
+                    specific:
+                      fields:
+                        header.category:
+                          type: radio
+                          label: Studiengang
+                          default: markdown
+                          style: vertical
+                          options:
+                            ID: Interfacedesign
+                            KD: Kommunikationsdesign
+                            PD: Produktdesign
+                            EMW: Europäische Medienwissenschaften
+                            MD: Master Design
+                            MEMW: Master Europäische Medienwissenschaften
+                        header.authors:
+                          type: selectizeapplaus
+                          label: Authoren
+                          help: Die beteiligten Absolventen.
+                          style: vertical
+                        
+                          style: vertical
+                          selectize:
+                            @data-options: '\Grav\Theme\ApplausApi::absolventen'
+
+                        header.supervisors:
+                          label: Betreuer
+                          help: Die Betreuer des Ausstellers
+                          type: selectizeapplaus
+                       
+                          style: vertical
+                          selectize:
+                            @data-options: '\Grav\Theme\ApplausApi::betreuer'
+                            
+                        header.media_order:
+                          type: pagemedia
+                          label: Bilder
+
+

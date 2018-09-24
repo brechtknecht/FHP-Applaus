@@ -1,0 +1,72 @@
+title: Pages
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        # options:
+        #   unset@: true
+        # advanced:
+        #   fields:
+        #     overrides:
+        #       unset@: true
+        #     routes_only:
+        #       unset@: true
+        #     admin_only:
+        #       unset@: true
+        content:
+          replace@: true
+          type: tab
+          title: Content
+          fields:
+            columns:
+              type: columns
+              fields:
+                column1:
+                  type: column
+                  fields:
+                    general:
+                      type: section
+                      title: Allgemein
+                      underline: true
+                      fields:
+                        header.title:
+                          type: text
+                          label: Navigations Titel
+                          help: Die Bezeichnung in der Navigation.
+                          style: vertical
+                          size: long
+
+                        header.headertext:
+                          type: text
+                          label: Überschrift
+                          help: Die Überschrift des Abschnitts.
+                          style: vertical
+                          size: long
+
+                        header.bodysections:
+                          type: list
+                          label: Inhalt
+                          size: long
+                          style: vertical
+                          help: Der Text, welcher auf der Seite steht.
+                          btnLabel: Hinzufügen
+                          collapsed: true
+                          fields:
+                            .name:
+                              type: text
+                              placeholder: Name — nicht notwendig
+                              style: vertical
+                              help: Der Name des Abschnitts
+                            .content:
+                                type: markdown
+                                validate:
+                                  type: textarea
+                column2:
+                  type: column
+                  fields:
+                    specific:
+                      type: section
+                      title: Spezifisch
+                      underline: true

@@ -1,0 +1,11 @@
+email: admin@email.de
+fullname: Gustav
+title: Admin
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$i.4j6O7i/B7Ll/uqf..y2ep1diEKbMC141bkkrT3kL8eNZB4KFzfq

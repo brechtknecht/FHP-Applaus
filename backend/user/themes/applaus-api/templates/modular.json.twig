@@ -1,0 +1,63 @@
+{# PAGES #}
+{% set pages = [] %}
+	{% for module in page.collection() %}
+		{% set content = module.content|json_decode %}
+
+		{% set pages = pages|merge({ (content.slug): content  }) %}
+	{% endfor %}
+{# NAVIGATION #}
+
+{% set navigation = [] %}
+	{% for module in page.collection() %}
+		{% set navigation = navigation|merge({ (loop.index):  { title: module.title, slug: module.slug|ltrim('_')} }) %}
+	{% endfor %}
+
+{# CONFIG #}
+{% set config = { 	styling: {
+							"--color1": header.color1,
+							"--color2": header.color2,
+							"--color3": header.color3,
+							"--color4": header.color4,
+							"--color5": header.color5,
+							"--color6": header.color6,
+							"--gradient_col2-11perc": header.color2 ~ "1C",
+							"--gradient_col2-90perc": header.color2 ~ "E6",
+							"--gradient_col2-35perc": header.color2 ~"59",
+							"--gradient_col2-20perc": header.color2 ~"33",
+							"--gradient_col1-70perc": header.color1 ~"b2",
+							"--gradient_col1-80perc": header.color1 ~"CC" },
+					categoryorder: {
+						0: {
+							"slug": "ID",
+							"name": "Interfacedesign"
+						},
+						1: {
+							"slug": "KD",
+							"name": "Kommunikationsdesign"
+						},
+						2: {
+							"slug": "PD",
+							"name": "Produktdesign"
+						},
+						3: {
+							"slug": "EMW",
+							"name": "Europäische Medienwissenschaft"
+						},
+						6: {
+							"slug": "MASTER",
+							"name": "Design & Europäische Medienwissenschaft"
+						}
+					},
+					title: header.title,
+					headertext: header.headertext|markdown
+					} %}
+
+{# PAYLOAD AND OUTPUT #}
+{% set payload = {pages: pages}|merge({config: config})|merge({ navigation: navigation}) %}
+{{ payload|json_encode|raw }}
+
+
+
+
+
+

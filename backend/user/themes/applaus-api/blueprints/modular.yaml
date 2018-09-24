@@ -1,0 +1,60 @@
+title: Modular
+extends@:
+  type: partials/pages
+  context: blueprints://
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          # replace@: true
+
+          fields:
+            columns:
+
+              fields:
+                column1:
+                  fields:
+                    general:
+                      fields:
+                        header.title:
+                          label: Titel
+                          help: Name der Webseite
+
+                        header.headertext: 
+                          type: markdown
+                          validate:
+                            type: textarea
+
+                        header.bodysections: 
+                          @unset: true
+                        header.headertext:
+                          @unset: true
+
+
+                column2:
+                  type: column
+                  fields:
+                    specific:
+                      title: Styling
+                      underline: true
+                      fields:
+                        header.color1:
+                          type: colorpicker
+                          label: Choose a color
+                        header.color2:
+                          type: colorpicker
+                          label: Choose a color
+                        header.color3:
+                          type: colorpicker
+                          label: Choose a color
+                        header.color4:
+                          type: colorpicker
+                          label: Choose a color
+                        header.color5:
+                          type: colorpicker
+                          label: Choose a color
+                        header.color6:
+                          type: colorpicker
+                          label: Choose a color

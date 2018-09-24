@@ -1,0 +1,45 @@
+{# -------------------------------------------------- #}
+{# ------- Absolventen nach Studiengang ordnen -------#}
+{# -------------------------------------------------- #}
+
+{% set category_list = [] %}
+
+{% for absolvent in header.absolventen %}
+
+	{% set category = absolvent.category %}
+	{% set category_list = category_list|merge({(category) : {}}) %}
+
+{% endfor %}
+
+
+{% set new_list = [] %}
+{% for group, value in category_list %}
+	
+	{% set temp_list = [] %}
+
+	{% for absolvent in header.absolventen %}
+		{% if group == absolvent.category %}
+			{% set temp_list = temp_list|merge({(loop.index): absolvent.id} ) %}
+		{% endif %}
+	{% endfor %}
+
+	{% set new_list = new_list|merge({ (group): temp_list }) %}
+
+{% endfor %}
+
+{# -------------------------------------------------- #}
+{# ----- Absolventen in rawlist ohne gruppierung ---- #}
+{# -------------------------------------------------- #}
+
+
+{% set raw_list = [] %}
+{% for absolvent in header.absolventen %}
+	{% set raw_list = raw_list|merge({(absolvent.id): absolvent} ) %}
+{% endfor %}
+
+{# -------------------------------------------------- #}
+{# -------------------------------------------------- #}
+
+{% set template = page.template|split('/_')[1] %}
+
+{{ {template: template, slug: page.slug|ltrim('_'), title: header.title, headertext: header.headertext, body: {groups: new_list, list: raw_list } }|json_encode|raw }}

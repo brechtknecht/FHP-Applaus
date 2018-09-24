@@ -1,0 +1,52 @@
+{% set category_list = [] %}
+{% set collection = [] %}
+{% set image_sizes = [250, 500, 750, 1000, 1250, 1500, 1750, 2000] %}
+
+
+{% for module in page.collection %}
+	{% set category = module.header.category %}
+	{% set category_list = category_list|merge([(category)]) %}
+	
+
+	{% set images = [] %}
+
+	{% for image in module.media.images %}
+		{% set image_set = "" %}
+
+		{% for size in image_sizes %}
+			{% set image_set = image_set ~ '../..' ~ image.cropResize(size, size).url() ~ ' ' ~ size ~ 'w, ' %}
+		{% endfor %}
+
+		{% set images = images|merge({ (loop.index): {url: '../..' ~ image.url, srcset: image_set|rtrim(', ') } }) %} 
+	{% endfor %}
+
+
+	{% set collection = collection|merge({ (module.title|hyphenize): { slug: module.title|hyphenize, title: module.title, category: module.header.category, subtitle: module.header.headertext, authors: module.header.authors, supervisors: module.header.supervisors, content: module.content, images: images}}) %}
+{% endfor %}
+
+
+{# ==================================================================== #}
+{# ========================= ORDERED LIST ============================= #}
+{# ==================================================================== #}
+
+{% set orderedlist = [] %}
+{% for key, category in category_list %}
+	{% set temp_list = [] %}
+
+	{% for item in collection %}
+		{% if category == item.category %}
+			{% set temp_list = temp_list|merge({ (loop.index) : item.title|hyphenize }) %}
+		{% endif %}
+	{% endfor %}
+
+	{% set orderedlist = orderedlist|merge({ (category): temp_list }) %}
+
+{% endfor %}
+
+
+
+
+{% set template = page.template|split('/_')[1] %}
+
+{{ {template: template, slug: page.slug|ltrim('_'), title: header.title, headertext: header.headertext, body: { groups: orderedlist, list: collection } }|json_encode|raw }}
+

@@ -1,0 +1,3 @@
+{% set template = page.template|split('/_')[1] %}
+
+{{ {template: template, slug: page.slug|ltrim('_'), title: header.title, headertext: header.headertext, body: collection}|json_encode|raw }}
