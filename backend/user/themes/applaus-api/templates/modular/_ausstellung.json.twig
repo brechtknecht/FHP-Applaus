@@ -1,5 +1,6 @@
 {% set category_list = [] %}
 {% set collection = [] %}
+{% set one2one_list = [] %}
 {% set image_sizes = [250, 500, 750, 1000, 1250, 1500, 1750, 2000] %}
 
 
@@ -20,8 +21,16 @@
 		{% set images = images|merge({ (loop.index): {url: '../..' ~ image.url, srcset: image_set|rtrim(', ') } }) %} 
 	{% endfor %}
 
+	{% set project_slug = module.title|hyphenize%}
+	{% set collection = collection|merge({ (project_slug): { slug: project_slug, title: module.title, category: module.header.category, subtitle: module.header.headertext, authors: module.header.authors, supervisors: module.header.supervisors, content: module.content, images: images}}) %}
 
-	{% set collection = collection|merge({ (module.title|hyphenize): { slug: module.title|hyphenize, title: module.title, category: module.header.category, subtitle: module.header.headertext, authors: module.header.authors, supervisors: module.header.supervisors, content: module.content, images: images}}) %}
+	{% set authors_to_project_list = [] %}
+	{% for author in module.header.authors|split(',') %}
+		{% set authors_to_project_list = authors_to_project_list|merge({ (author): project_slug }) %}
+	{% endfor %}
+
+	{% set one2one_list = one2one_list|merge(authors_to_project_list) %}
+
 {% endfor %}
 
 
@@ -45,8 +54,7 @@
 
 
 
-
 {% set template = page.template|split('/_')[1] %}
 
-{{ {template: template, slug: page.slug|ltrim('_'), title: header.title, headertext: header.headertext, body: { groups: orderedlist, list: collection } }|json_encode|raw }}
+{{ {template: template, slug: page.slug|ltrim('_'), title: header.title, headertext: header.headertext, body: { groups: orderedlist, list: collection, one2one: one2one_list} }|json_encode|raw }}
 
