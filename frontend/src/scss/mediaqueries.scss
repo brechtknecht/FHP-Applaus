@@ -1,0 +1,30 @@
+/* 
+  http://css-tricks.com/naming-media-queries/
+  
+  Usage:	
+ 	.selector {
+ 	  width: 25%;
+ 	  @include bp(S) {
+ 	    width: 100%;
+ 	  }
+ 	}
+*/
+
+
+@mixin bp($point) {
+	@if $point == XL { // 1024/16
+		@media (min-width: 64em) { @content; }
+	}
+	@else if $point == L { // 768/16
+		@media (min-width: 48em) { @content; }
+	}
+	@else if $point == M { // 640/16
+		@media (min-width: 40em)  { @content; }
+	}
+	@else if $point == S { // 480/16
+		@media (min-width: 30em)  { @content; }
+	}
+	@else if $point == XS { // 320/16
+		@media (min-width: 20em)  { @content; }
+	}
+}

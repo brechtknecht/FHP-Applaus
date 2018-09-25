@@ -46,6 +46,8 @@ export default {
 }
 </script>
 <style lang="scss">
+	@import '@/scss/mediaqueries.scss';
+
 	.body {
 		display: flex;
 		flex-direction: row;

@@ -24,7 +24,6 @@ export default {
 
 </script>
 <style lang="scss">
-
 	body {
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;	
