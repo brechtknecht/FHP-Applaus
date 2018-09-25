@@ -95,17 +95,26 @@
 			bottom: -5px !important;
 		}
 	}
+	.column {	
+		div {
+			margin-top: 2rem;
+		}
+		margin-top: 2.25rem;
+	    margin-bottom: 2.5rem;
+	    flex: 0 1 calc(25% - 2.272727273rem);
+	}
 	.absolventen {
 		margin: 0 auto;
 		.grid {
-			display: grid;
-			grid-auto-rows: auto;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+			display: flex;
+			align-items: stretch;
+			flex-wrap: nowrap;
 			max-height: 0;
 			opacity: 1;
 			overflow: hidden;
 			transition: 250ms ease-out;
 			text-align: left;
+			justify-content: space-between;
 			&.fake {
 				max-height: inherit;
 				position: absolute;
@@ -121,10 +130,6 @@
 				position: absolute;
 				left: calc(50% - 12px);
 				background: var(--color1);
-			}
-			div {
-				padding-top: 3em;
-				padding-bottom: 1.5em;
 			}
 		} 
 		
