@@ -8,13 +8,14 @@
 			<span> {{ item.slug }} </span>
 
 			<h4><em> {{ item.name }} </em></h4> 
-			<div class="grid" v-if="item.slug != 'MASTER'" v-bind:class="{ toggleSpoiler: spoilerActive[key]}">
-				<Absolvent 
-					v-for="absolvent in getAbsolventenGroups(item.slug)" 
-					v-bind:data="content.body.list[absolvent]"
-					:key="content.body.list[absolvent].id">
-				</Absolvent>
+			<div class="grid" v-bind:class="{ toggleSpoiler: spoilerActive[key]}">
+					<Absolvent 
+						v-for="absolvent in getAbsolventenGroups(item.slug)" 
+						v-bind:data="content.body.list[absolvent]"
+						:key="content.body.list[absolvent].id">
+					</Absolvent>
 			</div>
+
 		</div>
 	</div>
 </template>
@@ -47,11 +48,15 @@
 				this.$set(this.spoilerActive, key, !this.spoilerActive[key]);
 			},
 			getAbsolventenGroups(category) {
+				console.log(category);
 				if(category == 'MASTER') {
-					return Object.assign(this.content.body.groups.MEMW, this.content.body.groups.MD);
+					var reeturn = Object.assign(this.content.body.groups.MEMW, this.content.body.groups.MD);
 				} else {
-					return this.content.body.groups[category];
+					
+					var reeturn = this.content.body.groups[category];
+					
 				}
+				return reeturn;
 			}
 
 		} 
@@ -78,17 +83,22 @@
 		}
 	}
 	.absolventen {
-		width: 80%;
 		margin: 0 auto;
 		.grid {
 			display: grid;
 			grid-auto-rows: auto;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
 			max-height: 0;
 			opacity: 1;
 			overflow: hidden;
 			transition: 250ms ease-out;
 			text-align: left;
+			&.fake {
+				max-height: inherit;
+				position: absolute;
+				opacity: .5;
+				z-index: -1;
+			}
 			&:before {
 				content: '';
 				margin-top: 1rem;
@@ -108,7 +118,7 @@
 	}
 	.toggleSpoiler {
 		opacity: 1 !important;
-		max-height: 100px !important;
+		max-height: calc(var(--size) * 9rem) !important;
 		overflow: none !important;
 	}
 	.spoiler {
