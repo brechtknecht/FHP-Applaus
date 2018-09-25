@@ -4,7 +4,6 @@
 		<Navigation :items="this.$root.$options.navigation"></Navigation>
 		<Header class="header" :content="aussteller" contentIsGiven></Header>
 		
-
 		<section class="content-inner">
 
 			<div class="body">
@@ -50,5 +49,25 @@ export default {
 	.body {
 		display: flex;
 		flex-direction: row;
+	}
+
+	.section {
+		width: 50%;
+		&:first-child {
+			margin-right: .5rem;
+			text-align: right;
+			& .forename {
+				font-family: johnston;
+				text-transform: uppercase;
+			}
+		}
+		&:last-child {
+			margin-left: 1rem;
+			text-align: left;
+		}
+	}
+
+	.author {
+		display: block;
 	}
 </style>
