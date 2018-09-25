@@ -9,11 +9,13 @@
 
 			<h4><em> {{ item.name }} </em></h4> 
 			<div class="grid" v-bind:class="{ toggleSpoiler: spoilerActive[key]}">
+				<div class="column" v-for="(item, index) in getAbsolventenGroups(item.slug)">
 					<Absolvent 
-						v-for="absolvent in getAbsolventenGroups(item.slug)" 
+						v-for="absolvent in item" 
 						v-bind:data="content.body.list[absolvent]"
 						:key="content.body.list[absolvent].id">
 					</Absolvent>
+				</div>
 			</div>
 
 		</div>
@@ -48,7 +50,6 @@
 				this.$set(this.spoilerActive, key, !this.spoilerActive[key]);
 			},
 			getAbsolventenGroups(category) {
-				console.log(category);
 				if(category == 'MASTER') {
 					var reeturn = Object.assign(this.content.body.groups.MEMW, this.content.body.groups.MD);
 				} else {
@@ -56,7 +57,19 @@
 					var reeturn = this.content.body.groups[category];
 					
 				}
-				return reeturn;
+				var groups = {
+					0: {},
+					1: {},
+					2: {},
+					3: {}
+				};
+
+				Object.keys(reeturn).forEach(function(key) {
+					var absolvent = reeturn[key].toString();
+					groups[key % 4][Object.keys(groups[key % 4]).length] = absolvent;
+				});
+
+				return groups;
 			}
 
 		} 

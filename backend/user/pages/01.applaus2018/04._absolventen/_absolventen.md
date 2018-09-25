@@ -85,6 +85,33 @@ absolventen:
         category: EMW
         title: ''
         undertitle: ''
+    -
+        forename: Friedrich
+        lastname: Rüdingsen
+        id: 5baa226dbe82a
+        email: firedrich@koks.de
+        website: 'http://friedrich.de'
+        category: MEMW
+        title: 'Wenn das Leben einen trollt'
+        undertitle: 'oder wie ich einkaufen ging'
+    -
+        forename: Kersten
+        lastname: Neuer
+        id: 5baa22ba808c3
+        email: kersten@keeeer.de
+        website: 'http://kerstenkerst.de'
+        category: MEMW
+        title: 'Das Leben eines Tropfens'
+        undertitle: 'wie Meere entstehen'
+    -
+        forename: Sophia
+        lastname: Simbolismus
+        id: 5baa23071a46f
+        email: simbolism@sophia.de
+        website: 'http://sophia.de'
+        category: MEMW
+        title: 'Der Namenssymbolismus'
+        undertitle: 'Namen hin und her'
 template_format: json
 ---
 
