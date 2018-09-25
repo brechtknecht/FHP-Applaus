@@ -77,6 +77,14 @@ absolventen:
         category: MEMW
         title: ''
         undertitle: ''
+    -
+        forename: Jürgen
+        lastname: Kasanove
+        id: 5ba980545d4ca
+        email: jurg@jasa.de
+        category: EMW
+        title: ''
+        undertitle: ''
 template_format: json
 ---
 

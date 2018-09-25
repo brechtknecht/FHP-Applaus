@@ -1,22 +1,25 @@
 <template>
 
-	<scrollactive id="nav" class="nav-main" v-on:itemchanged="onItemChanged" :offset="navheight" :exact="true" :alwaysTrack="true" :duration="800">
+	<scrollactive id="nav" class="nav-main" v-on:itemchanged="onItemChanged" :offset="navheight" :exact="true" :alwaysTrack="true" :duration="800" >
 		<div class="nav-inner">
 			<!-- <div class="bars"></div> -->
-			<ul class="navigation">
+			<a class="mobile-toggle" @click="toggleMobileNav" >
+				<i class="bars" :class="{ 'nav-open': navOpen }"></i>
+			</a>
+
+			<ul class="navigation" :class="{ 'nav-open': navOpen }" :style="'--size:' + items.length" @click="toggleMobileNav">
 				<transition name="signethide">
-					<li v-show="signetshow" class="signet-item" :style="'--space:'+spaceBetween+'px'" :class="{ 'notReactive': !reactiveNav }">
+					<li v-show="signetshow" class="signet-item" :style="'--space:'+spaceBetween+'px'">
 						<a :href="relativePath + '#start'" class="signet-hiding is-active" :class="{ 'scrollactive-item': reactiveNav }">
 							<icon-base icon-name="signet-nav" viewBox="0 0 220 215"/>
 						</a>
 					</li>
 				</transition>
-				<li v-for="item in items" @click="toggleMobileNav">
-					<a :href="relativePath+'#'+item.slug" :title="item.title" :class="{ 'scrollactive-item': reactiveNav }">{{ item.title }}</a>
+				<li v-for="item in items">
+					<a :href="relativePath+'#'+item.slug" :title="item.title" :class="{ 'scrollactive-item': reactiveNav }">
+					<span>{{ item.title }}</span>
+					</a>
 				</li>
-				<a class="toggle" @click="toggleMobileNav">
-					<i class="bars"></i>
-				</a>
 			</ul>
 
 			<ul class="fakenav">
@@ -43,7 +46,8 @@
 				navheight: 88,
 				activeItem: Object,
 				signetshow: false,
-				spaceBetween: 0
+				spaceBetween: 0,
+				navOpen: false
 			}
 		},
 		computed: {
@@ -83,27 +87,9 @@
   				this.getSpaceBetweenNavItems();
   			},
 			/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-			toggleMobileNav(event) {
-				if(event.target.classList.contains('toggle') || event.target.classList.contains('bars') || event.target.classList.contains('responsive')){
-					console.log("entered");
-					var x = document.getElementById("nav");
-					var listElements = x.getElementsByTagName('a');
-					var list = x.getElementsByTagName('ul');
-
-					if (x.className === "scrollactive-nav nav-main") {
-						x.className += " responsive";
-						for(var i = 0; i < listElements.length; i++){
-							listElements[i].classList.toggle('responsive');
-						}
-						list[0].classList.toggle('show');
-					} else {
-						x.className = "scrollactive-nav nav-main";
-						for(var i = 0; i < listElements.length; i++){
-							listElements[i].classList.toggle('responsive');
-						}
-						list[0].classList.toggle('show');
-					}
-				}
+			toggleMobileNav() {
+				this.navOpen = !this.navOpen;
+				console.log('cliiick')
 			}
 		}
 		
@@ -115,64 +101,41 @@
 
 <style lang="scss">
 	.nav-main {
-		--signet-width: 2.6875rem;
+		--signet-width: 1.954545455rem;
+		@media screen and (max-width: 1699px) {
+			--signet-width: 2.6875rem;
+		}
+		
 		position: sticky;
 		background: var(--color1);
 		top: 0;
 		height: 4rem;
 		z-index: 10;
-		.nav-inner > ul > li:last-child{
-			display: none;
-		}
 	}
-
-	/* When the screen is less than 1219 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-	.toggle {
-		display: none;
-	}
-	@media screen and (max-width: 1219px) {
-		.nav-inner {
-			width: 100% !important;
-		}
-		.nav-main li {display: none;}
-		.nav-main a.icon {
-			width: 100%;
-			display: block;
-		}
-		.nav-main {
-			position: fixed;
-			box-sizing: border-box;
-			left: 0;
-			right: 0;
-			z-index: 10;
-		}
-
-		.toggle {
-			position: absolute;
-			top: 0;
-			cursor: pointer;
-			height: 100%;
-			display: block;
-			width: 100%;
-			z-index: 2;
-		}
-	}
-
-	svg.signet-nav {
+		svg.signet-nav {
 		width: var(--signet-width);
 		height: 100%;
 	}
 	.nav-inner {
 		margin: 0 auto;
 		height: 100%;
+		@media screen and (max-width: 1219px) {
+			width: 100% !important;
+		}
 	}
-	.signet-hiding {
-		height: 100%;
+	.signet-item {
+		@media screen and (max-width: 1219px) {
+			display: none;
+		}
+		.signet-hiding {
+			height: 100%;
+		}
 	}
 	.fakenav {
 		margin-top: -4rem;
 		z-index: 1;
-		height: 0;
+		min-height: 0;
+		max-height: 0;
 		overflow: hidden;
 		.signet-item {
 			display: none;
@@ -192,7 +155,112 @@
 	 	padding: 0 calc(3* var(--signet-width) - var(--space)) 0 0;
 	 	
 	}
+		ul {
+		margin: 0;
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		height: 100%;
+		background: var(--color1);
+		// transition: max-height .35s ease-out;
+		z-index: 10;
 
+
+		@media screen and (max-width: 1219px) {
+			--height: 2rem;
+			display: block;
+			height: 0;
+			overflow: hidden;
+			transition: height .35s;
+
+			&.nav-open {
+				height: calc(var(--height) * (var(--size) + 0.5));
+			}
+		}
+
+
+		li {
+			display: inline-block;
+			height: 100%;
+			position: relative;
+
+			@media screen and (max-width: 1219px) {
+				display: block;
+				width: 100%;
+				height: var(--height);
+				overflow: hidden;
+			}
+
+			&:not(:first-child) a {
+				display: flex;
+				align-items: center;
+				font-family: johnston, sans-serif;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: .05em;
+				font-style: normal;
+				color: var(--color3);
+				height: 100%;
+				font-size: 1.063rem;
+				text-decoration: none;
+				
+				span {
+					width: 100%;
+					text-align: center;
+				}
+				&.is-active {
+					color: var(--color4);
+				}
+
+				&:hover {
+					color: var(--color4);
+				}
+			}
+		}
+	}
+
+
+	// /* When the screen is less than 1219 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+	// .toggle {
+	// 	display: none;
+	// }
+	// @media screen and (max-width: 1219px) {
+	// 	.nav-inner {
+	// 		width: 100% !important;
+	// 	}
+	// 	.nav-main li {display: none;}
+	// 	.nav-main a.icon {
+	// 		width: 100%;
+	// 		display: block;
+	// 	}
+	// 	.nav-main {
+	// 		position: fixed;
+	// 		box-sizing: border-box;
+	// 		left: 0;
+	// 		right: 0;
+	// 		z-index: 10;
+	// 	}
+
+	// 	.toggle {
+	// 		position: absolute;
+	// 		top: 0;
+	// 		cursor: pointer;
+	// 		height: 100%;
+	// 		display: block;
+	// 		width: 100%;
+	// 		z-index: 2;
+	// 	}
+	// }
+
+	.mobile-toggle {
+		display: none;
+		height: 100%;
+		@media screen and (max-width: 1219px) {
+			display: block;
+		}
+	}
 	.bars {
 		height: 3px;
 		width: 30px;
@@ -220,38 +288,8 @@
 		&:after {
 			top: 6px;
 		}
-	}
 
-	.show {
-		max-height: 400px !important;
-	}
-
-	.responsive {
-		& .nav-inner {
-			width: 100%;
-		}
-		& a {
-			display: block;
-		}
-		& ul {
-			padding-top: 4rem;
-			padding-bottom: 1rem;
-			flex-direction: column; 
-		}
-		& li {
-			display: block;
-			text-align: center;
-			&:first-child {
-				display: none;
-			}
-		}
-		& .icon {
-			position: absolute;
-			top: 0;
-			width: 100%;
-			height: 100%;
-		}
-		& .bars {
+		&.nav-open {
 			background-color: transparent;
 			&:before {
 				top: 0;
@@ -266,48 +304,37 @@
 		}
 	}
 
-	ul {
-		margin: 0;
-		list-style: none;
-		padding: 0;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		max-height: 4rem;
+	// .show {
+	// 	max-height: 400px !important;
+	// }
 
-		background: var(--color1);
-		// overflow: hidden;
-		transition: max-height .35s ease-out;
-		z-index: 10;
+	// .responsive {
+	// 	& .nav-inner {
+	// 		width: 100%;
+	// 	}
+	// 	& a {
+	// 		display: block;
+	// 	}
+	// 	& ul {
+	// 		padding-top: 4rem;
+	// 		padding-bottom: 1rem;
+	// 		flex-direction: column; 
+	// 	}
+	// 	& li {
+	// 		display: block;
+	// 		text-align: center;
+	// 		&:first-child {
+	// 			display: none;
+	// 		}
+	// 	}
+	// 	& .icon {
+	// 		position: absolute;
+	// 		top: 0;
+	// 		width: 100%;
+	// 		height: 100%;
+	// 	}
+	// 
+	// }
 
-		li {
-			display: inline-block;
-			height: 100%;
-			align-items: center;
-			display: flex;
-			&.notReactive {
-				display: block !important;
-			}
-			&:not(:first-child) a {
-				font-family: johnston, sans-serif;
-				font-weight: 700;
-				text-transform: uppercase;
-				letter-spacing: .05em;
-				font-style: normal;
-				color: var(--color3);
-				line-height: 3rem;
-				font-size: 1.063rem;
-				text-decoration: none;
-				margin-top: .2rem;
 
-				&.is-active {
-					color: var(--color4);
-				}
-
-				&:hover {
-					color: var(--color4);
-				}
-			}
-		}
-	}
 </style>
