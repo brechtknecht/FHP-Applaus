@@ -25,11 +25,11 @@
 						<p v-html="aussteller.content"></p>
 					</div>
 					<div class="authors">
-						<div class="absolvent" v-for="absolvent in absolventen" :key="absolvent.id">
+						<div class="absolvent" v-for="(absolvent, index) in absolventen" :key="absolvent.id">
 							<span class="absolventen-name"> {{ absolvent.forename }} {{ absolvent.lastname }}</span>
 							<p> 
 								<strong class="content-title"> {{ absolvent.category }} </strong>
-								<em> </em>
+								<em> {{ studiengang[++index - 1] }} </em>
 							</p>
 							<p>
 								<strong class="content-title"> E-MAIL </strong>
@@ -79,6 +79,31 @@ export default {
 			let _betreuer = _aussteller.supervisors.split(',');
 
 			return _betreuer;
+		},
+		studiengang(){
+			let _studiengang = [];
+			this.absolventen.forEach(function(absolvent){
+				let _category = absolvent.category;
+				switch(_category) {
+					case "ID":
+						_category ="Interfacedesign"
+						break;
+					case "KD":
+						_category ="Kommunikationsdesgin"
+						break;
+					case "PD":
+						_category ="Produktdesign"
+						break;
+					case "MD":
+						_category ="Desgin Master"
+						break;
+					case "MEMW":
+						_category ="Europäische Medienwissenschaften"
+						break;
+				}
+				_studiengang.push(_category);
+			});
+			return _studiengang;
 		}
 	},
 	components: {
@@ -164,9 +189,7 @@ export default {
 				margin: 0;
 			}
 		}
-	} 
-
-
+	}
 
 	.author {
 		display: block;
