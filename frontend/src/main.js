@@ -29,6 +29,11 @@ new Vue({
 				return '<span class="forename">'+this.$options.pages.absolventen.body.list[id].forename + ' </span><span class="lastname">' + this.$options.pages.absolventen.body.list[id].lastname + '</span>';
 			}
 		},
+		getAbsolvent: function(id) {
+			if(id in this.$options.pages.absolventen.body.list) {
+				return this.$options.pages.absolventen.body.list[id];
+			}
+		},
 		randomProperty: function (obj) {
 		    var keys = Object.keys(obj)
 		    return obj[keys[ keys.length * Math.random() << 0]];
