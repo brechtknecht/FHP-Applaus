@@ -13,18 +13,18 @@
 
 @mixin bp($point) {
 	@if $point == XL { // 1024/16
-		@media (min-width: 64em) { @content; }
+		@media (max-width: 64em) { @content; }
 	}
 	@else if $point == L { // 768/16
-		@media (min-width: 48em) { @content; }
+		@media (max-width: 48em) { @content; }
 	}
 	@else if $point == M { // 640/16
-		@media (min-width: 40em)  { @content; }
+		@media (max-width: 40em)  { @content; }
 	}
 	@else if $point == S { // 480/16
-		@media (min-width: 30em)  { @content; }
+		@media (max-width: 30em)  { @content; }
 	}
 	@else if $point == XS { // 320/16
-		@media (min-width: 20em)  { @content; }
+		@media (max-width: 20em)  { @content; }
 	}
 }
