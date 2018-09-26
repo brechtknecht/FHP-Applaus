@@ -14,6 +14,7 @@
 	import IconSignetNav from '../icons/IconSignetNav.vue'
 	import IconSignetBoxBottom from '../icons/IconSignetBoxBottom.vue'
 	import IconSignetBoxTop from '../icons/IconSignetBoxTop.vue'
+	import IconArrowDown from '../icons/IconArrowDown.vue'
 	export default {
 		props: {
 			iconName: {
@@ -30,7 +31,8 @@
 			IconSignet,
 			IconSignetNav,
 			IconSignetBoxBottom,
-			IconSignetBoxTop
+			IconSignetBoxTop,
+			IconArrowDown
 		}
 	}
 </script>

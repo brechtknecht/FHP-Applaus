@@ -54,8 +54,9 @@ export default {
 		line-height: 1.1em;
 		text-transform: uppercase;
 		text-align: center;
-		margin-bottom: 3rem;
+		margin-bottom: 1rem;
 		margin-top: 0;
+		letter-spacing: .15rem;
 	}
 
 	h4 {
@@ -76,7 +77,9 @@ export default {
 		font-feature-settings: "onum";
 	}
 	h3.subtitle {
-		margin-top: -2rem;
+		margin-top: 1rem;
+		margin-bottom: 0;
+		font-weight: 400;
 	}
 	h5 {
 		font-family: johnston;

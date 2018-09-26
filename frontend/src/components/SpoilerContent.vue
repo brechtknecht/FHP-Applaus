@@ -31,12 +31,12 @@
 		height: var(--fullheight);
 	}
 	.content {
-		border-bottom: .136363636rem solid var(--color1);
+		// border-bottom: .136363636rem solid var(--color1);
 		position: relative;
 		overflow: hidden;
 		box-sizing: content-box;
 		height: 0;
-		transition: height .5s;
+		transition: height .3s;
 		.column-outer {
 			display: flex;
 			align-items: stretch;

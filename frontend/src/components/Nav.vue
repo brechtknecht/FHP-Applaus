@@ -2,7 +2,7 @@
 
 	<scrollactive id="nav" class="nav-main" v-on:itemchanged="onItemChanged" :offset="navheight" :exact="true" :alwaysTrack="true" :duration="800" >
 		<div class="nav-inner">
-			<!-- <div class="bars"></div> -->
+
 			<a class="mobile-toggle" @click="toggleMobileNav" >
 				<i class="bars" :class="{ 'nav-open': navOpen }"></i>
 			</a>
