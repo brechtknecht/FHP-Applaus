@@ -1,7 +1,7 @@
 <template>
     <div :class="'absolvent' + absolventId">
-      <h5> {{ $root.getAbsolvent(absolventId).forename }} {{ $root.getAbsolvent(absolventId).lastname }} </h5>
-      <em class="absolvent-desc"> <abbr> {{ $root.getAbsolvent(absolventId).title }} ·</abbr> {{ $root.getAbsolvent(absolventId).undertitle }} </em>
+      <h5> {{ absolventObject.forename }} {{ absolventObject.lastname }} </h5>
+      <em class="absolvent-desc"> <abbr> {{ absolventObject.title }} ·</abbr> {{ absolventObject.undertitle }} </em>
       <slot />
     </div>
 </template>
@@ -10,8 +10,8 @@
 	export default {
 		name: 'Absolvent',
 		props: {
-			absolventId: String,
-     
+      absolventObject: Object,
+			absolventId: String
     }
   }
 </script>

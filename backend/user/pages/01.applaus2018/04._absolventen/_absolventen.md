@@ -9,8 +9,8 @@ absolventen:
         email: gustav@einfach-neu.de
         website: 'http://einfach-neu.de'
         category: MD
-        title: 'Der goldene Handschuh'
-        undertitle: 'Ein bisschen hiervon, ein bisschen davon und schon ist der Kuchen fertig.'
+        title: ''
+        undertitle: ''
     -
         forename: Karl
         lastname: Heinz

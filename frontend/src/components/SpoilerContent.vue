@@ -4,6 +4,7 @@
 			<div class="column" v-for="(item, index) in absolventenGroups">
 				<Absolvent
 					v-for="absolvent in item"
+					:absolventObject="$root.getAbsolvent(absolvent)"
 					:absolventId="absolvent"
 					:key="absolvent">
 				</Absolvent>
@@ -31,7 +32,6 @@
 		height: var(--fullheight);
 	}
 	.content {
-		// border-bottom: .136363636rem solid var(--color1);
 		position: relative;
 		overflow: hidden;
 		box-sizing: content-box;
