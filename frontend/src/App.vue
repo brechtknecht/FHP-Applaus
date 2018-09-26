@@ -92,16 +92,15 @@ export default {
 		margin: .136363636rem 0 0;
 	}
 
-	p a {
+	a {
 		color: var(--color4);
-		border-bottom-style: solid;
-		border-width: 1px;
-		border-color: var(--color1);
+		border-bottom: 1px solid var(--color1);
 		text-decoration: none;
 		outline: 0;
-		cursor: pointer;
-		text-align: left;
-		white-space: nowrap;
+		transition: border-color .3s;
+		&:hover {
+			border-color: var(--color4);
+		}
 	}
 
 	p {

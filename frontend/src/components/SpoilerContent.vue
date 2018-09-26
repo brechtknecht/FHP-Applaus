@@ -50,7 +50,7 @@
 		}
 		.column {
 		    margin-bottom: 2.5rem;
-		    flex: 0 1 calc(25% - 2.272727273rem);
+		    flex: 0 1 calc(25% - 1.772727273rem);
 
 		    div {
 		    	margin-top: 2rem;

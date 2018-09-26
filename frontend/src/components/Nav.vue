@@ -193,7 +193,9 @@
 				height: var(--height);
 				overflow: hidden;
 			}
-
+			a {
+				border: none;
+			}
 			&:not(:first-child) a {
 				display: flex;
 				align-items: center;

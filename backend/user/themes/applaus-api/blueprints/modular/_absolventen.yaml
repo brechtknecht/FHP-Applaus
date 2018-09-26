@@ -84,7 +84,7 @@ form:
                                   style: vertical
                                   help: Titel der Abschlussarbeit.
                                   placeholder: Wenn nicht ausgestellt wird
-                                .undertitle:
+                                .subtitle:
                                   type: text
                                   label: Untertitel
                                   style: vertical

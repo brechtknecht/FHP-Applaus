@@ -34,7 +34,21 @@ new Vue({
 		},
 		getAbsolvent: function(id) {
 			if(id in this.$options.pages.absolventen.body.list) {
-				return this.$options.pages.absolventen.body.list[id];
+
+				var absolvent = this.$options.pages.absolventen.body.list[id];
+
+				if(!this.$options.pages.absolventen.body.list[id].title) {
+					if(id in this.$options.pages.ausstellung.body.one2one) {
+						var projekt = this.$options.pages.ausstellung.body.list[this.$options.pages.ausstellung.body.one2one[id]];
+						absolvent = Object.assign(absolvent, {
+							title: projekt.title,
+							subtitle: projekt.subtitle,
+							slug: projekt.slug
+							});
+					}
+				}
+				console.log(absolvent);
+				return absolvent;
 			}
 		},
 		randomProperty: function (obj) {

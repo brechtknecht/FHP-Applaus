@@ -10,7 +10,7 @@ absolventen:
         website: 'http://einfach-neu.de'
         category: MD
         title: ''
-        undertitle: ''
+        subtitle: ''
     -
         forename: Karl
         lastname: Heinz
@@ -19,7 +19,7 @@ absolventen:
         website: 'http://karlheinz.de'
         category: MEMW
         title: Negation
-        undertitle: 'Ne das will ich nicht, echt nicht.'
+        subtitle: 'Shit in my Pants'
     -
         forename: Jochen
         lastname: Rüdingsen
@@ -28,7 +28,7 @@ absolventen:
         website: 'http://jimdoo.de'
         category: MD
         title: 'Backe, Backe Kuchen'
-        undertitle: 'Weihnachten steht vor der Tür und Klaus ist Spekulatius.'
+        subtitle: ''
     -
         forename: Aussenseiter
         lastname: Heinz
@@ -36,8 +36,8 @@ absolventen:
         email: karsten@email.de
         website: 'http://nix.de'
         category: ID
-        title: Fahrschulen-App
-        undertitle: 'Heinz hat heute echt mal wieder versagt!'
+        title: ''
+        subtitle: ''
     -
         forename: Günther
         lastname: Tümmeltuch
@@ -45,7 +45,7 @@ absolventen:
         email: gt@schnellautofahren.de
         category: ID
         title: 'Nudeln kochen'
-        undertitle: 'ups, da is aber was angebrannt.'
+        subtitle: 'Wasser kocht nicht'
     -
         forename: Casi
         lastname: Sayfarth
@@ -53,21 +53,21 @@ absolventen:
         email: cs@cyber.de
         category: KD
         title: 'Die Untiefen des barsch-net'
-        undertitle: 'Eine Reise in das Internet der Fische'
+        subtitle: 'oder wie Fische im Internet klauen'
     -
         forename: Lord
         lastname: Lordsen
         id: 5b9015908e12a
         category: PD
         title: Stuhl
-        undertitle: 'Ich habe einen Stuhl gebaut, man kann auf ihm sitzen. Unfassbar oder!?'
+        subtitle: ''
     -
         forename: Richard
         lastname: Tutvollgutmitsolangemnamen
         id: 5b9015b8696e4
         category: MEMW
         title: 'Master of Desaster'
-        undertitle: 'Diesen Studienabschluss gibt es wirklich!'
+        subtitle: ''
     -
         forename: Carlotta
         lastname: Stratonowitsch
@@ -76,7 +76,7 @@ absolventen:
         website: 'http://carlotta.stratonowitsch.de'
         category: MEMW
         title: ''
-        undertitle: ''
+        subtitle: ''
     -
         forename: Jürgen
         lastname: Kasanove
@@ -84,7 +84,7 @@ absolventen:
         email: jurg@jasa.de
         category: EMW
         title: ''
-        undertitle: ''
+        subtitle: ''
     -
         forename: Friedrich
         lastname: Rüdingsen
@@ -93,7 +93,7 @@ absolventen:
         website: 'http://friedrich.de'
         category: MEMW
         title: 'Wenn das Leben einen trollt'
-        undertitle: 'oder wie ich einkaufen ging'
+        subtitle: 'oder wenn es mal nicht klappt'
     -
         forename: Kersten
         lastname: Neuer
@@ -102,7 +102,7 @@ absolventen:
         website: 'http://kerstenkerst.de'
         category: MEMW
         title: 'Das Leben eines Tropfens'
-        undertitle: 'wie Meere entstehen'
+        subtitle: 'wie Meere entsehen'
     -
         forename: Sophia
         lastname: Simbolismus
@@ -111,7 +111,7 @@ absolventen:
         website: 'http://sophia.de'
         category: MEMW
         title: 'Der Namenssymbolismus'
-        undertitle: 'Namen hin und her'
+        subtitle: 'Symbolismus von Namen und so'
 template_format: json
 ---
 

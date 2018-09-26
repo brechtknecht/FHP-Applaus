@@ -1,16 +1,17 @@
 <template>
 	<div class="teaser">
-		<a :href="'aussteller/'+teaser.slug" class="meta-data-inner" v-if="!contentIsGiven">
-			
-			<div class="authors">
-				<div v-for="author in teaser.authors.split(',')">
-					<span class="forename">{{ $root.getAbsolventFullname(author).forename }} </span> <span class="lastname">{{ $root.getAbsolventFullname(author).lastname }}</span>
-				</div>
-			</div>
-			<span class="title">
-			{{ teaser.title }}
-			</span>
-		</a>
+		<div class="meta-data-inner" v-if="!contentIsGiven">
+			<a :href="'aussteller/'+teaser.slug">
+				<span class="authors">
+					<span v-for="author in teaser.authors.split(',')">
+						<span class="forename">{{ $root.getAbsolventFullname(author).forename }} </span> <span class="lastname">{{ $root.getAbsolventFullname(author).lastname }}</span><br>
+					</span>
+				</span>
+				<span class="title">
+					{{ teaser.title }}
+				</span>
+			</a>
+		</div>
 
 		<div class="gradient" />
 		<!-- ATTENTION — ToDo ! Insert media queries here in this img tag! (sizes) -->
@@ -58,18 +59,20 @@
 			position: relative;
 			z-index: 9;
 			margin-bottom: 2rem;
-			text-decoration: none;
-
+			a {
+				text-decoration: none;
+				border: none;
+			}
 			.authors span, .title {
 				color: var(--color3);
 				font-family: johnston,sans-serif;
 				font-size: .75rem;
 				margin: 0;
-				line-height: 1.125rem;
+				line-height: 0rem;
 				font-style: normal;
 			}
 			.authors {
-				margin-bottom: 0;
+				margin-bottom: 0; 
 			}
 			.authors span {
 				text-transform: uppercase;
