@@ -174,6 +174,7 @@
 	}
 	.category {
 		margin-bottom: 2.727272727rem;
+		padding-top: 2.6rem;
 		.title {
 			text-align: center;
 			margin-bottom: 2.25rem;
