@@ -8,7 +8,12 @@
 				<span> {{ item.slug }} </span>
 				<h4><em> {{ item.name }} </em></h4>
 			</div>
-			<SpoilerContent :absolventenGroups="getAbsolventenGroups(item.slug)" :spoilerOpen="spoilerActive[key]" />
+			<SpoilerContent 
+				:absolventenGroups="getAbsolventenGroups(item.slug)" 
+				:spoilerOpen="spoilerActive[key]" 
+				:spoilerID="key"
+				:style="'--fullheight:'+spoilerHeight[key]+'px'"
+			/>
 		</div>
 	</div>
 </template>
@@ -21,7 +26,8 @@
 		data() {
 			return {
 				categories: this.$root.$options.config.categoryorder,
-				spoilerActive: []
+				spoilerActive: [],
+				spoilerHeight: []
 			}
 		},
 		components: {
@@ -38,6 +44,8 @@
 		},
 		methods: {
 			toggleSpoiler(key){
+				let height = document.getElementById('spoilercontent-'+key).offsetHeight;
+				this.$set(this.spoilerHeight, key, height);
 				this.$set(this.spoilerActive, key, !this.spoilerActive[key]);
 			},
 			getAbsolventenGroups(category) {
@@ -73,91 +81,13 @@
 		cursor: pointer;
 		display: block;
 	}
-	.spoilerActive {
-		&:before{
-			transform: rotate(180deg);
-			bottom: -3px !important;
-		} 
-
-		&:after {
-			transform: rotate(180deg);
-			bottom: -5px !important;
-		}
-	}
-	.column {	
-		div {
-			margin-top: 2rem;
-		}
-		margin-top: 2.25rem;
-	    margin-bottom: 2.5rem;
-	    flex: 0 1 calc(25% - 2.272727273rem);
-	}
-	.absolventen {
-		margin: 0 auto;
-		.content {
-			display: flex;
-			align-items: stretch;
-			flex-wrap: nowrap;
-			opacity: 1;
-			overflow: hidden;
-			transition: 250ms ease-out;
-			text-align: left;
-			justify-content: space-between;
-
-			&:before {
-				content: '';
-				margin-top: 1rem;
-				display: block;
-				width: 24px;
-				height: 3px;
-				position: absolute;
-				left: calc(50% - 12px);
-				background: var(--color1);
-			}
-		} 
-		
-	}
-	// .toggleSpoiler {
-	// 	opacity: 1 !important;
-	// 	max-height: calc(var(--size) * 9rem) !important;
-	// 	overflow: none !important;
-	// }
-	.spoiler {
+	.spoilerToggle {
 		position: relative;
-		border-bottom: .136363636rem solid var(--color1);
 		text-align: center;
 		margin-bottom: 1.5rem;
 		margin-top: 2.5rem;
 		padding-bottom: 1rem;
-		// overflow: hidden;
-		&:before {
-			content: '';
-			position: absolute;
-			border-width: 12px 12px 0;
-			border-style: solid;
-			border-color: var(--color1) transparent;
-			display: block;
-			width: 0;
-			bottom: -12px;
-			z-index: 0;
-			left: 50%;
-			background: transparent;
-			margin-left: -12px;
-		}
-		&:after {
-			clear: both;
-			content: "";
-			position: absolute;
-			border-style: solid;
-			border-width: 10px 10px 0;
-			border-color: var(--color3) transparent;
-			display: block;
-			width: 0;
-			z-index: 1;
-			left: 50%;
-			bottom: -8px;
-			margin-left: -10px;
-		}
+
 		& > span {
 			font-family: johnston;
 			font-style: normal;
