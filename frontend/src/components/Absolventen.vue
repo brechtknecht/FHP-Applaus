@@ -4,26 +4,17 @@
 		<!-- <p> {{ AbsolventenHeadertext }} </p> -->
 		<h3 class="subtitle">{{ $root.numberOfStudents }} Absolventen</h3>
 		<div class="spoiler" v-for="(item, key) in categories" v-bind:class="{ spoilerActive: spoilerActive[key] }">
-			<a class="spoilerToggle" v-on:click="toggleSpoiler(key)"></a>
-			<span> {{ item.slug }} </span>
-
-			<h4><em> {{ item.name }} </em></h4> 
-			<div class="grid" v-bind:class="{ toggleSpoiler: spoilerActive[key]}">
-				<div class="column" v-for="(item, index) in getAbsolventenGroups(item.slug)">
-					<Absolvent 
-						v-for="absolvent in item" 
-						v-bind:data="content.body.list[absolvent]"
-						:key="content.body.list[absolvent].id">
-					</Absolvent>
-				</div>
+			<div class="spoilerToggle" v-on:click="toggleSpoiler(key)">
+				<span> {{ item.slug }} </span>
+				<h4><em> {{ item.name }} </em></h4>
 			</div>
-
+			<SpoilerContent :absolventenGroups="getAbsolventenGroups(item.slug)" :spoilerOpen="spoilerActive[key]" />
 		</div>
 	</div>
 </template>
 
 <script>
-	import Absolvent from '@/components/Absolvent.vue'
+	import SpoilerContent from '@/components/SpoilerContent.vue'
 
 	export default {
 		name: 'Absolventen',
@@ -34,7 +25,7 @@
 			}
 		},
 		components: {
-			Absolvent
+			SpoilerContent
 		},
 		props: {
 			content: Object
@@ -78,11 +69,9 @@
 
 <style lang="scss">
 	.spoilerToggle {
-		position: absolute;
-		height: 3rem;
 		width: 100%;
-		left: 0;
 		cursor: pointer;
+		display: block;
 	}
 	.spoilerActive {
 		&:before{
@@ -105,22 +94,16 @@
 	}
 	.absolventen {
 		margin: 0 auto;
-		.grid {
+		.content {
 			display: flex;
 			align-items: stretch;
 			flex-wrap: nowrap;
-			max-height: 0;
 			opacity: 1;
 			overflow: hidden;
 			transition: 250ms ease-out;
 			text-align: left;
 			justify-content: space-between;
-			&.fake {
-				max-height: inherit;
-				position: absolute;
-				opacity: .5;
-				z-index: -1;
-			}
+
 			&:before {
 				content: '';
 				margin-top: 1rem;
@@ -134,18 +117,19 @@
 		} 
 		
 	}
-	.toggleSpoiler {
-		opacity: 1 !important;
-		max-height: calc(var(--size) * 9rem) !important;
-		overflow: none !important;
-	}
+	// .toggleSpoiler {
+	// 	opacity: 1 !important;
+	// 	max-height: calc(var(--size) * 9rem) !important;
+	// 	overflow: none !important;
+	// }
 	.spoiler {
 		position: relative;
-		border-bottom: 3px solid var(--color1);
+		border-bottom: .136363636rem solid var(--color1);
 		text-align: center;
 		margin-bottom: 1.5rem;
 		margin-top: 2.5rem;
 		padding-bottom: 1rem;
+		// overflow: hidden;
 		&:before {
 			content: '';
 			position: absolute;
@@ -166,7 +150,7 @@
 			position: absolute;
 			border-style: solid;
 			border-width: 10px 10px 0;
-			border-color: #fff transparent;
+			border-color: var(--color3) transparent;
 			display: block;
 			width: 0;
 			z-index: 1;

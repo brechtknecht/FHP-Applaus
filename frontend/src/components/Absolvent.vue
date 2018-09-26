@@ -1,7 +1,8 @@
 <template>
-    <div :class="'absolvent-' + data.id">
-      <h5> {{ data.forename }} {{ data.lastname }} </h5>
-      <em class="absolvent-desc"> <abbr> {{ data.title }} ·</abbr> {{ data.undertitle }} </em>
+    <div :class="'absolvent' + absolventId">
+      <h5> {{ $root.getAbsolvent(absolventId).forename }} {{ $root.getAbsolvent(absolventId).lastname }} </h5>
+      <em class="absolvent-desc"> <abbr> {{ $root.getAbsolvent(absolventId).title }} ·</abbr> {{ $root.getAbsolvent(absolventId).undertitle }} </em>
+      <slot />
     </div>
 </template>
 
@@ -9,10 +10,8 @@
 	export default {
 		name: 'Absolvent',
 		props: {
-			data: Object
-    },
-    created(){
-      // console.log(this.data);
+			absolventId: String,
+     
     }
   }
 </script>
