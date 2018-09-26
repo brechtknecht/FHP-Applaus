@@ -28,7 +28,7 @@
 						<div class="absolvent" v-for="(absolvent, index) in absolventen" :key="absolvent.id">
 							<span class="absolventen-name"> {{ absolvent.forename }} {{ absolvent.lastname }}</span>
 							<p> 
-								<strong class="content-title"> {{ absolvent.category }} </strong>
+								<strong class="content-title"> {{ getDegree(absolvent.category) }} </strong>
 								<em> {{ studiengang[++index - 1] }} </em>
 							</p>
 							<p>
@@ -95,7 +95,10 @@ export default {
 						_category ="Produktdesign"
 						break;
 					case "MD":
-						_category ="Desgin Master"
+						_category ="Desgin"
+						break;
+					case "EMW":
+						_category ="Europäische Medienwissenschaften"
 						break;
 					case "MEMW":
 						_category ="Europäische Medienwissenschaften"
@@ -109,6 +112,23 @@ export default {
 	components: {
 		Navigation,
 		Header
+	},
+	methods: {
+		getDegree: function(category) {
+			switch(category) {
+					case "ID":
+					case "KD":
+					case "PD":
+					case "EMW":
+						return "BA";
+						break;
+						
+					case "MD":
+					case "MEMW":
+						return "MASTER";
+						break;
+				}
+		}
 	}
 }
 </script>
