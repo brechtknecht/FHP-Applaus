@@ -24,7 +24,8 @@
 
 								<div class="group">
 									<div class="authoren">
-										<h5 class="author" v-for="author in content.body.list[item].authors.split(',')" v-html="$root.getAbsolventFullname(author)">
+										<h5 class="author" v-for="author in content.body.list[item].authors.split(',')">
+											<span class="forename">{{$root.getAbsolventFullname(author).forename}} </span><span class="lastname">{{$root.getAbsolventFullname(author).lastname}}</span>
 										</h5>
 									</div>
 									<em class="titel">

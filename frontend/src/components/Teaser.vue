@@ -3,7 +3,8 @@
 		<a :href="'aussteller/'+teaser.slug" class="meta-data-inner" v-if="!contentIsGiven">
 			
 			<div class="authors">
-				<div v-for="author in teaser.authors.split(',')" v-html="$root.getAbsolventFullname(author)">
+				<div v-for="author in teaser.authors.split(',')">
+					<span class="forename">{{ $root.getAbsolventFullname(author).forename }} </span> <span class="lastname">{{ $root.getAbsolventFullname(author).lastname }}</span>
 				</div>
 			</div>
 			<span class="title">
@@ -13,7 +14,7 @@
 
 		<div class="gradient" />
 		<!-- ATTENTION — ToDo ! Insert media queries here in this img tag! (sizes) -->
-		<img class="teaser-image" :src="backgroundImage[0].url" :srcset="backgroundImage[0].url" sizes="100vw">
+		<img class="teaser-image" :src="backgroundImage[0].url" :srcset="backgroundImage[0].srcset" sizes="100vw">
 	</div>
 </template>
 
@@ -67,11 +68,12 @@
 				line-height: 1.125rem;
 				font-style: normal;
 			}
+			.authors {
+				margin-bottom: 0;
+			}
 			.authors span {
 				text-transform: uppercase;
 				letter-spacing: .05rem;
-			}
-			.title {
 			}
 		}
 	}

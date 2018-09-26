@@ -26,7 +26,10 @@ new Vue({
 	methods: {
 		getAbsolventFullname: function(id) {
 			if( id in this.$options.pages.absolventen.body.list) {
-				return '<span class="forename">'+this.$options.pages.absolventen.body.list[id].forename + ' </span><span class="lastname">' + this.$options.pages.absolventen.body.list[id].lastname + '</span>';
+				return {
+					forename:	this.$options.pages.absolventen.body.list[id].forename,
+					lastname: this.$options.pages.absolventen.body.list[id].lastname
+				};
 			}
 		},
 		getAbsolvent: function(id) {
@@ -37,8 +40,7 @@ new Vue({
 		randomProperty: function (obj) {
 		    var keys = Object.keys(obj)
 		    return obj[keys[ keys.length * Math.random() << 0]];
-		},
-
+		}
 	},
 	computed: {
 		themeStyling: function() {

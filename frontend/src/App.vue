@@ -24,6 +24,10 @@ export default {
 
 </script>
 <style lang="scss">
+	// * {
+	// 	transition: all .5s;
+	// }
+	// =======================================
 	body {
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;	

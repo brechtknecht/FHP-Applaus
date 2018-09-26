@@ -115,6 +115,7 @@
 		svg.signet-nav {
 		width: var(--signet-width);
 		height: 100%;
+		fill: var(--color4);
 	}
 	.nav-inner {
 		margin: 0 auto;
@@ -209,6 +210,7 @@
 				span {
 					width: 100%;
 					text-align: center;
+					margin-top: .2rem;
 				}
 				&.is-active {
 					color: var(--color4);

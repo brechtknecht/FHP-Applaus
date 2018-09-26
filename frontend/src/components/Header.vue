@@ -12,7 +12,8 @@
 		<section class="content-inner wide" v-else>
 
 				<div class="group">
-					<div class="author" v-for="(author, index) in content.authors.split(',')" v-html="$root.getAbsolventFullname(author)">
+					<div class="author" v-for="(author, index) in content.authors.split(',')">
+						<span class="forename">{{$root.getAbsolventFullname(author).forename}} </span><span class="lastname">{{$root.getAbsolventFullname(author).lastname}}</span>
 					</div>
 
 				</div>
@@ -91,14 +92,14 @@
 	.header {
 		display: flex;
 
-		.title {
+		.group .title {
 			padding-top: 2.5rem;
 			padding-bottom: 1rem;
 			font-size: 1.5rem;
 			line-height: 1.75rem;
 			color: var(--color3);
 		}
-		.subtitle {
+		.group .subtitle {
 			font-size: 1.375rem;
 		    line-height: 1.3em;
 		    font-weight: 600;
