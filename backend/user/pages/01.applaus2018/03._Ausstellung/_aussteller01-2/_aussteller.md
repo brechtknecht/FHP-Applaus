@@ -1,7 +1,7 @@
 ---
 title: 'Wie der Fuchs den Hasen besuchte'
 headertext: 'Eine Geschichte über Leben und Tod'
-category: ID
+category: MEMW
 authors: '5b8281c78e025,5b8281c78e010'
 supervisors: 'Dr. Katrin von Kap-herr,Prof. Volker von Kardorff'
 headerimage: 03-01.png

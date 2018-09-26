@@ -15,7 +15,12 @@
 
 
 			<div class="grid">
-				<a :href="'/aussteller/'+item" v-for="(item, key) in getAusstellerGroups(item.slug)" style="--y-start: 1; --x-start:1; --y-delta: 1; --x-delta: 1;" class="article">
+				<a 
+					:href="'/aussteller/'+aussteller" 
+					v-for="(aussteller, key) in getAusstellerGroups(item.slug)" 
+					:style="'--y-start:' + grid[item.slug][key].y + '; --x-start:' + grid[item.slug][key].x + '; --y-delta:' + grid[item.slug][key].dy + '; --x-delta:' + grid[item.slug][key].dx" 
+					class="article"
+				>
 						<span class="beschriftung">
 
 								<div class="vignette">
@@ -24,12 +29,12 @@
 
 								<div class="group">
 									<div class="authoren">
-										<h5 class="author" v-for="author in content.body.list[item].authors.split(',')">
+										<h5 class="author" v-for="author in content.body.list[aussteller].authors.split(',')">
 											<span class="forename">{{$root.getAbsolventFullname(author).forename}} </span><span class="lastname">{{$root.getAbsolventFullname(author).lastname}}</span>
 										</h5>
 									</div>
 									<em class="titel">
-										{{ content.body.list[item].title }}
+										{{ content.body.list[aussteller].title }}
 									</em>
 								</div>
 								
@@ -42,7 +47,7 @@
 						<div class="gradient_changer"/>
 						<div class="gradient"/>
 						 <!-- ATTENTION — ToDo ! Insert media queries here in this img tag! (sizes)  -->
-						<img :srcset="content.body.list[item].images[0].srcset" :src="content.body.list[item].images[0].url" sizes="50vw"> 	
+						<img :srcset="content.body.list[aussteller].images[0].srcset" :src="content.body.list[aussteller].images[0].url" sizes="50vw"> 	
 				</a>
 			</div>
 		</div>
@@ -54,6 +59,64 @@
 	
 	export default {
 	name: 'Aussteler',
+	data() {
+		return {
+			grid: {
+				"ID": {
+					0: {
+						x: 1,
+						y: 1,
+						dx: 2,
+						dy: 1
+					},
+				},
+				"PD": {
+					0: {
+						x: 1,
+						y: 1,
+						dx: 2,
+						dy: 2
+					},
+				},
+				"KD": {
+					0: {
+						x: 1,
+						y: 1,
+						dx: 2,
+						dy: 2
+					},
+				},
+				"EMW": {
+					0: {
+						x: 1,
+						y: 1,
+						dx: 2,
+						dy: 2
+					},
+				},
+				"MASTER": {
+					0: {
+						x: 1,
+						y: 1,
+						dx: 2,
+						dy: 2
+					},
+					1: {
+						x: 3,
+						y: 1,
+						dx: 1,
+						dy: 2
+					},
+					2: {
+						x: 4,
+						y: 1,
+						dx: 1,
+						dy: 2
+					},
+				}
+			}
+		}
+	},
 	components: {
 		IconBase
 	},
@@ -63,7 +126,7 @@
 	methods: {
 		getAusstellerGroups(category) {
 			if(category == 'MASTER') {
-				return Object.assign(this.content.body.groups.MEMW, this.content.body.groups.MD);
+				return this.content.body.groups.MEMW.concat(this.content.body.groups.MD);
 			} else {
 				return this.content.body.groups[category];
 			}
@@ -90,6 +153,8 @@
 			position: relative;
 			z-index: 0;
 			color: var(--color4);
+			border: none;
+
 			.gradient {
 				background: linear-gradient(to bottom, var(--gradient_col2-20perc) 0, var(--gradient_col2-20perc) 37%, var(--gradient_col2-35perc) 100%);
 				position: absolute;

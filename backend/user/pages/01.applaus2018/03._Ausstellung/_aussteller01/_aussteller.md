@@ -1,7 +1,7 @@
 ---
 title: 'Beyond the Fabulousness'
 headertext: 'Ein queerer Dokumentarfilm über Madison Moore'
-category: KD
+category: MD
 authors: 5b8281c78e003
 supervisors: 'Prof. Anne Quirynen,Dr. Daniela Döring'
 media_order: '01 Still aus looking for moore 2018.jpg,02 Still aus looking for moore 2018.jpg,03 Still aus looking for moore 2018 Copyright Luke Carlisle.jpg,04 Filmplakat looking for moore 2018.jpg'
