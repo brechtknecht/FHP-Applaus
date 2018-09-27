@@ -90,11 +90,12 @@
 		z-index: 1;
 	}
 	.teaser-image {
-		position: absolute;
+		position: fixed;
 		top: 0; left: 0; bottom: 0; right: 0;
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
-		z-index: 0;
+		z-index: -1;
+		animation: moveImage 60s cubic-bezier(.18,.01,.85,1) both infinite;
 	}
 </style>

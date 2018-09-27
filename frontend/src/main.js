@@ -25,20 +25,7 @@ new Vue({
 	},
 	methods: {
 		
-		extend: function(target) {
-		    for(var i=1; i<arguments.length; ++i) {
-		        var from = arguments[i];
-		        if(typeof from !== 'object') continue;
-		        for(var j in from) {
-		            if(from.hasOwnProperty(j)) {
-		                target[j] = typeof from[j]==='object'
-		                ? extend({}, target[j], from[j])
-		                : from[j];
-		            }
-		        }
-		    }
-		    return target;
-		},
+
 
 		getAbsolventFullname: function(id) {
 			if( id in this.$options.pages.absolventen.body.list) {

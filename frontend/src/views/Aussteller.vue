@@ -3,47 +3,48 @@
 		<!-- Navigation needs to dont be »ScrollActive« -->
 		<!-- <Navigation :items="this.$root.$options.navigation" routerNav></Navigation> -->
 		<Header class="header" :content="aussteller" contentIsGiven></Header>
-		
-		<section class="content-inner">
+		<section class="wrapper-content">
+			<section class="content-inner">
 
-			<div class="body">
-				
-				<div class="section">
-					<span class="content-title"> {{ aussteller.title }} </span>
-					<span class="content-subtitle"> {{ aussteller.subtitle }} </span>
+				<div class="body">
+					
+					<div class="section">
+						<span class="content-title"> {{ aussteller.title }} </span>
+						<span class="content-subtitle"> {{ aussteller.subtitle }} </span>
 
-					<div class="betreuer">
-							<span class="content-title">Betreuer</span>
-							<em v-for="betreuer in betreuer" :key="betreuer.id"> 
-								{{ betreuer }} 
-							</em>
-						</div>
-				</div>
-
-				<div class="section">
-					<div class="text">
-						<p v-html="aussteller.content"></p>
+						<div class="betreuer">
+								<span class="content-title">Betreuer</span>
+								<em v-for="betreuer in betreuer" :key="betreuer.id"> 
+									{{ betreuer }} 
+								</em>
+							</div>
 					</div>
-					<div class="authors">
-						<div class="absolvent" v-for="(absolvent, index) in absolventen" :key="absolvent.id">
-							<span class="absolventen-name"> {{ absolvent.forename }} {{ absolvent.lastname }}</span>
-							<p> 
-								<strong class="content-title"> {{ getDegree(absolvent.category) }} </strong>
-								<em> {{ studiengang[++index - 1] }} </em>
-							</p>
-							<p>
-								<strong class="content-title"> E-MAIL </strong>
-								<em> <a v-bind:href=" `mailto:${absolvent.email}` "> {{ absolvent.email }} </a> </em>
-							</p>
-							<p>
-								<strong class="content-title"> WEB </strong>
-								<em> <a v-bind:href="absolvent.website"> {{ absolvent.website }} </a> </em>
-							</p>
+
+					<div class="section">
+						<div class="text">
+							<p v-html="aussteller.content"></p>
+						</div>
+						<div class="authors">
+							<div class="absolvent" v-for="(absolvent, index) in absolventen" :key="absolvent.id">
+								<span class="absolventen-name">{{ absolvent.forename }} {{ absolvent.lastname }}</span>
+								<p> 
+									<strong class="content-title">{{ getDegree(absolvent.category) }}</strong>
+									<em>{{ studiengang[++index - 1] }}</em>
+								</p>
+								<p>
+									<strong class="content-title">E-MAIL</strong>
+									<em><a v-bind:href=" `mailto:${absolvent.email}` ">{{ absolvent.email }}</a></em>
+								</p>
+								<p>
+									<strong class="content-title">WEB</strong>
+									<em><a v-bind:href="absolvent.website">{{ absolvent.website }}</a></em>
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
 
-			</div>
+				</div>
+			</section>
 		</section>
 	</div>
 </template>
@@ -134,7 +135,6 @@ export default {
 </script>
 <style lang="scss">
 	@import '@/scss/mediaqueries.scss';
-
 	.body {
 		display: flex;
 		flex-direction: row;
@@ -142,8 +142,11 @@ export default {
 			flex-direction: column;
 		}
 	}
-
-	.aussteller{
+	.wrapper-content {
+		background: var(--color5);
+	}
+	.aussteller {
+		
 		.section {
 			width: 50%;
 			@include bp(L) {

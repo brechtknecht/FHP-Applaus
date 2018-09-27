@@ -60,6 +60,17 @@ export default {
 			opacity: 1;
 		}
 	}
+	@keyframes moveImage {
+		0% {
+			object-position: 0% 0%;
+		}
+		50% {
+			object-position: 100% 100%;
+		}
+		100% {
+			object-position: 0% 0%;
+		}
+	}
 	.routerTransition-enter-active, .routerTransition-leave-active {
 	 	transition: opacity 5s;
 	}
