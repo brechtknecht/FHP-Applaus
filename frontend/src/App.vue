@@ -1,7 +1,7 @@
 <template>
 	<div id="start"  v-resize:debounce="resize" :style="this.$root.themeStyling">
 		<Header
-			v-show="$route.name == 'home'"
+			v-if="$route.name == 'home'"
 			class="header" 
 			:content="this.$root.$options.config"
 		/>
@@ -9,9 +9,9 @@
 			:items="this.$root.$options.navigation" 
 			:reactiveNav="reactiveNav"
 		/>
-		<transition name="routerTransition">
+		<!-- <transition name="routerTransition"> -->
 			<router-view></router-view>
-		</transition>
+		<!-- </transition> -->
 	</div>
 </template>
 
@@ -53,11 +53,15 @@ export default {
 </script>
 <style lang="scss">
 	.routerTransition-enter-active, .routerTransition-leave-active {
-	  transition: opacity .5s;
+	 	transition: opacity 5s;
 	}
 	.routerTransition-enter, .routerTransition-leave-to {
-	  opacity: 0;
+	 	opacity: 0;
 	}
+	.routerTransition-enter-to, .routerTransition-leave {
+		opacity: 1;
+	 }
+
 
 	body {
 		text-rendering: optimizeLegibility;

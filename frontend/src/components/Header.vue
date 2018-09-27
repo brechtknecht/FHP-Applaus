@@ -1,5 +1,6 @@
 <template>
 	<section class="wrapper" :class="{ 'aussteller': contentIsGiven}">
+
 		<section class="content-inner" v-if="!contentIsGiven">
 
 				<icon-base icon-name="signet" viewBox="0 0 300 155" />
@@ -9,6 +10,7 @@
 					<p class="sub-title" v-html="content.headertext" />
 				</div>
 		</section>
+
 		<section class="content-inner wide" v-else>
 
 				<div class="group">
@@ -70,8 +72,11 @@
 			font-style: italic;
 			line-height: 1.1em;
 			font-feature-settings: "dlig";
+			animation: fading 1s ease-in .2s backwards;
+			display: block;
 		}
 		.lastname {
+			animation: fading 1s ease-in .3s backwards;
 			font-size: 5.5rem;
 			line-height: 1.1em;
 		    font-family: johnston,sans-serif;
@@ -79,6 +84,7 @@
 		    text-transform: uppercase;
 		    letter-spacing: .05em;
 		    font-style: normal;
+		    display: block;
 		}
 	}
 
@@ -93,6 +99,7 @@
 		display: flex;
 
 		.group .title {
+			animation: fading 1s ease-in .7s backwards;
 			padding-top: 2.5rem;
 			padding-bottom: 1rem;
 			font-size: 1.5rem;
@@ -100,6 +107,7 @@
 			color: var(--color3);
 		}
 		.group .subtitle {
+			animation: fading 1s ease-in .9s backwards;
 			font-size: 1.375rem;
 		    line-height: 1.3em;
 		    font-weight: 600;
