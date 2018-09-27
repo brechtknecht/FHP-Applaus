@@ -1,7 +1,7 @@
 <template>
 	<div class="teaser">
 		<div class="meta-data-inner" v-if="!contentIsGiven">
-			<a :href="'aussteller/'+teaser.slug">
+			<router-link :to="'aussteller/'+teaser.slug">
 				<span class="authors">
 					<span v-for="author in teaser.authors.split(',')">
 						<span class="forename">{{ $root.getAbsolventFullname(author).forename }} </span> <span class="lastname">{{ $root.getAbsolventFullname(author).lastname }}</span><br>
@@ -10,7 +10,7 @@
 				<span class="title">
 					{{ teaser.title }}
 				</span>
-			</a>
+			</router-link>
 		</div>
 
 		<div class="gradient" />
@@ -54,11 +54,14 @@
 		flex-direction: column; 
 		justify-content: flex-end;
 
+
+
 		.meta-data-inner {
 			margin: 0 auto;
 			position: relative;
 			z-index: 9;
 			margin-bottom: 2rem;
+			animation: fading 1s ease-in 1.8s backwards;
 			a {
 				text-decoration: none;
 				border: none;

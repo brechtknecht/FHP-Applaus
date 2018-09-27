@@ -9,7 +9,7 @@
 
 			<ul class="navigation" :class="{ 'nav-open': navOpen }" :style="'--size:' + items.length" @click="toggleMobileNav">
 				<transition name="signethide">
-					<li v-show="signetshow" class="signet-item" :style="'--space:'+spaceBetween+'px'">
+					<li v-show="showMeSignet" class="signet-item" :style="'--space:'+spaceBetween+'px'">
 						<navLink 
 							:to="relativePath + '#start'"
 							class="signet-hiding is-active" 
@@ -61,10 +61,17 @@
 				activeItem: Object,
 				spaceBetween: 0,
 				navOpen: false,
-				signetshow: !this.reactiveNav
+				signetshow: false
 			}
 		},
 		computed: {
+			showMeSignet: function() {
+				if(this.reactiveNav) {
+					return this.signetshow;
+				} else {
+					return true;
+				}
+			},
 			relativePath: function() {
 				if(!this.reactiveNav) {
 					return '../';

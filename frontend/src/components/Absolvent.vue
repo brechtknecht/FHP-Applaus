@@ -7,7 +7,7 @@
       
       <h5 v-else>{{ absolventObject.forename }} {{ absolventObject.lastname }}</h5>
       
-      <em class="absolvent-desc">{{ absolventObject.title }} · {{ absolventObject.subtitle }} </em>
+      <em class="absolvent-desc">{{ absolventObject.title }} · {{ absolventObject.subtitle }}</em>
       <slot />
     </div>
 </template>

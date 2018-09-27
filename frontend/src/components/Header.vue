@@ -14,7 +14,7 @@
 		<section class="content-inner wide" v-else>
 
 				<div class="group">
-					<div class="author" v-for="(author, index) in content.authors.split(',')">
+					<div class="author" v-for="(author, index) in content.authors.split(',')" :class="{ colaboration: content.authors.split(',').length > 1 }">
 						<span class="forename">{{$root.getAbsolventFullname(author).forename}} </span><span class="lastname">{{$root.getAbsolventFullname(author).lastname}}</span>
 					</div>
 
@@ -67,6 +67,17 @@
 	.header .author {
 		text-align: center;
 		color: var(--color3);
+
+		&.colaboration {
+			height: 6.227272727rem;
+			.forename {
+				display: inline;
+				margin-bottom: 0;
+			}
+			.lastname {
+				display: inline;
+			}
+		}
 		.forename {
 			font-size: 5.75rem;
 			font-style: italic;
@@ -74,9 +85,10 @@
 			font-feature-settings: "dlig";
 			animation: fading 1s ease-in .2s backwards;
 			display: block;
+			margin-bottom: .86rem;
 		}
 		.lastname {
-			animation: fading 1s ease-in .3s backwards;
+			animation: fading 1s ease-in .5s backwards;
 			font-size: 5.5rem;
 			line-height: 1.1em;
 		    font-family: johnston,sans-serif;
@@ -84,7 +96,7 @@
 		    text-transform: uppercase;
 		    letter-spacing: .05em;
 		    font-style: normal;
-		    display: block;
+		    display: block;		    
 		}
 	}
 
@@ -99,15 +111,14 @@
 		display: flex;
 
 		.group .title {
-			animation: fading 1s ease-in .7s backwards;
-			padding-top: 2.5rem;
-			padding-bottom: 1rem;
+			animation: fading 1s ease-in .8s backwards;
+			margin: 3.545454545rem 0 1rem;
 			font-size: 1.5rem;
 			line-height: 1.75rem;
 			color: var(--color3);
 		}
 		.group .subtitle {
-			animation: fading 1s ease-in .9s backwards;
+			animation: fading 1s ease-in 1.1s backwards;
 			font-size: 1.375rem;
 		    line-height: 1.3em;
 		    font-weight: 600;
@@ -151,15 +162,6 @@
 			animation: fading 1s ease-in .5s backwards;
 			animation-delay: 900ms;
 			font-weight: 600;
-		}
-
-		@keyframes fading {
-			0% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
 		}
 	}
 </style>

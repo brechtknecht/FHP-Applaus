@@ -52,6 +52,14 @@ export default {
 
 </script>
 <style lang="scss">
+	@keyframes fading {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 	.routerTransition-enter-active, .routerTransition-leave-active {
 	 	transition: opacity 5s;
 	}
