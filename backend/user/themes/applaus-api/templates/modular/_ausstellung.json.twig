@@ -18,7 +18,7 @@
 			{% set image_set = image_set ~ '../..' ~ image.cropResize(size, size).url() ~ ' ' ~ size ~ 'w, ' %}
 		{% endfor %}
 
-		{% set images = images|merge({ (loop.index): {url: '../..' ~ image.url, srcset: image_set|rtrim(', ') } }) %} 
+		{% set images = images|merge({ (loop.index): {url: '../..' ~ image.url, srcset: image_set|rtrim(', '), aspect_ratio: image.width / image.height } }) %} 
 	{% endfor %}
 
 	{% set project_slug = module.title|hyphenize%}
