@@ -15,8 +15,8 @@
 
 
 			<div class="grid">
-				<a 
-					:href="'/aussteller/'+aussteller" 
+				<router-link 
+					:to="'/aussteller/'+aussteller" 
 					v-for="(aussteller, key) in getAusstellerGroups(item.slug)" 
 					:style="'--y-start:' + grid[item.slug][key].y + '; --x-start:' + grid[item.slug][key].x + '; --y-delta:' + grid[item.slug][key].dy + '; --x-delta:' + grid[item.slug][key].dx" 
 					class="article"
@@ -48,7 +48,7 @@
 						<div class="gradient"/>
 						 <!-- ATTENTION — ToDo ! Insert media queries here in this img tag! (sizes)  -->
 						<img :srcset="content.body.list[aussteller].images[0].srcset" :src="content.body.list[aussteller].images[0].url" sizes="50vw"> 	
-				</a>
+				</router-link>
 			</div>
 		</div>
 	</div>

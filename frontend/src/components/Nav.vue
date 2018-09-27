@@ -10,15 +10,24 @@
 			<ul class="navigation" :class="{ 'nav-open': navOpen }" :style="'--size:' + items.length" @click="toggleMobileNav">
 				<transition name="signethide">
 					<li v-show="signetshow" class="signet-item" :style="'--space:'+spaceBetween+'px'">
-						<a :href="relativePath + '#start'" class="signet-hiding is-active" :class="{ 'scrollactive-item': reactiveNav }">
+						<navLink 
+							:to="relativePath + '#start'"
+							class="signet-hiding is-active" 
+							:class="{ 'scrollactive-item': reactiveNav }"
+							:reactiveNav="reactiveNav"
+						>
 							<icon-base icon-name="signet-nav" viewBox="0 0 220 215"/>
-						</a>
+						</navLink>
 					</li>
 				</transition>
 				<li v-for="item in items">
-					<a :href="relativePath+'#'+item.slug" :title="item.title" :class="{ 'scrollactive-item': reactiveNav }">
+					<navLink 
+						:to="relativePath+'#'+item.slug" 
+						:title="item.title" 
+						:class="{ 'scrollactive-item': reactiveNav }"
+					>
 					<span>{{ item.title }}</span>
-					</a>
+					</navLink>
 				</li>
 			</ul>
 
@@ -39,31 +48,35 @@
 <script>
 	import IconBase from './IconBase.vue'
 	import VueScrollActive from 'vue-scrollactive'
+	import navLink from '@/components/navLink.vue'
 	export default {
 		name: 'Navigation',
+		props: {
+			items: Array,
+			reactiveNav: Boolean
+		},
 		data() {
 			return {
 				navheight: 88,
 				activeItem: Object,
-				signetshow: false,
 				spaceBetween: 0,
-				navOpen: false
+				navOpen: false,
+				signetshow: !this.reactiveNav
 			}
 		},
 		computed: {
 			relativePath: function() {
 				if(!this.reactiveNav) {
 					return '../';
+				} else {
+					return '/';
 				}
 			}
 		},
-		props: {
-			items: Array,
-			reactiveNav: Boolean
-		},
 		components: {
 			IconBase,
-			VueScrollActive
+			VueScrollActive,
+			navLink
 		},
 		mounted() {
 			this.navheight = document.getElementById("nav").clientHeight;
@@ -82,14 +95,15 @@
 				this.spaceBetween = secondel.x - (firstel.x + firstel.width);
 			},
   			onItemChanged(event, currentItem, lastActiveItem) {
-  				this.navheight = document.getElementById("nav").clientHeight;
-  				this.activeItem = currentItem;
-  				this.getSpaceBetweenNavItems();
+  				if(this.reactiveNav) {
+  					this.navheight = document.getElementById("nav").clientHeight;
+  					this.activeItem = currentItem;
+  					this.getSpaceBetweenNavItems();
+  				}
   			},
 			/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 			toggleMobileNav() {
-				this.navOpen = !this.navOpen;
-				console.log('cliiick')
+				this.navOpen = !this.navOpen				// console.log('cliiick')
 			}
 		}
 		

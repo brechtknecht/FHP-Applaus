@@ -63,7 +63,7 @@ new Vue({
 							});
 					}
 				}
-				console.log(absolvent);
+				
 				return absolvent;
 			}
 		},

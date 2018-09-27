@@ -26,7 +26,7 @@
 			contentIsGiven: Boolean
 		},
 		mounted() {
-			console.log(this.backgroundImage[0].url);
+			// console.log(this.backgroundImage[0].url);
 		},
 		computed: {
 			backgroundImage: function() {

@@ -1,7 +1,7 @@
 <template>
 	<div class="home">
-		<Header class="header" :content="this.$root.$options.config"></Header>
-		<Navigation :items="this.$root.$options.navigation" reactiveNav></Navigation>
+		<!-- <Header class="header" :content="this.$root.$options.config"></Header> -->
+		<!-- <Navigation :items="this.$root.$options.navigation" reactiveNav></Navigation> -->
 		<Pages :items="this.$root.$options.pages"></Pages>
 	</div>
 </template>

@@ -1,7 +1,7 @@
 <template>
 	<div class="aussteller">
 		<!-- Navigation needs to dont be »ScrollActive« -->
-		<Navigation :items="this.$root.$options.navigation"></Navigation>
+		<!-- <Navigation :items="this.$root.$options.navigation" routerNav></Navigation> -->
 		<Header class="header" :content="aussteller" contentIsGiven></Header>
 		
 		<section class="content-inner">

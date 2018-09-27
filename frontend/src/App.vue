@@ -1,11 +1,25 @@
 <template>
 	<div id="start"  v-resize:debounce="resize" :style="this.$root.themeStyling">
-		 <router-view></router-view>
+		<Header
+			v-show="$route.name == 'home'"
+			class="header" 
+			:content="this.$root.$options.config"
+		/>
+		<Navigation 
+			:items="this.$root.$options.navigation" 
+			:reactiveNav="reactiveNav"
+		/>
+		<transition name="routerTransition">
+			<router-view></router-view>
+		</transition>
 	</div>
 </template>
 
 <script>
 import resize from 'vue-resize-directive'
+import Navigation from '@/components/Nav.vue'
+import Header from '@/components/Header.vue'
+
 export default {
 	name: 'Start',
 	methods: {
@@ -14,20 +28,37 @@ export default {
 			this.$root.viewportWidth = window.innerWidth;
 		}
 	},
+	computed: {
+		reactiveNav: function() {
+			if(this.$route.path == '/') {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	},
+	ready() {
+		console.log(this.$route.name);
+	},
 	directives: {
         resize,
     },
 	components: {
+		Navigation,
+		Header
 	},
 
 }
 
 </script>
 <style lang="scss">
-	// * {
-	// 	transition: all .5s;
-	// }
-	// =======================================
+	.routerTransition-enter-active, .routerTransition-leave-active {
+	  transition: opacity .5s;
+	}
+	.routerTransition-enter, .routerTransition-leave-to {
+	  opacity: 0;
+	}
+
 	body {
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;	
