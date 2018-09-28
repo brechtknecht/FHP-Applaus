@@ -58,7 +58,7 @@ export default {
 	name: 'Aussteller',
 	data() {
 		let _aussteller = this.$root.$options.ausstellung.body.list[this.$route.params.id];
-
+		
 		return {
 				aussteller: _aussteller,
 		}

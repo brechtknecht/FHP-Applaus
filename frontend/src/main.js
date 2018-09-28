@@ -24,8 +24,24 @@ new Vue({
 		viewportWidth: 0
 	},
 	methods: {
-		
+		resize() {
+			this.viewportHeight = window.innerHeight;
+			this.viewportWidth = window.innerWidth;
+		},
 
+		getImageCoverWidth: function(ratioImage, boundingBox_width, boundingBox_height) {
+			let ratioBoundingBox = boundingBox_width / boundingBox_height;
+
+			if(ratioBoundingBox > ratioImage) {
+				var imageWidth = boundingBox_width;
+			}
+			if(ratioBoundingBox <= ratioImage) {
+				var imageWidth = ratioImage * boundingBox_height;	
+			}
+			
+			let viewportWidthUnits = (imageWidth / boundingBox_width) * 100;
+			return viewportWidthUnits+'vw';
+		},
 
 		getAbsolventFullname: function(id) {
 			if( id in this.$options.pages.absolventen.body.list) {
@@ -58,6 +74,9 @@ new Vue({
 		    var keys = Object.keys(obj)
 		    return obj[keys[ keys.length * Math.random() << 0]];
 		}
+	},
+	created() {
+		this.resize();
 	},
 	computed: {
 		themeStyling: function() {

@@ -1,5 +1,5 @@
 <template>
-	<div id="start"  v-resize:debounce="resize" :style="this.$root.themeStyling">
+	<div id="start"  v-resize:debounce="$root.resize" :style="this.$root.themeStyling">
 		<Header
 			v-if="$route.name == 'home'"
 			class="header" 
@@ -23,10 +23,6 @@ import Header from '@/components/Header.vue'
 export default {
 	name: 'Start',
 	methods: {
-		resize() {
-			this.$root.viewportHeight = window.innerHeight;
-			this.$root.viewportWidth = window.innerWidth;
-		}
 	},
 	computed: {
 		reactiveNav: function() {
