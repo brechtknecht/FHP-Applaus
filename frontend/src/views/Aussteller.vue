@@ -152,6 +152,7 @@ export default {
 			@include bp(M) {
 				width: 100%;
 			}
+			
 			& .betreuer {
 				margin-top: 5rem;
 				@include bp(M) { 
