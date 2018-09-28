@@ -58,7 +58,7 @@ export default {
 	name: 'Aussteller',
 	data() {
 		let _aussteller = this.$root.$options.ausstellung.body.list[this.$route.params.id];
-		
+
 		return {
 				aussteller: _aussteller,
 		}
@@ -138,7 +138,7 @@ export default {
 	.body {
 		display: flex;
 		flex-direction: row;
-		@include bp(L) {
+		@include bp(M) {
 			flex-direction: column;
 		}
 	}
@@ -149,12 +149,12 @@ export default {
 		
 		.section {
 			width: 50%;
-			@include bp(L) {
+			@include bp(M) {
 				width: 100%;
 			}
 			& .betreuer {
 				margin-top: 5rem;
-				@include bp(L) { 
+				@include bp(M) { 
 					margin-top: 1.5rem;
 
 				}
@@ -166,7 +166,7 @@ export default {
 			&:first-child {
 				margin-right: .5rem;
 				text-align: right;
-				@include bp(L) {
+				@include bp(M) {
 					text-align: left;
 					margin-left: 1rem;
 					margin-right: 0;

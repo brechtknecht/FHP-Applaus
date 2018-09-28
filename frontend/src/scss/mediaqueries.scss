@@ -12,19 +12,32 @@
 
 
 @mixin bp($point) {
+	@if $point == XXL { // 1024/16
+		@media (max-width: 1699px) { @content; }
+	}
 	@if $point == XL { // 1024/16
-		@media (max-width: 64em) { @content; }
+		@media (max-width: 1219px) { @content; }
 	}
 	@else if $point == L { // 768/16
-		@media (max-width: 48em) { @content; }
+		@media (max-width: 900px) { @content; }
 	}
 	@else if $point == M { // 640/16
-		@media (max-width: 40em)  { @content; }
+		@media (max-width: 768px)  { @content; }
 	}
 	@else if $point == S { // 480/16
-		@media (max-width: 30em)  { @content; }
+		@media (max-width: 660px)  { @content; }
 	}
 	@else if $point == XS { // 320/16
-		@media (max-width: 20em)  { @content; }
+		@media (max-width: 550px)  { @content; }
+	}
+	@else if $point == XXS { // 320/16
+		@media (max-width: 460px)  { @content; }
 	}
 }
+// 1699
+// 1219
+// 900
+// 768
+// 660
+// 550
+// 460

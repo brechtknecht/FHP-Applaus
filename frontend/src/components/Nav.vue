@@ -282,6 +282,8 @@
 	.mobile-toggle {
 		display: none;
 		height: 100%;
+		border: none;
+		cursor: pointer;
 		@media screen and (max-width: 1219px) {
 			display: block;
 		}
