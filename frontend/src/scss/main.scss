@@ -45,6 +45,7 @@ html {
 
 [class*="inner"] {
 	width:1350px;
+	box-sizing: border-box;
 	
 	@media all and (min-width: 769px) and (max-width:1219px) {
 		width: 648px;
@@ -56,6 +57,8 @@ html {
 
 	@media all and (max-width:768px) {
 		width: 100%;
+		padding-left: 2.142857143rem;
+		padding-right: 2.142857143rem;
 	}	
 }
 

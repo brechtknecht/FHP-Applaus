@@ -79,7 +79,8 @@
 		}
 	}
 	section.content-inner {
-		padding: 5.5rem 0 6rem;
+		padding-top: 5.5rem; 
+		padding-bottom: 6rem;
 		margin: 0 auto;
 	}
 

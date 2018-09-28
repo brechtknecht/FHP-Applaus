@@ -28,15 +28,15 @@
 							<div class="absolvent" v-for="(absolvent, index) in absolventen" :key="absolvent.id">
 								<span class="absolventen-name">{{ absolvent.forename }} {{ absolvent.lastname }}</span>
 								<p> 
-									<strong class="content-title">{{ getDegree(absolvent.category) }}</strong>
+									<strong class="content-title">{{ getDegree(absolvent.category) }}</strong>&nbsp;
 									<em>{{ studiengang[++index - 1] }}</em>
 								</p>
 								<p>
-									<strong class="content-title">E-MAIL</strong>
+									<strong class="content-title">E-MAIL</strong>&nbsp;
 									<em><a v-bind:href=" `mailto:${absolvent.email}` ">{{ absolvent.email }}</a></em>
 								</p>
 								<p>
-									<strong class="content-title">WEB</strong>
+									<strong class="content-title">WEB</strong>&nbsp;
 									<em><a v-bind:href="absolvent.website">{{ absolvent.website }}</a></em>
 								</p>
 							</div>
@@ -169,7 +169,7 @@ export default {
 				text-align: right;
 				@include bp(M) {
 					text-align: left;
-					margin-left: 1rem;
+					// margin-left: 1rem;
 					margin-right: 0;
 				}
 				& .forename {
@@ -178,7 +178,7 @@ export default {
 				}
 			}
 			&:last-child {
-				margin-left: 1rem;
+				//margin-left: 1rem;
 				text-align: left;
 			}
 		}
