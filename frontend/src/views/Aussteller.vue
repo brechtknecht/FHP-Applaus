@@ -42,7 +42,15 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section class="content-inner">
+				<div class="images">
 
+				</div>
+				<div class="overview">
+					<h3 class="subtitle">Weitere</h3>
+					<h4 class="small-title">Abschlussarbeiten</h4>
 				</div>
 			</section>
 		</section>
@@ -198,6 +206,9 @@ export default {
 		.authors {
 			.absolvent {
 				margin-bottom: 1.5rem;
+				strong {
+					margin-right: .3rem;
+				}
 			}
 			.absolventen-name {
 				font-feature-settings: "smcp","c2sc";
@@ -216,5 +227,12 @@ export default {
 
 	.author {
 		display: block;
+	}
+
+	.overview {
+		.small-title {
+			font-size: 2.75rem;
+			text-transform: uppercase;
+		}
 	}
 </style>

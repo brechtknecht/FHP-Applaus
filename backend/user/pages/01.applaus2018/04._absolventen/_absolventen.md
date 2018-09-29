@@ -112,6 +112,15 @@ absolventen:
         category: MEMW
         title: 'Der Namenssymbolismus'
         subtitle: 'Symbolismus von Namen und so'
+    -
+        forename: Fiete
+        lastname: Durchfallmann
+        id: 5bae36df50275
+        email: ad@affepenner.com
+        website: 'http://www.affepenner.com'
+        category: KD
+        title: ''
+        subtitle: ''
 template_format: json
 ---
 
