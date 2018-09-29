@@ -183,10 +183,12 @@
 				.vignette {
 					opacity: 1;
 					&:first-child {
-						padding-bottom: 5rem;
+						// padding-bottom: 5rem;
+						margin-top: 1rem;
 					}
 					&:last-child {
-						padding-top: 5rem;
+						// padding-top: 5rem;
+						margin-bottom: 1rem;
 					}
 				}
 				.group {
@@ -198,12 +200,14 @@
 	}
 	.vignette {
 		opacity: 0;
-		transition: padding .4s, opacity .4s;
+		transition: margin .4s, opacity .4s;
 		&:first-child {
-			padding-bottom: 7rem;
+			// padding-bottom: 7rem;
+			margin-top: 0;
 		}
 		&:last-child {
-			padding-top: 7rem;
+			// padding-top: 7rem;
+			margin-bottom: 0;
 		}
 		svg {
 			position: relative;
@@ -214,11 +218,16 @@
 	.beschriftung {
 		position: absolute;
 		z-index: 2;
-		top: 0; left: 0; bottom: 0; right: 0;
+		left: 0; 
+		right: 0;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
 		text-align: center;
+		height: 18.6363rem;
+		top: 50%;
+		margin-top: - 9.31815rem;
+
 		.group {
 			padding: 0 1.25rem;
 			opacity: 0;
