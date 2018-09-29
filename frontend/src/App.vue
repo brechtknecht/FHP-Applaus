@@ -48,6 +48,7 @@ export default {
 
 </script>
 <style lang="scss">
+	@import '@/scss/mediaqueries.scss';
 	@keyframes fading {
 		0% {
 			opacity: 0;
@@ -87,11 +88,14 @@ export default {
 		border-bottom: 1.5rem solid var(--color1);
 		border-right: 1.5rem solid var(--color1);
 		border-left: 1.5rem solid var(--color1);
-
-
 		text-rendering: optimizeLegibility;
 		font-family: abril-text;
 		color: var(--color4);
+
+		@include bp(M) {
+			border: none;
+		}
+
 	}
 
 	h1 {

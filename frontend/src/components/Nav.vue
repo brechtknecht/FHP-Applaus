@@ -143,6 +143,7 @@
 		height: 100%;
 		@media screen and (max-width: 1219px) {
 			width: 100% !important;
+			padding: 0 !important;
 		}
 	}
 	.signet-item {
@@ -282,6 +283,8 @@
 	.mobile-toggle {
 		display: none;
 		height: 100%;
+		border: none;
+		cursor: pointer;
 		@media screen and (max-width: 1219px) {
 			display: block;
 		}

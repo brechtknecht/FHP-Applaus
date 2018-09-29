@@ -18,7 +18,8 @@
 				<router-link 
 					:to="'/aussteller/'+aussteller" 
 					v-for="(aussteller, key) in getAusstellerGroups(item.slug)" 
-					:style="'--y-start:' + grid[item.slug][key].y + '; --x-start:' + grid[item.slug][key].x + '; --y-delta:' + grid[item.slug][key].dy + '; --x-delta:' + grid[item.slug][key].dx" 
+					:style="'--y-start:' + grid[item.slug][key].y + '; --x-start:' + grid[item.slug][key].x + '; --y-delta:' + grid[item.slug][key].dy + '; --x-delta:' + grid[item.slug][key].dx"
+					:key="item.slug"
 					class="article"
 				>
 						<span class="beschriftung">

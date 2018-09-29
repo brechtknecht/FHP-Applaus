@@ -28,15 +28,15 @@
 							<div class="absolvent" v-for="(absolvent, index) in absolventen" :key="absolvent.id">
 								<span class="absolventen-name">{{ absolvent.forename }} {{ absolvent.lastname }}</span>
 								<p> 
-									<strong class="content-title">{{ getDegree(absolvent.category) }}</strong>
+									<strong class="content-title">{{ getDegree(absolvent.category) }}</strong>&nbsp;
 									<em>{{ studiengang[++index - 1] }}</em>
 								</p>
 								<p>
-									<strong class="content-title">E-MAIL</strong>
+									<strong class="content-title">E-MAIL</strong>&nbsp;
 									<em><a v-bind:href=" `mailto:${absolvent.email}` ">{{ absolvent.email }}</a></em>
 								</p>
 								<p>
-									<strong class="content-title">WEB</strong>
+									<strong class="content-title">WEB</strong>&nbsp;
 									<em><a v-bind:href="absolvent.website">{{ absolvent.website }}</a></em>
 								</p>
 							</div>
@@ -66,7 +66,7 @@ export default {
 	name: 'Aussteller',
 	data() {
 		let _aussteller = this.$root.$options.ausstellung.body.list[this.$route.params.id];
-		
+
 		return {
 				aussteller: _aussteller,
 		}
@@ -146,7 +146,7 @@ export default {
 	.body {
 		display: flex;
 		flex-direction: row;
-		@include bp(L) {
+		@include bp(M) {
 			flex-direction: column;
 		}
 	}
@@ -157,12 +157,13 @@ export default {
 		
 		.section {
 			width: 50%;
-			@include bp(L) {
+			@include bp(M) {
 				width: 100%;
 			}
+			
 			& .betreuer {
 				margin-top: 5rem;
-				@include bp(L) { 
+				@include bp(M) { 
 					margin-top: 1.5rem;
 
 				}
@@ -174,9 +175,9 @@ export default {
 			&:first-child {
 				margin-right: .5rem;
 				text-align: right;
-				@include bp(L) {
+				@include bp(M) {
 					text-align: left;
-					margin-left: 1rem;
+					// margin-left: 1rem;
 					margin-right: 0;
 				}
 				& .forename {
@@ -185,7 +186,7 @@ export default {
 				}
 			}
 			&:last-child {
-				margin-left: 1rem;
+				//margin-left: 1rem;
 				text-align: left;
 			}
 		}
