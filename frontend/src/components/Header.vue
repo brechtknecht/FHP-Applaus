@@ -14,8 +14,9 @@
 		<section class="content-inner wide" v-else>
 
 				<div class="group">
-					<div class="author" v-for="(author, index) in content.authors.split(',')" :class="{ colaboration: content.authors.split(',').length > 1 }">
-						<span class="forename">{{$root.getAbsolventFullname(author).forename}} </span><span class="lastname">{{$root.getAbsolventFullname(author).lastname}}</span>
+					<div class="author" v-for="(author, index) in content.authors.split(',')" :class="{ colaboration: isColaboration }">
+						<span class="forename">{{$root.getAbsolventFullname(author).forename}} </span><br v-if="!isColaboration">
+						<span class="lastname">{{$root.getAbsolventFullname(author).lastname}}</span>
 					</div>
 
 				</div>
@@ -39,7 +40,11 @@
 			content: Object,
 			contentIsGiven: Boolean 
 		},
-
+		computed: {
+			isColaboration: function() {
+				return (this.content.authors.split(',').length > 1 ? true : false);
+			}
+		},
 		components: {
 			IconBase,
 			Teaser
@@ -91,11 +96,28 @@
 		.forename {
 			font-size: 5.75rem;
 			font-style: italic;
-			line-height: 1.1em;
+			line-height: 1.1;
 			font-feature-settings: "dlig";
 			animation: fading 1s ease-in .2s backwards;
-			display: block;
-			margin-bottom: .86rem;
+
+			font-family: abril-display,serif;
+			font-weight: 400;
+			text-transform: none;
+			letter-spacing: 0;
+
+			@include bp(M) {
+				font-size: 5.25rem;
+			}
+			@include bp(S) {
+				font-size: 3.75rem;
+			}
+			@include bp(XS) {
+				font-size: 3rem
+			}
+			@include bp(XXS) {
+				font-size: 2.3rem
+			}
+
 		}
 		.lastname {
 			animation: fading 1s ease-in .5s backwards;
@@ -106,15 +128,46 @@
 		    text-transform: uppercase;
 		    letter-spacing: .05em;
 		    font-style: normal;
-		    display: block;		    
+		    
+
+		    @include bp(M) {
+				font-size: 5rem
+			}
+			@include bp(S) {
+				font-size: 3.5rem
+			}
+			@include bp(XS) {
+				font-size: 2.75rem
+			}
+			@include bp(XXS) {
+				font-size: 2.3rem
+			}
+
 		}
 	}
 	.header {
 		display: flex;
+		.group .subtitle, .group .title {
+			margin: 0 auto;
+			width: 750px;
 
+			@include bp(XXL) {
+				width: 37.5rem;
+			}
+			@include bp(XL) {
+				width: 32.142857143rem;
+			}
+			@include bp(M) {
+				width: 80%;
+			}
+			@include bp(XXS) {
+				font-size: 1.375rem;
+			}
+
+		}
 		.group .title {
 			animation: fading 1s ease-in .8s backwards;
-			margin: 3.545454545rem 0 1rem;
+			margin: 3.545454545rem auto 1rem;
 			font-size: 1.5rem;
 			line-height: 1.75rem;
 			color: var(--color3);
@@ -135,6 +188,9 @@
 				font-size: 1.375rem;
 			}
 
+			@include bp(HXXS) {
+				display: none;
+			}
 		}
 	}
 
@@ -146,6 +202,9 @@
 		align-items: center;
 		z-index: 3;
 		position: relative;
+		@include bp(XXS) {
+			padding: 0 1.428571429rem;
+		}
 
 		svg {
 			animation: fading 1s ease-in .5s backwards;

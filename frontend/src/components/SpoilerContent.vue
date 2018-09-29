@@ -46,7 +46,8 @@
 			text-align: left;
 			justify-content: space-between;
 			width: 100%;
-			position: absolute;
+			position: absolute;	
+			
 		}
 		.column {
 		    margin-bottom: 2.5rem;

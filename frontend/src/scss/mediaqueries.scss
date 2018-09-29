@@ -12,10 +12,11 @@
 
 
 @mixin bp($point) {
-	@if $point == XXL { 
+	// 22 px
+	@if $point == XXL { // 16 px
 		@media (max-width: 1699px) { @content; }
 	}
-	@if $point == XL {
+	@if $point == XL { // 14 px
 		@media (max-width: 1219px) { @content; }
 	}
 	@else if $point == L { 
@@ -31,10 +32,10 @@
 		@media (max-width: 550px)  { @content; }
 	}
 	@else if $point == XXS { 
-		@media (max-width: 460px)  { @content; }
+		@media (max-width: 480px)  { @content; }
 	}
-
-		@if $point == min-XXL { 
+	// ================== MIN ======================
+	@if $point == min-XXL { 
 		@media (min-width: 1220px) { @content; }
 	}
 	@if $point == min-XL {
@@ -50,10 +51,34 @@
 		@media (min-width: 551px)  { @content; }
 	}
 	@else if $point == min-XS { 
-		@media (min-width: 461px)  { @content; }
+		@media (min-width: 481px)  { @content; }
 	}
 	@else if $point == min-XXS { 
 		@media (min-width: 320px)  { @content; }
+	}
+
+	// ================== HEIGHT ======================
+
+	// @if $point == XXL { // 16 px
+	// 	@media (max-width: 1699px) { @content; }
+	// }
+	// @if $point == XL { // 14 px
+	// 	@media (max-width: 1219px) { @content; }
+	// }
+	// @else if $point == L { 
+	// 	@media (max-width: 900px) { @content; }
+	// }
+	// @else if $point == M { 
+	// 	@media (max-width: 768px)  { @content; }
+	// }
+	// @else if $point == S { 
+	// 	@media (max-width: 660px)  { @content; }
+	// }
+	@else if $point == HXS { 
+		@media (max-height: 580px)  { @content; }
+	}
+	@else if $point == HXXS { 
+		@media (max-height: 460px)  { @content; }
 	}
 }
 // 1699
