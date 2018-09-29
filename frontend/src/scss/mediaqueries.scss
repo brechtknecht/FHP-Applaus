@@ -53,7 +53,7 @@
 		@media (min-width: 461px)  { @content; }
 	}
 	@else if $point == min-XXS { 
-		@media (min-width: 460px)  { @content; }
+		@media (min-width: 320px)  { @content; }
 	}
 }
 // 1699

@@ -64,7 +64,13 @@
 			z-index: 9;
 			margin-bottom: 2rem;
 			animation: fading 1s ease-in 1.8s backwards;
-			
+
+			@include bp(XL) {
+				width: 100%;
+				padding-left: 2rem;
+				box-sizing: border-box;
+			}
+
 			@include bp(S) {
 				display: none;
 			}
@@ -79,6 +85,10 @@
 				margin: 0;
 				line-height: 0rem;
 				font-style: normal;
+
+				@include bp(XXL) {
+					font-size: .875rem;
+				}
 			}
 			.authors {
 				margin-bottom: 0; 

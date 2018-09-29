@@ -2,7 +2,7 @@
 	<section :id="content.slug" class="wrapper" v-bind:class="IndexMod">
 		<section class="content-inner">
 
-				<h2 v-html="content.headertext" v-if="content.headertext"></h2>
+				<h2 v-html="content.headertext" v-if="content.headertext" :class="content.template"></h2>
 
 				<div class="body" v-if="content.template == 'applaus'">
 
@@ -67,7 +67,9 @@
 
 <style lang="scss">
 	@import '@/scss/mediaqueries.scss';
-
+	h2.applaus {
+		margin-bottom: 3rem;
+	}
 	section.wrapper {
 		// min-height: 100vh;
 		&.landing {

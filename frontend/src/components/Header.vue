@@ -67,7 +67,8 @@
 			height: calc(100vh - 4rem);
 		} 
 		section.content-inner {
-			padding: 0 0 0;
+			padding-top:0;
+			padding-bottom:0;
 		}
 	}
 	.content-inner.wide {
@@ -108,14 +109,6 @@
 		    display: block;		    
 		}
 	}
-
-	svg.signet {
-		fill: var(--color3);
-	}
-	svg.applaus {
-		fill: var(--color3);
-	}
-
 	.header {
 		display: flex;
 
@@ -133,6 +126,15 @@
 		    font-weight: 600;
 		    font-style: italic;
 		    color: var(--color3);
+
+		    @include bp(M) {
+				width: 80%;
+			}
+
+			@include bp(XXS) {
+				font-size: 1.375rem;
+			}
+
 		}
 	}
 
@@ -143,6 +145,7 @@
 		justify-content: center;
 		align-items: center;
 		z-index: 3;
+		position: relative;
 
 		svg {
 			animation: fading 1s ease-in .5s backwards;
@@ -150,16 +153,46 @@
 			animation-direction: forwards;
 		}
 		svg.signet {
-			// width: 13.75rem;
-			height: 7.07rem;
+			width: 13.75rem;
+			height: 7.125rem;
 			margin: -5rem 0 4.3636rem;
 			// padding: 0 0 12.4674286%;
 			animation-delay: 0ms;
+
+			fill: var(--color3);
+
+			@include bp(M) {
+				width: 35%;
+			}
+			@include bp(XS) {
+				width: 45%;
+				height: auto;
+				margin-bottom: 3rem;
+			}
+			@include bp(XXS) {
+				width: 50%;
+			    height: auto;
+			    margin-bottom: 3rem;
+			}
+
 		}
 		svg.applaus {
 			width: 35rem;
 			animation-delay: 600ms;
 			margin: 0 auto 2rem;
+			fill: var(--color3);
+			display: block;
+			position: relative;
+
+			@include bp(M) {
+				width: 75%;
+			}
+			@include bp(S) {
+				width: 74%;
+			}
+			@include bp(XS) {
+				width: 85%;
+			}
 		}
 		&  p {
 			color: var(--color3);
