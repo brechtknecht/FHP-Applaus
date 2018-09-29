@@ -49,6 +49,7 @@ export default {
 </script>
 <style lang="scss">
 	@import '@/scss/mediaqueries.scss';
+	
 	@keyframes fading {
 		0% {
 			opacity: 0;

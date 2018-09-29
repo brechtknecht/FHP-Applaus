@@ -22,8 +22,17 @@
 					:key="item.slug"
 					class="article"
 				>
+					<div class="background">
+						<div class="gradient_changer"/>
+						<div class="gradient"/>
+						 <!-- ATTENTION — ToDo ! Insert media queries here in this img tag! (sizes)  -->
+						<img 
+							:srcset="content.body.list[aussteller].images[0].srcset" 
+							:src="content.body.list[aussteller].images[0].url" 
+							sizes="50vw"
+						>
+					</div>
 						<span class="beschriftung">
-
 								<div class="vignette">
 									<icon-base icon-name="signet-box-top" viewBox="0 0 220 66.621"/>
 								</div>
@@ -42,13 +51,7 @@
 								<div class="vignette">
 									<icon-base icon-name="signet-box-bottom" viewBox="0 0 220 66.621"/>
 								</div>
-
-
 						</span>
-						<div class="gradient_changer"/>
-						<div class="gradient"/>
-						 <!-- ATTENTION — ToDo ! Insert media queries here in this img tag! (sizes)  -->
-						<img :srcset="content.body.list[aussteller].images[0].srcset" :src="content.body.list[aussteller].images[0].url" sizes="50vw"> 	
 				</router-link>
 			</div>
 		</div>
@@ -137,6 +140,9 @@
 </script>
 
 <style lang="scss">
+	@import '@/scss/mediaqueries.scss';
+@include bp(min-L) {
+
 	.grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -170,11 +176,17 @@
 				opacity: 0;
 				transition: opacity .75s;
 			}
-			img {
+			.background {
 				height: 100%;
 				width: 100%;
-				object-fit: cover;
+
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}	
 			}
+
 			&:hover {
 
 				.gradient_changer {
@@ -246,6 +258,41 @@
 			}
 		}
 
+	}
+}
+	@include bp(M) { 
+		.article {
+			border: 0;
+			width: 100%;
+			display: block;
+			.background {
+				padding-bottom: 66.6666%;
+				position: relative;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					position: absolute;
+					z-index: 1;
+				}
+				.gradient {
+					background: linear-gradient(to bottom, var(--gradient_col2-20perc) 0, var(--gradient_col2-20perc) 37%, var(--gradient_col2-35perc) 100%);
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					z-index: 2;
+					display: block;
+				}
+			}
+
+
+			.vignette {
+				display: none;
+			}
+			.gradient {
+				display: none;
+			}
+		}
 	}
 	.category {
 		margin-bottom: 2.727272727rem;

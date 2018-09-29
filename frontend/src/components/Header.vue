@@ -48,11 +48,20 @@
 </script>
 
 <style lang="scss">
+	@import '@/scss/mediaqueries.scss';
+
 	section.wrapper.header {
 		position: relative;
 		height: calc(100vh - 4rem - 1.5rem);
 		overflow: hidden;
 		border-top: 1.5rem solid var(--color1);
+
+		@include bp(XL) {
+			border: none;
+			height: calc(100vh - 4rem);
+			margin-top: 4rem;
+		}
+
 		&.aussteller {
 			border: none;
 			height: calc(100vh - 4rem);

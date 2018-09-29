@@ -45,6 +45,8 @@
 </script>
 
 <style lang="scss">
+	@import '@/scss/mediaqueries.scss';
+
 	.teaser {
 		position: absolute;
 		overflow: hidden;
@@ -62,6 +64,10 @@
 			z-index: 9;
 			margin-bottom: 2rem;
 			animation: fading 1s ease-in 1.8s backwards;
+			
+			@include bp(S) {
+				display: none;
+			}
 			a {
 				text-decoration: none;
 				border: none;

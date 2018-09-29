@@ -121,12 +121,20 @@
 </script>
 
 <style lang="scss">
+	@import '@/scss/mediaqueries.scss';
+
 	.nav-main {
 		--signet-width: 1.954545455rem;
-		@media screen and (max-width: 1699px) {
+
+		@include bp(XXL) {
 			--signet-width: 2.6875rem;
 		}
-		
+		@include bp(XL) {
+			position: fixed;
+		}
+
+		left: 0;
+		right: 0;
 		position: sticky;
 		background: var(--color1);
 		top: 0;

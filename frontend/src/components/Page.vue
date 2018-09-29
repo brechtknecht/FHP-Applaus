@@ -66,6 +66,8 @@
 </script>
 
 <style lang="scss">
+	@import '@/scss/mediaqueries.scss';
+
 	section.wrapper {
 		// min-height: 100vh;
 		&.landing {
@@ -89,14 +91,21 @@
 			// display: grid;
 			// grid-template-columns: 1fr 1fr;
 			// grid-column-gap: 2rem;
-			// word-wrap: break-word;	
+			// word-wrap: break-word;
+
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: row;
 			justify-content: space-between;
+			@include bp(M) {
+				flex-direction: column;
+			}
 
 			.section {
 				width: calc(50% - 2rem);
+				@include bp(M) {
+					width: 100%;
+				}
 			}
 		}
 
