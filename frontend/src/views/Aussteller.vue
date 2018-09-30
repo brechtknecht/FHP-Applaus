@@ -45,11 +45,15 @@
 				</div>
 			</section>
 			<section class="content-inner">
-				<div class="images">
-
+				<div class="images grid">
+					<div class="image" v-for="image in images">
+						<img :srcset="image.srcset"/>
+					</div>
 				</div>
+			</section>
+			<section class="content-inner">
 				<div class="overview">
-					<h3 class="subtitle">Weitere</h3>
+					<h3 class="subtitle dark">Weitere</h3>
 					<h4 class="small-title">Abschlussarbeiten</h4>
 				</div>
 			</section>
@@ -116,6 +120,9 @@ export default {
 				_studiengang.push(_category);
 			});
 			return _studiengang;
+		},
+		images() {
+			return this.aussteller.images;
 		}
 	},
 	components: {
@@ -230,10 +237,27 @@ export default {
 		display: block;
 	}
 
+	.images {
+		.image img{
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
 	.overview {
+		.dark {
+			color: var(--color4);
+			margin-bottom: .75rem;
+		}
 		.small-title {
 			font-size: 2.75rem;
 			text-transform: uppercase;
+			margin-bottom: 3rem;
+			margin-top: 1.75rem;
+			letter-spacing: .05em;
+			text-align: center;
 		}
 	}
+
+
 </style>
