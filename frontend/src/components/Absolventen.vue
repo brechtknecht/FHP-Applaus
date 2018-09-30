@@ -9,9 +9,9 @@
 				<h4><em> {{ item.name }} </em></h4>
 				<div class="subbar short" />
 			</div>
-			<SpoilerContent 
-				:absolventenGroups="getAbsolventenGroups(item.slug)" 
-				:spoilerOpen="spoilerActive[key]" 
+			<SpoilerContent
+				:absolventenGroups="getAbsolventenGroups(item.slug)"
+				:spoilerOpen="spoilerActive[key]"
 				:spoilerID="key"
 				:style="'--fullheight:'+spoilerHeight[key]+'px'"
 			/>
@@ -21,61 +21,59 @@
 </template>
 
 <script>
-	import SpoilerContent from '@/components/SpoilerContent.vue'
-	import IconBase from './IconBase.vue'
-	export default {
-		name: 'Absolventen',
-		data() {
-			return {
-				categories: this.$root.$options.config.categoryorder,
-				spoilerActive: [],
-				spoilerHeight: []
-			}
-		},
-		components: {
-			SpoilerContent,
-			IconBase
-		},
-		props: {
-			content: Object
-		},
-		created: function(){
-			// Testing for getting the correct Keys
-            // console.log(Object.getOwnPropertyNames(this.AbsolventenData.EMW));            
-            // console.log(this.content.body);
+import SpoilerContent from '@/components/SpoilerContent.vue'
+import IconBase from './IconBase.vue'
+export default {
+  name: 'Absolventen',
+  data () {
+    return {
+      categories: this.$root.$options.config.categoryorder,
+      spoilerActive: [],
+      spoilerHeight: []
+    }
+  },
+  components: {
+    SpoilerContent,
+    IconBase
+  },
+  props: {
+    content: Object
+  },
+  created: function () {
+    // Testing for getting the correct Keys
+    // console.log(Object.getOwnPropertyNames(this.AbsolventenData.EMW));
+    // console.log(this.content.body);
 
-		},
-		methods: {
-			toggleSpoiler(key){
-				let height = document.getElementById('spoilercontent-'+key).offsetHeight;
-				this.$set(this.spoilerHeight, key, height);
-				this.$set(this.spoilerActive, key, !this.spoilerActive[key]);
-			},
-			getAbsolventenGroups(category) {
-				if(category == 'MASTER') {
-					var reeturn = Object.assign(this.content.body.groups.MEMW, this.content.body.groups.MD);
-				} else {
-					
-					var reeturn = this.content.body.groups[category];
-					
-				}
-				var groups = {
-					0: {},
-					1: {},
-					2: {},
-					3: {}
-				};
+  },
+  methods: {
+    toggleSpoiler (key) {
+      let height = document.getElementById('spoilercontent-' + key).offsetHeight
+      this.$set(this.spoilerHeight, key, height)
+      this.$set(this.spoilerActive, key, !this.spoilerActive[key])
+    },
+    getAbsolventenGroups (category) {
+      if (category == 'MASTER') {
+        var reeturn = Object.assign(this.content.body.groups.MEMW, this.content.body.groups.MD)
+      } else {
+        var reeturn = this.content.body.groups[category]
+      }
+      var groups = {
+        0: {},
+        1: {},
+        2: {},
+        3: {}
+      }
 
-				Object.keys(reeturn).forEach(function(key) {
-					var absolvent = reeturn[key].toString();
-					groups[key % 4][Object.keys(groups[key % 4]).length] = absolvent;
-				});
+      Object.keys(reeturn).forEach(function (key) {
+        var absolvent = reeturn[key].toString()
+        groups[key % 4][Object.keys(groups[key % 4]).length] = absolvent
+      })
 
-				return groups;
-			}
+      return groups
+    }
 
-		} 
-	}
+  }
+}
 </script>
 
 <style lang="scss">
@@ -141,7 +139,7 @@
 		text-align: center;
 		padding-bottom: 1.1rem;
 		padding-top: 2.6rem;
-		transition: color .25s; 
+		transition: color .25s;
 
 		&:hover {
 			color: var(--color1);
@@ -157,7 +155,7 @@
 			font-size: 1rem;
 			text-decoration: none;
 			margin: 0;
-		} 
+		}
 		& > h4 {
 			font-family: abril-text,serif;
 			font-size: 1rem;
@@ -165,7 +163,7 @@
 			text-decoration: none;
 			line-height: 1.3rem;
 			cursor: pointer;
-			margin: 0; 
+			margin: 0;
 		}
 	}
 </style>

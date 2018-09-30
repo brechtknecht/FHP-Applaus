@@ -10,9 +10,9 @@
 			<ul class="navigation" :class="{ 'nav-open': navOpen }" :style="'--size:' + items.length" @click="toggleMobileNav">
 				<transition name="signethide">
 					<li v-show="showMeSignet" class="signet-item" :style="'--space:'+spaceBetween+'px'">
-						<navLink 
+						<navLink
 							:to="relativePath + '#start'"
-							class="signet-hiding is-active" 
+							class="signet-hiding is-active"
 							:class="{ 'scrollactive-item': reactiveNav }"
 							:reactiveNav="reactiveNav"
 						>
@@ -21,9 +21,9 @@
 					</li>
 				</transition>
 				<li v-for="item in items">
-					<navLink 
-						:to="relativePath+'#'+item.slug" 
-						:title="item.title" 
+					<navLink
+						:to="relativePath+'#'+item.slug"
+						:title="item.title"
 						:class="{ 'scrollactive-item': reactiveNav }"
 					>
 					<span>{{ item.title }}</span>
@@ -46,77 +46,74 @@
 </template>
 
 <script>
-	import IconBase from './IconBase.vue'
-	import VueScrollActive from 'vue-scrollactive'
-	import navLink from '@/components/navLink.vue'
-	export default {
-		name: 'Navigation',
-		props: {
-			items: Array,
-			reactiveNav: Boolean
-		},
-		data() {
-			return {
-				navheight: 88,
-				activeItem: Object,
-				spaceBetween: 0,
-				navOpen: false,
-				signetshow: false
-			}
-		},
-		computed: {
-			showMeSignet: function() {
-				if(this.reactiveNav) {
-					return this.signetshow;
-				} else {
-					return true;
-				}
-			},
-			relativePath: function() {
-				if(!this.reactiveNav) {
-					return '../';
-				} else {
-					return '/';
-				}
-			}
-		},
-		components: {
-			IconBase,
-			VueScrollActive,
-			navLink
-		},
-		mounted() {
-			this.navheight = document.getElementById("nav").clientHeight;
-			this.getSpaceBetweenNavItems();
-		},
-		watch: {
-			activeItem: function(check) {
-					this.signetshow = this.activeItem && !this.activeItem.classList.contains('signet-hiding');
-				
-			}
-		},
-		methods: {
-			getSpaceBetweenNavItems() {
-				var firstel = document.getElementById("FakeNavItem0").getBoundingClientRect();
-				var secondel = document.getElementById("FakeNavItem1").getBoundingClientRect();
-				this.spaceBetween = secondel.x - (firstel.x + firstel.width);
-			},
-  			onItemChanged(event, currentItem, lastActiveItem) {
-  				if(this.reactiveNav) {
-  					this.navheight = document.getElementById("nav").clientHeight;
-  					this.activeItem = currentItem;
-  					this.getSpaceBetweenNavItems();
+import IconBase from './IconBase.vue'
+import VueScrollActive from 'vue-scrollactive'
+import navLink from '@/components/navLink.vue'
+export default {
+  name: 'Navigation',
+  props: {
+    items: Array,
+    reactiveNav: Boolean
+  },
+  data () {
+    return {
+      navheight: 88,
+      activeItem: Object,
+      spaceBetween: 0,
+      navOpen: false,
+      signetshow: false
+    }
+  },
+  computed: {
+    showMeSignet: function () {
+      if (this.reactiveNav) {
+        return this.signetshow
+      } else {
+        return true
+      }
+    },
+    relativePath: function () {
+      if (!this.reactiveNav) {
+        return '../'
+      } else {
+        return '/'
+      }
+    }
+  },
+  components: {
+    IconBase,
+    VueScrollActive,
+    navLink
+  },
+  mounted () {
+    this.navheight = document.getElementById('nav').clientHeight
+    this.getSpaceBetweenNavItems()
+  },
+  watch: {
+    activeItem: function (check) {
+      this.signetshow = this.activeItem && !this.activeItem.classList.contains('signet-hiding')
+    }
+  },
+  methods: {
+    getSpaceBetweenNavItems () {
+      var firstel = document.getElementById('FakeNavItem0').getBoundingClientRect()
+      var secondel = document.getElementById('FakeNavItem1').getBoundingClientRect()
+      this.spaceBetween = secondel.x - (firstel.x + firstel.width)
+    },
+  			onItemChanged (event, currentItem, lastActiveItem) {
+  				if (this.reactiveNav) {
+  					this.navheight = document.getElementById('nav').clientHeight
+  					this.activeItem = currentItem
+  					this.getSpaceBetweenNavItems()
   				}
   			},
-			/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-			toggleMobileNav() {
-				this.navOpen = !this.navOpen				// console.log('cliiick')
-			}
-		}
-		
-	}
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    toggleMobileNav () {
+      this.navOpen = !this.navOpen				// console.log('cliiick')
+    }
+  }
 
-
+}
 
 </script>
 
@@ -177,14 +174,14 @@
  		width: var(--signet-width);
  		margin-left: 0;
  		padding: 0 0 0 0;
- 		opacity: 1;	
+ 		opacity: 1;
 	}
 	.signethide-enter, .signethide-leave-to {
 	 	opacity: 0;
 	 	width: 0;
 	 	margin-left: calc(-3 * var(--signet-width));
 	 	padding: 0 calc(3* var(--signet-width) - var(--space)) 0 0;
-	 	
+
 	}
 		ul {
 		margin: 0;
@@ -198,7 +195,6 @@
 		// transition: max-height .35s ease-out;
 		z-index: 10;
 
-
 		@media screen and (max-width: 1219px) {
 			--height: 2rem;
 			display: block;
@@ -210,7 +206,6 @@
 				height: calc(var(--height) * (var(--size) + 0.5));
 			}
 		}
-
 
 		li {
 			display: inline-block;
@@ -238,7 +233,7 @@
 				height: 100%;
 				font-size: 1.063rem;
 				text-decoration: none;
-				
+
 				span {
 					width: 100%;
 					text-align: center;
@@ -254,7 +249,6 @@
 			}
 		}
 	}
-
 
 	// /* When the screen is less than 1219 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 	// .toggle {
@@ -354,7 +348,7 @@
 	// 	& ul {
 	// 		padding-top: 4rem;
 	// 		padding-bottom: 1rem;
-	// 		flex-direction: column; 
+	// 		flex-direction: column;
 	// 	}
 	// 	& li {
 	// 		display: block;
@@ -369,8 +363,7 @@
 	// 		width: 100%;
 	// 		height: 100%;
 	// 	}
-	// 
+	//
 	// }
-
 
 </style>

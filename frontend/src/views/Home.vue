@@ -13,11 +13,11 @@ import Header from '@/components/Header.vue'
 import ApplausData from '../../public/applaus2018.json'
 
 export default {
-	name: 'home',
-	components: {
-		Navigation,
-		Pages,
-		Header
-	}
+  name: 'home',
+  components: {
+    Navigation,
+    Pages,
+    Header
+  }
 }
 </script>

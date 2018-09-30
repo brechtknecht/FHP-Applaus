@@ -13,11 +13,10 @@
 				</h4>
 			</div>
 
-
 			<div class="grid">
-				<router-link 
-					:to="'/aussteller/'+aussteller" 
-					v-for="(aussteller, key) in getAusstellerGroups(item.slug)" 
+				<router-link
+					:to="'/aussteller/'+aussteller"
+					v-for="(aussteller, key) in getAusstellerGroups(item.slug)"
 					:style="'--y-start:' + grid[item.slug][key].y + '; --x-start:' + grid[item.slug][key].x + '; --y-delta:' + grid[item.slug][key].dy + '; --x-delta:' + grid[item.slug][key].dx"
 					:key="item.slug"
 					class="article"
@@ -26,9 +25,9 @@
 						<div class="gradient_changer"/>
 						<div class="gradient"/>
 						 <!-- ATTENTION — ToDo ! Insert media queries here in this img tag! (sizes)  -->
-						<img 
-							:srcset="content.body.list[aussteller].images[0].srcset" 
-							:src="content.body.list[aussteller].images[0].url" 
+						<img
+							:srcset="content.body.list[aussteller].images[0].srcset"
+							:src="content.body.list[aussteller].images[0].url"
 							sizes="50vw"
 						>
 					</div>
@@ -47,7 +46,7 @@
 										{{ content.body.list[aussteller].title }}
 									</em>
 								</div>
-								
+
 								<div class="vignette">
 									<icon-base icon-name="signet-box-bottom" viewBox="0 0 220 66.621"/>
 								</div>
@@ -59,83 +58,83 @@
 </template>
 
 <script>
-	import IconBase from './IconBase.vue'
-	
-	export default {
-	name: 'Aussteler',
-	data() {
-		return {
-			grid: {
-				"ID": {
-					0: {
-						x: 1,
-						y: 1,
-						dx: 2,
-						dy: 1
-					},
-				},
-				"PD": {
-					0: {
-						x: 1,
-						y: 1,
-						dx: 2,
-						dy: 2
-					},
-				},
-				"KD": {
-					0: {
-						x: 1,
-						y: 1,
-						dx: 2,
-						dy: 2
-					},
-				},
-				"EMW": {
-					0: {
-						x: 1,
-						y: 1,
-						dx: 2,
-						dy: 2
-					},
-				},
-				"MASTER": {
-					0: {
-						x: 1,
-						y: 1,
-						dx: 2,
-						dy: 2
-					},
-					1: {
-						x: 3,
-						y: 1,
-						dx: 1,
-						dy: 2
-					},
-					2: {
-						x: 4,
-						y: 1,
-						dx: 1,
-						dy: 2
-					},
-				}
-			}
-		}
-	},
-	components: {
-		IconBase
-	},
-	props: {
-		content: Object,
-	},
-	methods: {
-		getAusstellerGroups(category) {
-			if(category == 'MASTER') {
-				return this.content.body.groups.MEMW.concat(this.content.body.groups.MD);
-			} else {
-				return this.content.body.groups[category];
-			}
-		}
-	}
+import IconBase from './IconBase.vue'
+
+export default {
+  name: 'Aussteler',
+  data () {
+    return {
+      grid: {
+        'ID': {
+          0: {
+            x: 1,
+            y: 1,
+            dx: 2,
+            dy: 1
+          }
+        },
+        'PD': {
+          0: {
+            x: 1,
+            y: 1,
+            dx: 2,
+            dy: 2
+          }
+        },
+        'KD': {
+          0: {
+            x: 1,
+            y: 1,
+            dx: 2,
+            dy: 2
+          }
+        },
+        'EMW': {
+          0: {
+            x: 1,
+            y: 1,
+            dx: 2,
+            dy: 2
+          }
+        },
+        'MASTER': {
+          0: {
+            x: 1,
+            y: 1,
+            dx: 2,
+            dy: 2
+          },
+          1: {
+            x: 3,
+            y: 1,
+            dx: 1,
+            dy: 2
+          },
+          2: {
+            x: 4,
+            y: 1,
+            dx: 1,
+            dy: 2
+          }
+        }
+      }
+    }
+  },
+  components: {
+    IconBase
+  },
+  props: {
+    content: Object
+  },
+  methods: {
+    getAusstellerGroups (category) {
+      if (category == 'MASTER') {
+        return this.content.body.groups.MEMW.concat(this.content.body.groups.MD)
+      } else {
+        return this.content.body.groups[category]
+      }
+    }
+  }
 }
 </script>
 
@@ -151,7 +150,7 @@
 		grid-row-gap: 2.272727273rem;
 		width: 100%;
 		box-sizing: border-box;
-		.article {	
+		.article {
 			grid-column-start: var(--x-start);
 			grid-column-end: span var(--x-delta);
 			grid-row-start: var(--y-start);
@@ -184,7 +183,7 @@
 					height: 100%;
 					width: 100%;
 					object-fit: cover;
-				}	
+				}
 			}
 
 			&:hover {
@@ -226,11 +225,11 @@
 			width: 5.625rem;
 			margin: 0 auto;
 		}
-	}	
+	}
 	.beschriftung {
 		position: absolute;
 		z-index: 2;
-		left: 0; 
+		left: 0;
 		right: 0;
 		display: flex;
 		flex-direction: column;
@@ -260,7 +259,7 @@
 
 	}
 }
-	@include bp(M) { 
+	@include bp(M) {
 		.article {
 			border: 0;
 			width: 100%;
@@ -284,7 +283,6 @@
 					display: block;
 				}
 			}
-
 
 			.vignette {
 				display: none;
@@ -310,7 +308,7 @@
 				font-size: 1rem;
 				text-decoration: none;
 				margin: 0;
-			} 
+			}
 			h4 {
 				font-family: abril-text,serif;
 				font-size: 1rem;
@@ -318,7 +316,7 @@
 				text-decoration: none;
 				line-height: 1.3rem;
 				// cursor: pointer;
-				margin: 0; 
+				margin: 0;
 			}
 		}
 	}

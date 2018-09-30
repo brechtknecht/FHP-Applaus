@@ -20,27 +20,27 @@
 </template>
 
 <script>
-	export default {
-		props: {
-			content: Array,
-			contentIsGiven: Boolean
-		},
-		mounted() {
-			// console.log(this.backgroundImage[0].url);
-		},
-		computed: {
-			backgroundImage: function() {
-				if(this.contentIsGiven) {
-					return this.content;
-				} else {
-					return this.teaser.images;
-				}
-			},
-			teaser: function() {
-				return this.$root.randomProperty(this.$root.$options.pages.ausstellung.body.list);
-			}
-		}
-	}
+export default {
+  props: {
+    content: Array,
+    contentIsGiven: Boolean
+  },
+  mounted () {
+    // console.log(this.backgroundImage[0].url);
+  },
+  computed: {
+    backgroundImage: function () {
+      if (this.contentIsGiven) {
+        return this.content
+      } else {
+        return this.teaser.images
+      }
+    },
+    teaser: function () {
+      return this.$root.randomProperty(this.$root.$options.pages.ausstellung.body.list)
+    }
+  }
+}
 
 </script>
 
@@ -53,10 +53,8 @@
 		top: 0; left: 0; bottom: 0; right: 0;
 		box-sizing: border-box;
 		display: flex;
-		flex-direction: column; 
+		flex-direction: column;
 		justify-content: flex-end;
-
-
 
 		.meta-data-inner {
 			margin: 0 auto;
@@ -91,7 +89,7 @@
 				}
 			}
 			.authors {
-				margin-bottom: 0; 
+				margin-bottom: 0;
 			}
 			.authors span {
 				text-transform: uppercase;

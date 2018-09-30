@@ -5,16 +5,16 @@
 </template>
 
 <script>
-	import Page from '@/components/Page.vue'
-	
-	export default {
-		name: 'Pages',
+import Page from '@/components/Page.vue'
 
-		components: {
-			Page
-		},
-		props: {
-			items: Object
-		}
-	}
+export default {
+  name: 'Pages',
+
+  components: {
+    Page
+  },
+  props: {
+    items: Object
+  }
+}
 </script>

@@ -13,19 +13,19 @@
 	</div>
 </template>
 <script>
-	import Absolvent from '@/components/Absolvent.vue'
+import Absolvent from '@/components/Absolvent.vue'
 
-	export default {
-		name: 'spoilerContent',
-		props: {
-			absolventenGroups: Object,
-			spoilerOpen: Boolean,
-			spoilerID: String
-		},
-		components: {
-			Absolvent
-		}
-	}
+export default {
+  name: 'spoilerContent',
+  props: {
+    absolventenGroups: Object,
+    spoilerOpen: Boolean,
+    spoilerID: String
+  },
+  components: {
+    Absolvent
+  }
+}
 </script>
 <style lang="scss">
 	.spoilerActive .content {
@@ -46,8 +46,8 @@
 			text-align: left;
 			justify-content: space-between;
 			width: 100%;
-			position: absolute;	
-			
+			position: absolute;
+
 		}
 		.column {
 		    margin-bottom: 2.5rem;
@@ -56,6 +56,6 @@
 		    div {
 		    	margin-top: 2rem;
 		    }
-		}		
+		}
 	}
 </style>

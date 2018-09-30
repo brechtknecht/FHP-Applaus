@@ -5,7 +5,7 @@
 
 				<icon-base icon-name="signet" viewBox="0 0 300 155" />
 
-				<div class="group">				
+				<div class="group">
 					<icon-base icon-name="applaus" viewBox="0 0 234 36.5" />
 					<p class="sub-title" v-html="content.headertext" />
 				</div>
@@ -21,7 +21,7 @@
 
 				</div>
 
-				<div class="group">				
+				<div class="group">
 					<h2 class="title">{{content.title}}</h2>
 					<h3 class="subtitle">{{content.subtitle}}</h3>
 				</div>
@@ -32,24 +32,24 @@
 </template>
 
 <script>
-	import IconBase from './IconBase.vue'
-	import Teaser from './Teaser.vue'
-	export default {
-		name: 'Page',
-		props: {
-			content: Object,
-			contentIsGiven: Boolean 
-		},
-		computed: {
-			isColaboration: function() {
-				return (this.content.authors.split(',').length > 1 ? true : false);
-			}
-		},
-		components: {
-			IconBase,
-			Teaser
-		}
-	}
+import IconBase from './IconBase.vue'
+import Teaser from './Teaser.vue'
+export default {
+  name: 'Page',
+  props: {
+    content: Object,
+    contentIsGiven: Boolean
+  },
+  computed: {
+    isColaboration: function () {
+      return (this.content.authors.split(',').length > 1)
+    }
+  },
+  components: {
+    IconBase,
+    Teaser
+  }
+}
 </script>
 
 <style lang="scss">
@@ -70,7 +70,7 @@
 		&.aussteller {
 			border: none;
 			height: calc(100vh - 4rem);
-		} 
+		}
 		section.content-inner {
 			padding-top:0;
 			padding-bottom:0;
@@ -128,7 +128,6 @@
 		    text-transform: uppercase;
 		    letter-spacing: .05em;
 		    font-style: normal;
-		    
 
 		    @include bp(M) {
 				font-size: 5rem

@@ -8,11 +8,11 @@
 </template>
 
 <script>
-	export default {
-		props: {
-			content: Object
-		}
-	}
+export default {
+  props: {
+    content: Object
+  }
+}
 
 </script>
 

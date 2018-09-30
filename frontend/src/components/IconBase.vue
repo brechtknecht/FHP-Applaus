@@ -9,30 +9,30 @@
 </template>
 
 <script>
-	import IconSignet from '../icons/IconSignet.vue'
-	import IconApplaus from '../icons/IconApplaus.vue'
-	import IconSignetNav from '../icons/IconSignetNav.vue'
-	import IconSignetBoxBottom from '../icons/IconSignetBoxBottom.vue'
-	import IconSignetBoxTop from '../icons/IconSignetBoxTop.vue'
-	import IconArrowDown from '../icons/IconArrowDown.vue'
-	export default {
-		props: {
-			iconName: {
-				type: String,
-				default: 'box'
-			},
-			viewBox: {
-				type: [Number, String],
-				default: "0 0 1 1"
-			}
-		},
-		components: {
-			IconApplaus,
-			IconSignet,
-			IconSignetNav,
-			IconSignetBoxBottom,
-			IconSignetBoxTop,
-			IconArrowDown
-		}
-	}
+import IconSignet from '../icons/IconSignet.vue'
+import IconApplaus from '../icons/IconApplaus.vue'
+import IconSignetNav from '../icons/IconSignetNav.vue'
+import IconSignetBoxBottom from '../icons/IconSignetBoxBottom.vue'
+import IconSignetBoxTop from '../icons/IconSignetBoxTop.vue'
+import IconArrowDown from '../icons/IconArrowDown.vue'
+export default {
+  props: {
+    iconName: {
+      type: String,
+      default: 'box'
+    },
+    viewBox: {
+      type: [Number, String],
+      default: '0 0 1 1'
+    }
+  },
+  components: {
+    IconApplaus,
+    IconSignet,
+    IconSignetNav,
+    IconSignetBoxBottom,
+    IconSignetBoxTop,
+    IconArrowDown
+  }
+}
 </script>

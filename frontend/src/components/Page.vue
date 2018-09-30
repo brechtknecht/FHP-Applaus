@@ -15,7 +15,7 @@
 
 				<div v-if="content.template == 'ausstellung'">
 					<aussteller :content="content"></aussteller>
-				</div>	
+				</div>
 
 				<!-- Use var absolventen — less data! Also you have check if the user is ausstelling or not.  -->
 				<!-- When not, the title is saved directly to the absolventen page — when the user is a aussteller you have to look at the absolventen object  -->
@@ -34,35 +34,34 @@
 </template>
 
 <script>
-	import Aussteller from '@/components/Aussteller.vue'
-	import Absolventen from '@/components/Absolventen.vue'
-	import Kontakt from '@/components/Kontakt.vue'
+import Aussteller from '@/components/Aussteller.vue'
+import Absolventen from '@/components/Absolventen.vue'
+import Kontakt from '@/components/Kontakt.vue'
 
-	export default {
-		name: 'Page',
-		props: {
-			content: Object
-		},
-		components: {
-			Aussteller,
-			Absolventen,
-			Kontakt
-		},
-		computed: {
-			IndexMod: function() {
-				var state = this.$vnode.key % 2;
-				if(state < 1 ) {
-					return "bg-dark";
-				} else {
-					return "bg-light";
-				}
-				
-			}
-		},
-		created: function(){
-			
-		}
-	}
+export default {
+  name: 'Page',
+  props: {
+    content: Object
+  },
+  components: {
+    Aussteller,
+    Absolventen,
+    Kontakt
+  },
+  computed: {
+    IndexMod: function () {
+      var state = this.$vnode.key % 2
+      if (state < 1) {
+        return 'bg-dark'
+      } else {
+        return 'bg-light'
+      }
+    }
+  },
+  created: function () {
+
+  }
+}
 </script>
 
 <style lang="scss">
@@ -83,7 +82,7 @@
 		}
 	}
 	section.content-inner {
-		padding-top: 5.5rem; 
+		padding-top: 5.5rem;
 		padding-bottom: 6rem;
 		margin: 0 auto;
 	}

@@ -7,15 +7,15 @@
 			<section class="content-inner">
 
 				<div class="body">
-					
+
 					<div class="section">
 						<span class="content-title"> {{ aussteller.title }} </span>
 						<span class="content-subtitle"> {{ aussteller.subtitle }} </span>
 
 						<div class="betreuer">
 								<span class="content-title">Betreuer</span>
-								<em v-for="betreuer in betreuer" :key="betreuer.id"> 
-									{{ betreuer }} 
+								<em v-for="betreuer in betreuer" :key="betreuer.id">
+									{{ betreuer }}
 								</em>
 							</div>
 					</div>
@@ -27,7 +27,7 @@
 						<div class="authors">
 							<div class="absolvent" v-for="(absolvent, index) in absolventen" :key="absolvent.id">
 								<span class="absolventen-name">{{ absolvent.forename }} {{ absolvent.lastname }}</span>
-								<p> 
+								<p>
 									<strong class="content-title">{{ getDegree(absolvent.category) }}</strong>&nbsp;
 									<em>{{ studiengang[++index - 1] }}</em>
 								</p>
@@ -67,85 +67,85 @@ import Header from '@/components/Header.vue'
 import ApplausData from '../../public/applaus2018.json'
 
 export default {
-	name: 'Aussteller',
-	data() {
-		let _aussteller = this.$root.$options.ausstellung.body.list[this.$route.params.id];
+  name: 'Aussteller',
+  data () {
+    let _aussteller = this.$root.$options.ausstellung.body.list[this.$route.params.id]
 
-		return {
-				aussteller: _aussteller,
-		}
-	},
-	computed: {
-		absolventen(){
-			let _aussteller = this.aussteller;
-			let _ref = _aussteller.authors.split(',');
-			let _absolventen = [];
+    return {
+      aussteller: _aussteller
+    }
+  },
+  computed: {
+    absolventen () {
+      let _aussteller = this.aussteller
+      let _ref = _aussteller.authors.split(',')
+      let _absolventen = []
 
-			_ref.forEach(function(key){
-				_absolventen.push(this.$root.getAbsolvent(key));
-			}, this.$root);
+      _ref.forEach(function (key) {
+        _absolventen.push(this.$root.getAbsolvent(key))
+      }, this.$root)
 
-			return _absolventen;
-		},
-		betreuer(){
-			let _aussteller = this.aussteller;
-			let _betreuer = _aussteller.supervisors.split(',');
+      return _absolventen
+    },
+    betreuer () {
+      let _aussteller = this.aussteller
+      let _betreuer = _aussteller.supervisors.split(',')
 
-			return _betreuer;
-		},
-		studiengang(){
-			let _studiengang = [];
-			this.absolventen.forEach(function(absolvent){
-				let _category = absolvent.category;
-				switch(_category) {
-					case "ID":
-						_category ="Interfacedesign"
-						break;
-					case "KD":
-						_category ="Kommunikationsdesgin"
-						break;
-					case "PD":
-						_category ="Produktdesign"
-						break;
-					case "MD":
-						_category ="Desgin"
-						break;
-					case "EMW":
-						_category ="Europäische Medienwissenschaften"
-						break;
-					case "MEMW":
-						_category ="Europäische Medienwissenschaften"
-						break;
-				}
-				_studiengang.push(_category);
-			});
-			return _studiengang;
-		},
-		images() {
-			return this.aussteller.images;
-		}
-	},
-	components: {
-		Navigation,
-		Header
-	},
-	methods: {
-		getDegree: function(category) {
-			switch(category) {
-					case "ID":
-					case "KD":
-					case "PD":
-					case "EMW":
-						return "BA";
-						break;
-						
-					case "MD":
-					case "MEMW":
-						return "MASTER";
-						break;
-				}
-		}
-	}
+      return _betreuer
+    },
+    studiengang () {
+      let _studiengang = []
+      this.absolventen.forEach(function (absolvent) {
+        let _category = absolvent.category
+        switch (_category) {
+          case 'ID':
+            _category = 'Interfacedesign'
+            break
+          case 'KD':
+            _category = 'Kommunikationsdesgin'
+            break
+          case 'PD':
+            _category = 'Produktdesign'
+            break
+          case 'MD':
+            _category = 'Desgin'
+            break
+          case 'EMW':
+            _category = 'Europäische Medienwissenschaften'
+            break
+          case 'MEMW':
+            _category = 'Europäische Medienwissenschaften'
+            break
+        }
+        _studiengang.push(_category)
+      })
+      return _studiengang
+    },
+    images () {
+      return this.aussteller.images
+    }
+  },
+  components: {
+    Navigation,
+    Header
+  },
+  methods: {
+    getDegree: function (category) {
+      switch (category) {
+        case 'ID':
+        case 'KD':
+        case 'PD':
+        case 'EMW':
+          return 'BA'
+          break
+
+        case 'MD':
+        case 'MEMW':
+          return 'MASTER'
+          break
+      }
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -161,16 +161,16 @@ export default {
 		background: var(--color5);
 	}
 	.aussteller {
-		
+
 		.section {
 			width: 50%;
 			@include bp(M) {
 				width: 100%;
 			}
-			
+
 			& .betreuer {
 				margin-top: 5rem;
-				@include bp(M) { 
+				@include bp(M) {
 					margin-top: 1.5rem;
 
 				}
@@ -258,6 +258,5 @@ export default {
 			text-align: center;
 		}
 	}
-
 
 </style>

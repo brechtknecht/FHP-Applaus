@@ -5,7 +5,7 @@ import Aussteller from './views/Aussteller.vue'
 
 Vue.use(Router)
 
-export default new Router ({
+export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -20,11 +20,11 @@ export default new Router ({
       component: Aussteller
     }
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior (to, from, savedPosition) {
   	 if (to.hash) {
-            return {selector: to.hash}
-        } else {
-            return { x: 0, y: 0 }
-        }
+      return { selector: to.hash }
+    } else {
+      return { x: 0, y: 0 }
+    }
   }
 })

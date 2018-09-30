@@ -9,11 +9,11 @@
 	</router-link>
 </template>
 <script>
-	export default {
+export default {
 
-		props: {
-			reactiveNav: Boolean,
-			to: String
-		}
-	}
+  props: {
+    reactiveNav: Boolean,
+    to: String
+  }
+}
 </script>

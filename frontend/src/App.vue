@@ -2,11 +2,11 @@
 	<div id="start"  v-resize:debounce="$root.resize" :style="this.$root.themeStyling">
 		<Header
 			v-if="$route.name == 'home'"
-			class="header" 
+			class="header"
 			:content="this.$root.$options.config"
 		/>
-		<Navigation 
-			:items="this.$root.$options.navigation" 
+		<Navigation
+			:items="this.$root.$options.navigation"
 			:reactiveNav="reactiveNav"
 		/>
 		<!-- <transition name="routerTransition"> -->
@@ -21,28 +21,28 @@ import Navigation from '@/components/Nav.vue'
 import Header from '@/components/Header.vue'
 
 export default {
-	name: 'Start',
-	methods: {
-	},
-	computed: {
-		reactiveNav: function() {
-			if(this.$route.path == '/') {
-				return true;
-			} else {
-				return false;
-			}
-		}
-	},
-	ready() {
-		console.log(this.$route.name);
-	},
-	directives: {
-        resize,
-    },
-	components: {
-		Navigation,
-		Header
-	},
+  name: 'Start',
+  methods: {
+  },
+  computed: {
+    reactiveNav: function () {
+      if (this.$route.path == '/') {
+        return true
+      } else {
+        return false
+      }
+    }
+  },
+  ready () {
+    console.log(this.$route.name)
+  },
+  directives: {
+    resize
+  },
+  components: {
+    Navigation,
+    Header
+  }
 
 }
 
@@ -79,10 +79,9 @@ export default {
 		opacity: 1;
 	 }
 
-
 	body {
 		text-rendering: optimizeLegibility;
-		-webkit-font-smoothing: antialiased;	
+		-webkit-font-smoothing: antialiased;
 	}
 
 	#start {
