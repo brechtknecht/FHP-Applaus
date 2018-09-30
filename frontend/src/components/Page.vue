@@ -2,7 +2,7 @@
 	<section :id="content.slug" class="wrapper" v-bind:class="IndexMod">
 		<section class="content-inner">
 
-				<h2 v-html="content.headertext" v-if="content.headertext"></h2>
+				<h2 v-html="content.headertext" v-if="content.headertext" :class="content.template"></h2>
 
 				<div class="body" v-if="content.template == 'applaus'">
 
@@ -66,6 +66,10 @@
 </script>
 
 <style lang="scss">
+	@import '@/scss/mediaqueries.scss';
+	h2.applaus {
+		margin-bottom: 3rem;
+	}
 	section.wrapper {
 		// min-height: 100vh;
 		&.landing {
@@ -89,14 +93,21 @@
 			// display: grid;
 			// grid-template-columns: 1fr 1fr;
 			// grid-column-gap: 2rem;
-			// word-wrap: break-word;	
+			// word-wrap: break-word;
+
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: row;
 			justify-content: space-between;
+			@include bp(M) {
+				flex-direction: column;
+			}
 
 			.section {
 				width: calc(50% - 2rem);
+				@include bp(M) {
+					width: 100%;
+				}
 			}
 		}
 

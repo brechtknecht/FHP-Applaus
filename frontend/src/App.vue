@@ -49,6 +49,7 @@ export default {
 </script>
 <style lang="scss">
 	@import '@/scss/mediaqueries.scss';
+
 	@keyframes fading {
 		0% {
 			opacity: 0;
@@ -111,6 +112,9 @@ export default {
 		margin-bottom: 1rem;
 		margin-top: 0;
 		letter-spacing: .15rem;
+		@include bp(XXS) {
+			font-size: 2.25rem;
+		}
 	}
 
 	h4 {
