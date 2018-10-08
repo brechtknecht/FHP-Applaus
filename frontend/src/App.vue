@@ -146,7 +146,7 @@ export default {
 		text-transform: uppercase;
 		letter-spacing: .05em;
 
-		margin: .136363636rem 0 0;
+		margin: .363636364rem 0 0;
 	}
 
 	a {

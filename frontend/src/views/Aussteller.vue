@@ -180,7 +180,7 @@ export default {
 				}
 			}
 			&:first-child {
-				margin-right: .5rem;
+				margin-right: 2.272727273rem;
 				text-align: right;
 				@include bp(M) {
 					text-align: left;

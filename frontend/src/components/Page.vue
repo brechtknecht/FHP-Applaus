@@ -4,7 +4,7 @@
 
 				<h2 v-html="content.headertext" v-if="content.headertext" :class="content.template"></h2>
 
-				<div class="body" v-if="content.template == 'applaus'">
+				<div class="body" v-if="content.template == 'applaus' || content.template == 'programm'">
 
 					<div class="section" v-for="section in content.body" :key="section.template">
 						<h4 v-if="section.name" v-html="section.name" ></h4>
@@ -16,10 +16,6 @@
 				<div v-if="content.template == 'ausstellung'">
 					<aussteller :content="content"></aussteller>
 				</div>
-
-				<!-- Use var absolventen — less data! Also you have check if the user is ausstelling or not.  -->
-				<!-- When not, the title is saved directly to the absolventen page — when the user is a aussteller you have to look at the absolventen object  -->
-				<!-- example: aussteller.vue -->
 
 				<div v-else-if="content.template == 'absolventen'">
 					<Absolventen :content="content"></Absolventen>
@@ -96,14 +92,15 @@ export default {
 
 			display: flex;
 			flex-wrap: wrap;
-			flex-direction: row;
+			flex-direction: column wrap;
+			// align-content: stretch;
 			justify-content: space-between;
 			@include bp(M) {
 				flex-direction: column;
 			}
 
 			.section {
-				width: calc(50% - 2rem);
+				width: calc(50% - 1.136363636rem);
 				@include bp(M) {
 					width: 100%;
 				}

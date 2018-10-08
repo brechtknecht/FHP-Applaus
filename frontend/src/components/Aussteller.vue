@@ -18,7 +18,7 @@
 					:to="'/aussteller/'+aussteller"
 					v-for="(aussteller, key) in getAusstellerGroups(item.slug)"
 					:style="'--y-start:' + grid[item.slug][key].y + '; --x-start:' + grid[item.slug][key].x + '; --y-delta:' + grid[item.slug][key].dy + '; --x-delta:' + grid[item.slug][key].dx"
-					:key="item.slug"
+					:key="item.slug + key "
 					class="article"
 				>
 					<div class="background">
@@ -74,48 +74,90 @@ export default {
           }
         },
         'PD': {
-          0: {
-            x: 1,
-            y: 1,
-            dx: 2,
-            dy: 2
-          }
+	        0: {
+	            x: 1,
+	            y: 1,
+	            dx: 2,
+	            dy: 2
+	        },
+	        1: {
+	            x: 3,
+	            y: 1,
+	            dx: 1,
+	            dy: 2
+	        },
+			2: {
+				x: 4,
+				y: 1,
+				dx: 1,
+				dy: 2
+			}
         },
         'KD': {
-          0: {
-            x: 1,
-            y: 1,
-            dx: 2,
-            dy: 2
-          }
+	        0: {
+	            x: 1,
+	            y: 1,
+	            dx: 2,
+	            dy: 2
+	        },
+	        1: {
+	            x: 3,
+	            y: 1,
+	            dx: 1,
+	            dy: 2
+	        },
+			2: {
+				x: 4,
+				y: 1,
+				dx: 1,
+				dy: 2
+			}
         },
         'EMW': {
-          0: {
-            x: 1,
-            y: 1,
-            dx: 2,
-            dy: 2
-          }
+	        0: {
+	            x: 1,
+	            y: 1,
+	            dx: 2,
+	            dy: 2
+	        },
+	        1: {
+	            x: 3,
+	            y: 1,
+	            dx: 1,
+	            dy: 2
+	        },
+			2: {
+				x: 4,
+				y: 1,
+				dx: 1,
+				dy: 2
+			}
         },
         'MASTER': {
-          0: {
-            x: 1,
-            y: 1,
-            dx: 2,
-            dy: 2
-          },
-          1: {
-            x: 3,
-            y: 1,
-            dx: 1,
-            dy: 2
-          },
-          2: {
-            x: 4,
-            y: 1,
-            dx: 1,
-            dy: 2
-          }
+	        0: {
+	            x: 1,
+	            y: 1,
+	            dx: 2,
+	            dy: 2
+	        },
+	        1: {
+	            x: 3,
+	            y: 1,
+	            dx: 1,
+	            dy: 2
+	        },
+			2: {
+				x: 4,
+				y: 1,
+				dx: 1,
+				dy: 2
+			},
+			3: {
+				x: 5,
+				y: 3,
+				dx: 1,
+				dy: 2
+			}
         }
       }
     }
