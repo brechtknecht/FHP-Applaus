@@ -1,15 +1,16 @@
 <template>
 	<section :id="content.slug" class="wrapper" v-bind:class="IndexMod">
 		<section class="content-inner">
-
+				
 				<h2 v-html="content.headertext" v-if="content.headertext" :class="content.template"></h2>
 
 				<div class="body" v-if="content.template == 'applaus' || content.template == 'programm'">
-
-					<div class="section" v-for="section in content.body" :key="section.template">
-						<h4 v-if="section.name" v-html="section.name" ></h4>
+					
+					
+					<div class="section" :class="section.name" v-for="section in content.body" :key="section.template">
 						<div class="text" v-html="section.content"></div>
 					</div>
+				
 
 				</div>
 
@@ -45,6 +46,24 @@ export default {
     Kontakt
   },
   computed: {
+  	getContentColums: function() {
+  		var stColumn = []; // First Column
+  		var scColumn = []; // Second Column
+
+  		this.content.body.forEach(function(item, index) {
+  			// console.log((index % 2));
+  			if((index % 2) > 0) {
+  				scColumn.push(item);
+  			} else {
+  				stColumn.push(item);
+  			}
+  			// console.log(item, index);
+  		});
+  		return {
+  			0: stColumn,
+  			1: scColumn
+  		}
+  	},
     IndexMod: function () {
       var state = this.$vnode.key % 2
       if (state < 1) {
@@ -84,26 +103,43 @@ export default {
 	}
 
 		#applaus > section > .body {
-			// Use Flexbox here -> original layout
-			// display: grid;
-			// grid-template-columns: 1fr 1fr;
-			// grid-column-gap: 2rem;
-			// word-wrap: break-word;
-
+			
 			display: flex;
 			flex-wrap: wrap;
-			flex-direction: column wrap;
-			// align-content: stretch;
+			flex-direction: row;
 			justify-content: space-between;
+			position: relative;
+
 			@include bp(M) {
 				flex-direction: column;
 			}
 
 			.section {
 				width: calc(50% - 1.136363636rem);
+
 				@include bp(M) {
 					width: 100%;
 				}
+
+				&:nth-child(4) {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+
+					@include bp(M) {
+						position: inherit;
+					}
+				}
+
+				@include bp(M) {
+					&:nth-child(2) {
+						order: 98;
+					}
+					&:nth-child(3) {
+						order: 99;
+					}
+				}
+
 			}
 		}
 
