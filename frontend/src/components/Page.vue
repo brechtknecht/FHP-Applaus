@@ -46,24 +46,6 @@ export default {
     Kontakt
   },
   computed: {
-  	getContentColums: function() {
-  		var stColumn = []; // First Column
-  		var scColumn = []; // Second Column
-
-  		this.content.body.forEach(function(item, index) {
-  			// console.log((index % 2));
-  			if((index % 2) > 0) {
-  				scColumn.push(item);
-  			} else {
-  				stColumn.push(item);
-  			}
-  			// console.log(item, index);
-  		});
-  		return {
-  			0: stColumn,
-  			1: scColumn
-  		}
-  	},
     IndexMod: function () {
       var state = this.$vnode.key % 2
       if (state < 1) {
@@ -103,7 +85,7 @@ export default {
 	}
 
 		#applaus > section > .body {
-			
+
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: row;
