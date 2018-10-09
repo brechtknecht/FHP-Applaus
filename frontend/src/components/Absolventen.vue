@@ -69,7 +69,7 @@ export default {
         groups[key % 4][Object.keys(groups[key % 4]).length] = absolvent
       })
 
-      return groups
+    return groups
     }
 
   }
@@ -138,8 +138,8 @@ export default {
 		position: relative;
 		text-align: center;
 		padding-bottom: 1.1rem;
-		padding-top: 2.6rem;
 		transition: color .25s;
+		padding-top: 2.6rem;
 
 		&:hover {
 			color: var(--color1);

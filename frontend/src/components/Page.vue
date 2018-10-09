@@ -84,11 +84,23 @@ export default {
 		margin: 0 auto;
 	}
 	article {
-		span {
-			height: 100%;
-			float: left;
-		}
+		position: relative;
 		display: block;
+		padding-left: 3.5625rem;
+
+		span {
+			top: .11rem;
+			bottom: 0;
+			left: 0;
+			position: absolute;	
+			font-family: johnston;
+			font-size: .875rem;
+			font-style: normal;
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+
+		}
 	}
 	section > .body {
 
