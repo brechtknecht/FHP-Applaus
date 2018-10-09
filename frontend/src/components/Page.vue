@@ -83,14 +83,21 @@ export default {
 		padding-bottom: 6rem;
 		margin: 0 auto;
 	}
+	.text {
+		h3 {
+			padding-left: 3.5625rem;
+			text-align: left;
+			margin-bottom: 1.875rem;
+		}
+	}
 	article {
 		position: relative;
 		display: block;
 		padding-left: 3.5625rem;
-
+		margin-bottom: 1.5rem;
+		line-height: 1.5;
 		span {
-			top: .11rem;
-			bottom: 0;
+			top: -1.1px;
 			left: 0;
 			position: absolute;	
 			font-family: johnston;
@@ -99,7 +106,9 @@ export default {
 			font-weight: 400;
 			text-transform: uppercase;
 			letter-spacing: .05em;
-
+		}
+		h5 {
+			margin: 0;
 		}
 	}
 	section > .body {

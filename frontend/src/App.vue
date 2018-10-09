@@ -171,4 +171,8 @@ export default {
 		letter-spacing: .05em;
 		border-bottom: 0!important;
 	}
+
+	::selection {
+  		background: var(--color2); /* WebKit/Blink Browsers */
+	}
 </style>
