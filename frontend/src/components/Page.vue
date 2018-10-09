@@ -83,46 +83,57 @@ export default {
 		padding-bottom: 6rem;
 		margin: 0 auto;
 	}
+	article {
+		span {
+			height: 100%;
+			float: left;
+		}
+		display: block;
+	}
+	section > .body {
 
-		#applaus > section > .body {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+		position: relative;
 
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: space-between;
-			position: relative;
+		@include bp(M) {
+			flex-direction: column;
+		}
+
+		.section {
+			width: calc(50% - 1.136363636rem);
 
 			@include bp(M) {
-				flex-direction: column;
+				width: 100%;
 			}
 
-			.section {
-				width: calc(50% - 1.136363636rem);
+			&:nth-child(4) {
+				position: absolute;
+				bottom: 0;
+				right: 0;
 
 				@include bp(M) {
-					width: 100%;
+					position: inherit;
 				}
-
-				&:nth-child(4) {
-					position: absolute;
-					bottom: 0;
-					right: 0;
-
-					@include bp(M) {
-						position: inherit;
-					}
-				}
-
-				@include bp(M) {
-					&:nth-child(2) {
-						order: 98;
-					}
-					&:nth-child(3) {
-						order: 99;
-					}
-				}
-
 			}
+			&.right {
+				text-align: right;
+				@include bp(M) {
+					text-align: inherit;
+				}
+			}
+			@include bp(M) {
+				&:nth-child(2) {
+					order: 98;
+				}
+				&:nth-child(3) {
+					order: 99;
+				}
+			}
+
 		}
+	}
 
 </style>

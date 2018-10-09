@@ -132,8 +132,6 @@ export default {
 		text-align: center;
 		color: var(--color1);
 		font-feature-settings: "onum";
-	}
-	h3.subtitle {
 		margin-top: 1rem;
 		margin-bottom: 0;
 		font-weight: 400;
@@ -145,7 +143,6 @@ export default {
 		font-weight: 400;
 		text-transform: uppercase;
 		letter-spacing: .05em;
-
 		margin: .363636364rem 0 0;
 	}
 
