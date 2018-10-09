@@ -87,7 +87,7 @@ export default {
 		h3 {
 			padding-left: 3.5625rem;
 			text-align: left;
-			margin-bottom: 1.875rem;
+			margin-bottom: 1.5rem;
 		}
 	}
 	article {
