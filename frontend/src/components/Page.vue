@@ -1,6 +1,6 @@
 <template>
 	<section :id="content.slug" class="wrapper" v-bind:class="IndexMod">
-		<section class="content-inner">
+		<section class="content-inner" v-if="content.template != 'kontakt'">
 				
 				<h2 v-html="content.headertext" v-if="content.headertext" :class="content.template"></h2>
 
@@ -22,11 +22,14 @@
 					<Absolventen :content="content"></Absolventen>
 				</div>
 
-				<div v-else-if="content.template == 'kontakt'">
-					<Kontakt :content="content"></Kontakt>
-				</div>
-
 		</section>
+
+		<section class="content" v-else>
+			<div v-if="content.template == 'kontakt'">
+				<Kontakt :content="content"></Kontakt>
+			</div>
+		</section>
+
 	</section>
 </template>
 
@@ -34,6 +37,7 @@
 import Aussteller from '@/components/Aussteller.vue'
 import Absolventen from '@/components/Absolventen.vue'
 import Kontakt from '@/components/Kontakt.vue'
+
 
 export default {
   name: 'Page',
@@ -82,6 +86,7 @@ export default {
 		padding-top: 5.5rem;
 		padding-bottom: 6rem;
 		margin: 0 auto;
+		
 	}
 	.text {
 		h3 {
@@ -96,9 +101,10 @@ export default {
 		display: block;
 		padding-left: 3.5625rem;
 		margin-bottom: 1.5rem;
-		line-height: 1.5;
+		line-height: 1.5rem;
 		span {
-			top: -1.1px;
+			top: 0;
+			line-height: 1.2;
 			left: 0;
 			position: absolute;	
 			font-family: johnston;
@@ -110,6 +116,7 @@ export default {
 		}
 		h5 {
 			margin: 0;
+			line-height: 1.2;
 		}
 	}
 	section > .body {

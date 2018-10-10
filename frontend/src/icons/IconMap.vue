@@ -4,7 +4,9 @@ E9D7B0 sec
 C9BBA2 third
 817450 fourth
  -->
-	<!-- viewBox="0 -136 1650 1200" -->
+<!-- viewBox="0 -136 1650 1200" -->
+<template>
+<g>
 <pattern x="812.5" y="470.5" width="8.504" height="8.504" patternUnits="userSpaceOnUse" id="SVGID_1_" viewBox="0 -8.504 8.504 8.504" overflow="visible">
 	<g>
 		<polygon fill="none" points="0,0 8.504,0 8.504,-8.504 0,-8.504   "/>
@@ -1050,3 +1052,5 @@ C9BBA2 third
 	
 		<line fill="none" stroke="#E9D7B0" class="secColor" stroke-width="11" stroke-linecap="round" stroke-miterlimit="10" x1="812.371" y1="528.715" x2="837.795" y2="503.29"/>
 </g>
+</g>
+</template>

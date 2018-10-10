@@ -1,5 +1,5 @@
 <template>
-	<div class="content" >
+	<div class="spoilerContent" >
 		<div class="column-outer" :id="'spoilercontent-'+spoilerID">
 			<div class="column" v-for="(item, index) in absolventenGroups">
 				<Absolvent
@@ -28,10 +28,10 @@ export default {
 }
 </script>
 <style lang="scss">
-	.spoilerActive .content {
+	.spoilerActive .spoilerContent {
 		height: var(--fullheight);
 	}
-	.content {
+	.spoilerContent {
 		position: relative;
 		overflow: hidden;
 		box-sizing: content-box;
