@@ -88,6 +88,7 @@ export default {
 			padding-left: 3.5625rem;
 			text-align: left;
 			margin-bottom: 1.5rem;
+			margin-top: .5rem;
 		}
 	}
 	article {
@@ -125,7 +126,11 @@ export default {
 
 		.section {
 			width: calc(50% - 1.136363636rem);
-
+			&.general {
+				width: 100%;
+				border-top: 1px solid var(--color2);
+				padding-top: 1rem;
+			}
 			@include bp(M) {
 				width: 100%;
 			}
