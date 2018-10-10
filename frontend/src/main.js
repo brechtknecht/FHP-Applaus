@@ -49,6 +49,10 @@ new Vue({
           forename:	this.$options.pages.absolventen.body.list[id].forename,
           lastname: this.$options.pages.absolventen.body.list[id].lastname
         }
+      } else {
+        return { forename: 'Not Found',
+                  lastname: 'Not Found'
+                }
       }
     },
     getAbsolvent: function (id) {
@@ -67,6 +71,10 @@ new Vue({
         }
 
         return absolvent
+      } else {
+        return { forename: 'Not Found',
+                  lastname: 'Not Found'
+                }
       }
     },
     randomProperty: function (obj) {

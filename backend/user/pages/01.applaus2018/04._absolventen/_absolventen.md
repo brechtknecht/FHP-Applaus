@@ -3,24 +3,6 @@ title: Absolventen
 headertext: Absolventen
 absolventen:
     -
-        forename: Gustav
-        lastname: Neustadt
-        id: 5b8281c78e025
-        email: gustav@einfach-neu.de
-        website: 'http://einfach-neu.de'
-        category: MD
-        title: ''
-        subtitle: ''
-    -
-        forename: Karl
-        lastname: Heinz
-        id: 5b8281c78e003
-        email: karl@heinz.de
-        website: 'http://karlheinz.de'
-        category: MEMW
-        title: Negation
-        subtitle: 'Shit in my Pants'
-    -
         forename: Jochen
         lastname: Rüdingsen
         id: 5b8281c78e004
