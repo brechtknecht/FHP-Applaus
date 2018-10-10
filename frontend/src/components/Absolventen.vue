@@ -52,24 +52,26 @@ export default {
       this.$set(this.spoilerActive, key, !this.spoilerActive[key])
     },
     getAbsolventenGroups (category) {
+    	var absolventsObject = {};
       if (category == 'MASTER') {
-        var reeturn = Object.assign(this.content.body.groups.MEMW, this.content.body.groups.MD)
+      	console.log(this.content.body.groups.MD, this.content.body.groups.MEMW);
+      	absolventsObject = this.content.body.groups.MD.concat(this.content.body.groups.MEMW);
       } else {
-        var reeturn = this.content.body.groups[category]
+        absolventsObject = this.content.body.groups[category] || [];
       }
-      var groups = {
+      // console.log(absolventsObject);
+      var columns = {
         0: {},
         1: {},
         2: {},
         3: {}
       }
-
-      Object.keys(reeturn).forEach(function (key) {
-        var absolvent = reeturn[key].toString()
-        groups[key % 4][Object.keys(groups[key % 4]).length] = absolvent
+      Object.keys(absolventsObject).forEach(function (key) {
+        var absolvent = absolventsObject[key].toString();
+        columns[key % 4][Object.keys(columns[key % 4]).length] = absolvent;
       })
 
-    return groups
+    return columns;
     }
 
   }

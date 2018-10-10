@@ -1,11 +1,12 @@
 ---
-title: 'Beyond the Fabulousness'
-headertext: 'Ein queerer Dokumentarfilm über Madison Moore'
+title: Wechselspiel
+headertext: 'Der Dramentext und die inszenierende Typografie'
 category: MD
-authors: 5b8281c78e003
-supervisors: 'Prof. Anne Quirynen,Dr. Daniela Döring'
-media_order: '01 Still aus looking for moore 2018.jpg,02 Still aus looking for moore 2018.jpg,03 Still aus looking for moore 2018 Copyright Luke Carlisle.jpg,04 Filmplakat looking for moore 2018.jpg'
+authors: 5bbe65be11689
+supervisors: 'Prof. Dr. Nico Heise,Prof. Dr. Jan Distelmeyer'
+media_order: '1.jpg,2.jpg,3.jpg,4.jpg'
+headerimage: 03-01.png
 template_format: json
 ---
 
-Die vorgelegte Bachelorarbeit in Projektform nähert sich dem Verhältnis zwischen Queerness und Dokumentarfilm in Form eines Kurzportäts über Madison Moore. Der Dokumentarfilm mit dem Namen »looking for moore« stellt eine Möglichkeit für das Publikum dar, den queeren Kulturkritiker, Autor und Künstler sowie seine Geschichte als queere Person of color durch Momentaufnahmen aus seinem Leben sowie in Form von Interviews kennenzulernen. Im schriftlichen Teil der Arbeit werden sowohl die theoretischen Grundlagen zur Queer Theory und zum Dokumentarfilm als auch die persönlichen Reflexionsprozesse dargelegt.
+Die Gestaltung der Publikation und seiner Materialität wird in diesem Projekt bewusst für die Dramatik des Textes eingesetzt. Als Untersuchungsobjekt habe ich den Text des Regisseurs Derek Jarman, zu seinem Film »Blue« von 1993 gewählt. Es ist seine letzte Regiearbeit und entstand trotz einer fortschreitenden AIDS-bedingten Erblindung als eine Art »Hörfilm« – die Leinwand bleibt 70 Minuten lang blau. Thema sind Jarmans Leben und seine Visionen im Rahmen einer Retrospektive. Die typografische Inszenierung des Dramentextes stellt die subjektive Interpretation durch den Gestalter dar. Vergleichbar mit der Inszenierung eines Stückes durch den Regisseur. Ziel ist es Inhalte zu vermitteln, um den Betrachter durch neue Erkenntnisse zu bereichern. Zur inszenierenden Typografie gehört dabei nicht allein die begründete Wahl der Schrift und deren Anordnung auf der Fläche, sondern ebenso die des geeigneten Mediums und dessen Verwendung.
