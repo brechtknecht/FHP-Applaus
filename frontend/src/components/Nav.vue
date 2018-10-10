@@ -293,12 +293,12 @@ export default {
 	}
 	.bars {
 		height: 3px;
-		width: 30px;
+		width: 2.142857143rem;
 		background: #fff;
 		position: absolute;
 		left: 50%;
 		bottom: 50%;
-		margin-left: -12px;
+		margin-left: -1.071428572rem;
 		&:after,
 		&:before {
 			content: '';
