@@ -13,6 +13,7 @@
 				<div class="gradient"/>
 				 <!-- ATTENTION — ToDo ! Insert media queries here in this img tag! (sizes)  -->
 				<img
+					v-if="content.body.list[aussteller].images[0]"
 					:srcset="content.body.list[aussteller].images[0].srcset"
 					:src="content.body.list[aussteller].images[0].url"
 					sizes="1vw"
