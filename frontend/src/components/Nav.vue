@@ -133,7 +133,7 @@ export default {
 		left: 0;
 		right: 0;
 		position: sticky;
-		background: var(--color1);
+		background: var(--color6);
 		top: 0;
 		height: 4rem;
 		z-index: 10;
@@ -191,7 +191,7 @@ export default {
 		flex-direction: row;
 		justify-content: space-between;
 		height: 100%;
-		background: var(--color1);
+		background: var(--color6);
 		// transition: max-height .35s ease-out;
 		z-index: 10;
 
