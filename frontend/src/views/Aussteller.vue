@@ -32,11 +32,11 @@
 									<em>{{ studiengang[++index - 1] }}</em>
 								</p>
 								<p>
-									<strong class="content-title">E-MAIL</strong>&nbsp;
+									<strong v-if="absolvent.mail" class="content-title">E-MAIL</strong>&nbsp;
 									<em><a v-bind:href=" `mailto:${absolvent.email}` ">{{ absolvent.email }}</a></em>
 								</p>
 								<p>
-									<strong class="content-title">WEB</strong>&nbsp;
+									<strong v-if="absolvent.website" class="content-title">WEB</strong>&nbsp;
 									<em><a v-bind:href="absolvent.website">{{ absolvent.website }}</a></em>
 								</p>
 							</div>
@@ -60,7 +60,7 @@
 				<div class="tab-menu">
 					<h3 class="tab" 
 						v-for="(item, key) in $root.$options.config.categoryorder" :key="item.key"
-						v-on:click="toggleTab(key)"
+						v-on:click="toggleTab(key, item.slug)"
 						v-bind:class="{active: isActive[key]}">
 						<span>
 							{{ item.slug }}<br>
@@ -69,8 +69,7 @@
 					</h3>
 				</div>
 
-
-				<ausstellerGrid :categorySlug="'MASTER'" :content="$root.$options.ausstellung" />
+				<ausstellerGrid :categorySlug="this.currentGridView" :content="$root.$options.ausstellung" class="ausstellerGrid"/>
 			</section>
 		</section>
 	</div>
@@ -89,7 +88,8 @@ export default {
 
     return {
 			aussteller: _aussteller,
-			isActive: [true, false]
+			isActive: [true, false],
+			currentGridView: String
     }
   },
   computed: {
@@ -178,7 +178,7 @@ export default {
 			}
 			return name
 		},
-		toggleTab(key){
+		toggleTab(key, slug){
 			if(this.isActive[key]){
 				return;
 			}
@@ -188,6 +188,8 @@ export default {
 			}
 
 			this.$set(this.isActive, key, !this.isActive[key]);
+
+			this.currentGridView = slug;
 		}
   }
 }
@@ -394,5 +396,8 @@ export default {
 			    margin-left: calc(-4 * var(--strokewidth) + calc(var(--strokewidth) - 1px) );
 			}
 		}
+	}
+	.ausstellerGrid {
+		margin: 2rem 0;
 	}
 </style>
