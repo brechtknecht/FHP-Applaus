@@ -4,7 +4,7 @@
 		<!-- <Navigation :items="this.$root.$options.navigation" routerNav></Navigation> -->
 		<Header class="header" :content="aussteller" contentIsGiven></Header>
 		<section class="wrapper-content">
-			<section class="content-inner">
+			<section class="content-inner" style="padding-bottom: 4.5rem;">
 
 				<div class="body">
 
@@ -44,9 +44,9 @@
 					</div>
 				</div>
 			</section>
-			<section class="content-inner">
-				<div class="images grid">
-					<div class="image" v-for="image in images">
+			<section class="images">
+				<div class="images-grid-inner">
+					<div class="image" v-for="image in images" :key="image.key">
 						<img :srcset="image.srcset"/>
 					</div>
 				</div>
@@ -55,6 +55,18 @@
 				<div class="overview">
 					<h3 class="subtitle dark">Weitere</h3>
 					<h4 class="small-title">Abschlussarbeiten</h4>
+				</div>
+
+				<div class="tab-menu">
+					<h3 class="tab" 
+						v-for="(item, key) in $root.$options.config.categoryorder" :key="item.key"
+						v-on:click="toggleTab(key)"
+						v-bind:class="{active: isActive[key]}">
+						<span>
+							{{ item.slug }}<br>
+							<h4><em>{{ parseShort(item.name) }}</em></h4>
+						</span>
+					</h3>
 				</div>
 			</section>
 		</section>
@@ -72,7 +84,8 @@ export default {
     let _aussteller = this.$root.$options.ausstellung.body.list[this.$route.params.id]
 
     return {
-      aussteller: _aussteller
+			aussteller: _aussteller,
+			isActive: [true, false]
     }
   },
   computed: {
@@ -144,7 +157,33 @@ export default {
           return 'MASTER'
           break
       }
-    }
+		},
+		parseShort(name) {
+			switch (name) {
+				case 'Interfacedesign':
+					return 'Interface\ndesign'
+				case 'Kommunikationsdesign':
+					return 'Kommunikations\ndesign'
+				case 'Produktdesign':
+					return 'Produkt\ndesign'
+				case 'Europäische Medienwissenschaft':
+					return 'Europäische \n Medienwissenschaft'
+				case 'Design & Europäische Medienwissenschaft':
+					return 'Design \n Master'
+			}
+			return name
+		},
+		toggleTab(key){
+			if(this.isActive[key]){
+				return;
+			}
+
+			for(var i = 0; i < this.isActive.length; i++){
+				this.isActive[i] = false;
+			}
+
+			this.$set(this.isActive, key, !this.isActive[key]);
+		}
   }
 }
 </script>
@@ -236,9 +275,17 @@ export default {
 	.author {
 		display: block;
 	}
-
 	.images {
-		.image img{
+		padding-top: 5rem;
+		padding-bottom: 4.5rem;
+		background: var(--color3);
+	}
+
+	.images-grid-inner {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-row-gap: 2rem;
+		img {
 			width: 100%;
 			max-width: 100%;
 		}
@@ -258,5 +305,73 @@ export default {
 			text-align: center;
 		}
 	}
-
+	.tab-menu {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: var(--color1) solid 3px;
+		.tab {
+			margin-bottom: 1.5rem;
+			cursor: pointer;
+			span {
+				position: relative;
+				top: 12px;
+				font-family: johnston;
+				font-style: normal;
+				line-height: 1.3rem;
+				font-weight: 400;
+				font-size: 1rem;
+				color: var(--color4);
+				text-decoration: none;
+				margin: 0;
+		}
+			h4 {
+				font-family: abril-text,serif;
+				font-size: 1rem;
+				font-weight: 400;
+				text-decoration: none;
+				hyphens: auto;
+				line-height: 1.3rem;
+				color: var(--color4);
+				margin: 0;
+				em {
+					white-space: pre-wrap;
+				}
+			}
+		}
+		.active {
+				span {
+					top: 0;
+				}
+				cursor: auto;
+				--strokewidth: 3px;
+				&:before {
+					clear: both;
+					content: "";
+					position: relative;
+			    border-style: solid;
+			    border-width: calc(4 * var(--strokewidth)) calc(4 * var(--strokewidth)) 0;
+			    border-color: var(--color1) transparent;
+			    display: block;
+			    width: 0;
+			    z-index: 0;
+			    left: 50%;
+			    margin-left: calc(-4 * var(--strokewidth));
+			    bottom: calc(-100% - 1.5rem);
+			}
+			&:after {
+			    clear: both;
+			    content: "";
+			    position: relative;
+			    border-style: solid;
+			    border-width: calc(4 * var(--strokewidth) - calc(var(--strokewidth) - 1px)) calc(4 * var(--strokewidth) - calc(var(--strokewidth) - 1px)) 0;
+			    border-color: var(--color5) transparent;
+			    display: block;
+					width: 0;
+					bottom: calc(-1.5rem + var(--strokewidth) - 11px);
+			    z-index: 1;
+			    left: 50%;
+			    margin-left: calc(-4 * var(--strokewidth) + calc(var(--strokewidth) - 1px) );
+			}
+		}
+	}
 </style>
