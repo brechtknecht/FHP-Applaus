@@ -318,8 +318,15 @@ export default {
 		}
 	}
 
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover
+	}
+
 	.thumbnail {
 		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: auto;
 		& > .image:first-child {
 			grid-column: 1 / span 2;
 		}
