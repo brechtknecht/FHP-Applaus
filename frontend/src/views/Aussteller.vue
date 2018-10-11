@@ -68,6 +68,9 @@
 						</span>
 					</h3>
 				</div>
+
+
+				<Aussteller :categorySlug="'ID'" :content="$root.$options.ausstellung" />
 			</section>
 		</section>
 	</div>
@@ -76,6 +79,7 @@
 <script>
 import Navigation from '@/components/Nav.vue'
 import Header from '@/components/Header.vue'
+import Aussteller from '../components/austellerGrid.vue'
 import ApplausData from '../../public/applaus2018.json'
 
 export default {
@@ -140,7 +144,8 @@ export default {
   },
   components: {
     Navigation,
-    Header
+    Header,
+		Aussteller
   },
   methods: {
     getDegree: function (category) {
@@ -312,6 +317,12 @@ export default {
 		.tab {
 			margin-bottom: 1.5rem;
 			cursor: pointer;
+			&:hover {
+				span,
+				h4 {
+					color: var(--color1)
+				}
+			}
 			span {
 				position: relative;
 				top: 12px;
@@ -320,9 +331,11 @@ export default {
 				line-height: 1.3rem;
 				font-weight: 400;
 				font-size: 1rem;
+				opacity: .5;
 				color: var(--color4);
 				text-decoration: none;
 				margin: 0;
+				transition: color .2s;
 		}
 			h4 {
 				font-family: abril-text,serif;
@@ -332,7 +345,9 @@ export default {
 				hyphens: auto;
 				line-height: 1.3rem;
 				color: var(--color4);
+				opacity: .5;
 				margin: 0;
+				transition: color .2s;
 				em {
 					white-space: pre-wrap;
 				}
@@ -341,6 +356,12 @@ export default {
 		.active {
 				span {
 					top: 0;
+					opacity: 1 !important;
+					color: var(--color4);
+				}
+				h4 {
+					opacity: 1 !important;
+					color: var(--color4);
 				}
 				cursor: auto;
 				--strokewidth: 3px;
