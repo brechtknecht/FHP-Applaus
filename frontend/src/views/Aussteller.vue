@@ -32,11 +32,11 @@
 									<em>{{ studiengang[++index - 1] }}</em>
 								</p>
 								<p>
-									<strong class="content-title">E-MAIL</strong>&nbsp;
+									<strong v-if="absolvent.mail" class="content-title">E-MAIL</strong>&nbsp;
 									<em><a v-bind:href=" `mailto:${absolvent.email}` ">{{ absolvent.email }}</a></em>
 								</p>
 								<p>
-									<strong class="content-title">WEB</strong>&nbsp;
+									<strong v-if="absolvent.website" class="content-title">WEB</strong>&nbsp;
 									<em><a v-bind:href="absolvent.website">{{ absolvent.website }}</a></em>
 								</p>
 							</div>
@@ -60,7 +60,7 @@
 				<div class="tab-menu">
 					<h3 class="tab" 
 						v-for="(item, key) in $root.$options.config.categoryorder" :key="item.key"
-						v-on:click="toggleTab(key)"
+						v-on:click="toggleTab(key, item.slug)"
 						v-bind:class="{active: isActive[key]}">
 						<span>
 							{{ item.slug }}<br>
@@ -69,8 +69,14 @@
 					</h3>
 				</div>
 
+				<transition name="fade" mode="out-in">
+					<ausstellerGrid 
+						:categorySlug="this.currentGridView" 
+						:content="$root.$options.ausstellung" class="ausstellerGrid"
+						:key="this.currentGridView"
+					/>
+				</transition>
 
-				<ausstellerGrid :categorySlug="'MASTER'" :content="$root.$options.ausstellung" />
 			</section>
 		</section>
 	</div>
@@ -89,7 +95,8 @@ export default {
 
     return {
 			aussteller: _aussteller,
-			isActive: [true, false]
+			isActive: [true, false],
+			currentGridView: String
     }
   },
   computed: {
@@ -146,7 +153,7 @@ export default {
     Navigation,
     Header,
 	ausstellerGrid
-  },
+	},
   methods: {
     getDegree: function (category) {
       switch (category) {
@@ -178,7 +185,7 @@ export default {
 			}
 			return name
 		},
-		toggleTab(key){
+		toggleTab(key, slug){
 			if(this.isActive[key]){
 				return;
 			}
@@ -188,6 +195,8 @@ export default {
 			}
 
 			this.$set(this.isActive, key, !this.isActive[key]);
+
+			this.currentGridView = slug;
 		}
   }
 }
@@ -201,6 +210,17 @@ export default {
 			flex-direction: column;
 		}
 	}
+
+	/* TRANSITIONS */
+	.fade-enter-active, .fade-leave-active {
+		transition: opacity .5s;
+	}
+	.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+		opacity: 0;
+	}
+
+
+
 	.wrapper-content {
 		background: var(--color5);
 	}
@@ -394,5 +414,8 @@ export default {
 			    margin-left: calc(-4 * var(--strokewidth) + calc(var(--strokewidth) - 1px) );
 			}
 		}
+	}
+	.ausstellerGrid {
+		margin: 2rem 0;
 	}
 </style>
