@@ -45,9 +45,10 @@
 				</div>
 			</section>
 			<section class="images">
-				<div class="images-grid-inner">
+				{{ this.aussteller.template }}
+				<div class="images-grid-inner" :class="this.aussteller.template">
 					<div class="image" v-for="image in images" :key="image.key">
-						<img :srcset="image.srcset"/>
+						<img :srcset="image.srcset" :src="image.url" />
 					</div>
 				</div>
 			</section>
@@ -96,7 +97,7 @@ export default {
     return {
 			aussteller: _aussteller,
 			isActive: [true, false],
-			currentGridView: String
+			currentGridView: 'ID'
     }
   },
   computed: {
@@ -310,10 +311,33 @@ export default {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-row-gap: 2rem;
+		grid-column-gap: 2rem;
 		img {
 			width: 100%;
 			max-width: 100%;
 		}
+	}
+
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover
+	}
+
+	.thumbnail {
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: auto;
+		& > .image:first-child {
+			grid-column: 1 / span 2;
+		}
+	}
+
+	.imageBig {
+		grid-template-columns: 1fr;
+	}
+
+	.imageSmall {
+		grid-template-columns: 1fr 1fr;
 	}
 
 	.overview {
@@ -332,7 +356,7 @@ export default {
 	}
 	.tab-menu {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		border-bottom: var(--color1) solid 3px;
 		.tab {
 			margin-bottom: 1.5rem;
