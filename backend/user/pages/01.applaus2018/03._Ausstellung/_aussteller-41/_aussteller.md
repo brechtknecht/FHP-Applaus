@@ -6,6 +6,7 @@ authors: 5bbfb7b85618f
 supervisors: 'Prof. Winfried Gerling,Prof. Dr. Birgit Schneider'
 thumbSize: s
 imageTemplate: thumbnail
+media_order: Zusammenstellung.jpg
 template_format: json
 ---
 
