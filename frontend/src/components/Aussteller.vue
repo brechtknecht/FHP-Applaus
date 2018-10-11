@@ -27,7 +27,7 @@ export default {
 		}
 	},
 	components: {
-		austellerGrid
+		ausstellerGrid
 	},
 	props: {
 		content: Object
