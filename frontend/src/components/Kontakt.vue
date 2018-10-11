@@ -1,6 +1,5 @@
 <template>
 	<div class="kontakte">
-		text text text text
 		<div class="map-wrapper">
 			<div class="map-bubble">
 				<h4>FH POTSDAM</h4>
