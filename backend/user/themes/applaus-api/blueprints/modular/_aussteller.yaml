@@ -81,6 +81,15 @@ form:
                             m: Mittel
                             l: Groß
 
+                        header.imageTemplate:
+                          type: radio
+                          label: Template
+                          default: thumbnail
+                          style: vertical
+                          options:
+                            thumbnail: Groß, klein, klein
+                            imageSmall: klein, klein
+                            imageBig: Groß
 
                         header.media_order:
                           type: pagemedia

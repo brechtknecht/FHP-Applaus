@@ -10,7 +10,6 @@
 import Navigation from '@/components/Nav.vue'
 import Pages from '@/components/Pages.vue'
 import Header from '@/components/Header.vue'
-import ApplausData from '../../public/applaus2018.json'
 
 export default {
   name: 'home',

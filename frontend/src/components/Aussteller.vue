@@ -12,7 +12,7 @@
 					</em>
 				</h4>
 			</div>
-			<ausstellerGrid :categorySlug="item.slug" :content="content" />
+			<ausstellerGrid :categorySlug="item.slug" :content="$root.$options.ausstellung" />
 		</div>
 	</div>
 </template>

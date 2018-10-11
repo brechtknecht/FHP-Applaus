@@ -1,12 +1,12 @@
 ---
 title: 'Applaus 2018'
 headertext: "_Die besten Abschlussarbeiten  \r\nim Fachbereich Design der FH Potsdam  \r\nim Jahr 2018_"
-color1: '#70d6ff'
-color2: '#b9e7fa'
+color1: '#cf586c'
+color2: '#f099a2'
 color3: '#ffffff'
-color4: '#2a3940'
-color5: '#ebf9ff'
-color6: '#96dcfa'
+color4: '#473436'
+color5: '#fffafb'
+color6: '#df5f6c'
 content:
     items: '@self.modular'
     order: desc

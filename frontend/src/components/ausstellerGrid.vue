@@ -47,7 +47,7 @@
 import IconBase from './IconBase.vue'
 
 export default {
-  name: 'AustellerGrid',
+  name: 'AusstellerGrid',
   data () {
     return {
     	sizes: {

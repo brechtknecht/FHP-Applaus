@@ -111,6 +111,6 @@ export default {
 		width: 100%;
 		object-fit: cover;
 		z-index: -1;
-		animation: moveImage 60s cubic-bezier(.18,.01,.85,1) both infinite;
+		// animation: moveImage 60s cubic-bezier(.18,.01,.85,1) both infinite;
 	}
 </style>

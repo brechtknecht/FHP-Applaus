@@ -16,8 +16,9 @@ class ApplausApi extends Theme
 
         $absolventen_liste = array ();
         foreach($data->pages->absolventen->body->list as $absolvent) {
-            
+            if($absolvent->forename AND $absolvent->lastname AND $absolvent->category AND $absolvent->id) {
                 $absolventen_liste[] = array('text' => $absolvent->forename.' '.$absolvent->lastname.' — '.$absolvent->category, 'value' => $absolvent->id);
+            }
 
         }
         return($absolventen_liste);
