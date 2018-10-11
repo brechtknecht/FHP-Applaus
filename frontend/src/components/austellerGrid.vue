@@ -3,9 +3,10 @@
 		<router-link
 			:to="'/aussteller/'+aussteller"
 			v-for="(aussteller, key) in getAusstellerGroups(categorySlug)"
-			:style="'--y-start:' + grid[categorySlug][key].y + '; --x-start:' + grid[categorySlug][key].x + '; --y-delta:' + grid[categorySlug][key].dy + '; --x-delta:' + grid[categorySlug][key].dx"
-			:key="categorySlug + key "
+			
+			:key="categorySlug + key"
 			class="article"
+			:class="'thumbSize--'+content.body.list[aussteller].thumbSize"
 		>
 			<div class="background">
 				<div class="gradient_changer"/>
@@ -168,26 +169,64 @@ export default {
 
 <style lang="scss">
 	@import '@/scss/mediaqueries.scss';
+	.grid {
+		--row-height: 9.090909091rem;
+		--gap: 2.272727273rem;
+
+		@include bp(XXL) {
+			--row-height: 8.8125rem;
+			--gap: 2.5rem;
+		}
+		@include bp(XL) {
+			--row-height: 7rem;
+			--gap: 1.428571429rem;
+
+			.beschriftung {
+				.authoren {
+					padding: 0;
+				}
+				.titel {
+					display: none;
+				}
+			}
+		}
+	}
 @include bp(min-L) {
 
 	.grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-auto-rows: 9.090909091rem;
-		grid-column-gap: 2.272727273rem;
-		grid-row-gap: 2.272727273rem;
 		width: 100%;
 		box-sizing: border-box;
+		grid-auto-flow: row dense;
+		grid-column-gap: var(--gap);
+		grid-row-gap: var(--gap);
+		grid-auto-rows: var(--row-height);
+
 		.article {
-			grid-column-start: var(--x-start);
-			grid-column-end: span var(--x-delta);
-			grid-row-start: var(--y-start);
-			grid-row-end: span var(--y-delta);
+			// grid-column-start: var(--x-start);
+			// grid-column-end: span var(--x-delta);
+			// grid-row-start: var(--y-start);
+			// grid-row-end: span var(--y-delta);
+
 			overflow: hidden;
 			position: relative;
 			z-index: 0;
 			color: var(--color4);
 			border: none;
+
+			&.thumbSize--s {
+				grid-column-end: span 1;
+				grid-row-end: span 1;
+			}
+			&.thumbSize--m {
+				grid-column-end: span 1;
+				grid-row-end: span 2;
+			}
+			&.thumbSize--l {
+				grid-column-end: span 2;
+				grid-row-end: span 2;
+			}
 
 			.gradient {
 				background: linear-gradient(to bottom, var(--gradient_col2-20perc) 0, var(--gradient_col2-20perc) 37%, var(--gradient_col2-35perc) 100%);
@@ -263,9 +302,9 @@ export default {
 		flex-direction: column;
 		justify-content: space-between;
 		text-align: center;
-		height: 18.6363rem;
+		height: calc(2 * var(--row-height));
 		top: 50%;
-		margin-top: - 9.31815rem;
+		margin-top: calc(-1 * var(--row-height));
 
 		.group {
 			padding: 0 1.25rem;
