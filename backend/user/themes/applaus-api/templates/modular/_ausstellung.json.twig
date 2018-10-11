@@ -42,13 +42,26 @@
 {% for key, category in category_list %}
 	{% set temp_list = [] %}
 
+	{% set s = [] %}
+	{% set m = [] %}
+	{% set l = [] %}
+
 	{% for item in collection %}
 		{% if category == item.category %}
+
+			{% if item.thumbSize == s %}
+				{% set s = s|merge({ (loop.index) : item.title|hyphenize }) %}
+			{% elseif item.thumbSize == m %}
+				{% set m = m|merge({ (loop.index) : item.title|hyphenize }) %}
+			{% elseif item.thumbSize == l %}
+				{% set l = l|merge({ (loop.index) : item.title|hyphenize }) %}
+			{% endif %}
+
 			{% set temp_list = temp_list|merge({ (loop.index) : item.title|hyphenize }) %}
 		{% endif %}
 	{% endfor %}
 
-	{% set orderedlist = orderedlist|merge({ (category): temp_list }) %}
+	{% set orderedlist = orderedlist|merge({ (category): temp_list, (category ~ 'Sizes'): {s: s, m: m, l: l} }) %}
 
 {% endfor %}
 
