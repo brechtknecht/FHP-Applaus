@@ -69,7 +69,14 @@
 					</h3>
 				</div>
 
-				<ausstellerGrid :categorySlug="this.currentGridView" :content="$root.$options.ausstellung" class="ausstellerGrid"/>
+				<transition name="fade" mode="out-in">
+					<ausstellerGrid 
+						:categorySlug="this.currentGridView" 
+						:content="$root.$options.ausstellung" class="ausstellerGrid"
+						:key="this.currentGridView"
+					/>
+				</transition>
+
 			</section>
 		</section>
 	</div>
@@ -146,7 +153,7 @@ export default {
     Navigation,
     Header,
 	ausstellerGrid
-  },
+	},
   methods: {
     getDegree: function (category) {
       switch (category) {
@@ -203,6 +210,17 @@ export default {
 			flex-direction: column;
 		}
 	}
+
+	/* TRANSITIONS */
+	.fade-enter-active, .fade-leave-active {
+		transition: opacity .5s;
+	}
+	.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+		opacity: 0;
+	}
+
+
+
 	.wrapper-content {
 		background: var(--color5);
 	}
