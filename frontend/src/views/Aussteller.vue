@@ -70,7 +70,7 @@
 				</div>
 
 
-				<Aussteller :categorySlug="'ID'" :content="$root.$options.ausstellung" />
+				<ausstellerGrid :categorySlug="'MASTER'" :content="$root.$options.ausstellung" />
 			</section>
 		</section>
 	</div>
@@ -79,7 +79,7 @@
 <script>
 import Navigation from '@/components/Nav.vue'
 import Header from '@/components/Header.vue'
-import Aussteller from '../components/ausstellerGrid.vue'
+import ausstellerGrid from '../components/ausstellerGrid.vue'
 import ApplausData from '../../public/applaus2018.json'
 
 export default {
@@ -145,7 +145,7 @@ export default {
   components: {
     Navigation,
     Header,
-	Aussteller
+	ausstellerGrid
   },
   methods: {
     getDegree: function (category) {
