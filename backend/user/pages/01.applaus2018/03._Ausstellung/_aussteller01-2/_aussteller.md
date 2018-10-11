@@ -4,6 +4,7 @@ headertext: 'Zur Bedeutung der Netzneutralität für Internet und Meinungsfreihe
 category: MEMW
 authors: 5bbe643540b7b
 supervisors: 'Prof. Dr. Nico Heise,Prof. Dr. Jan Distelmeyer'
+thumbSize: m
 media_order: 'appstart_screen.jpeg,checkPoint1.jpeg,dosenWerfen.jpeg,ersteAufgabe.jpeg,filterblase.jpg,finish.jpeg,gameOver.jpeg,itemSammeln.jpeg,kalibrieren.jpeg,map_screen.jpeg,map.jpg,mockup@2x.png,paparazzi.jpeg,portal.jpeg,scavengar_icon.png,startGame.jpeg,startpoint.jpeg,winkel.jpeg,wuerfelStapeln.jpeg'
 headerimage: 03-01.png
 template_format: json

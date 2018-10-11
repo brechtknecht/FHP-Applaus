@@ -12,6 +12,7 @@
 			<SpoilerContent
 				:absolventenGroups="getAbsolventenGroups(item.slug)"
 				:spoilerOpen="spoilerActive[key]"
+				:spoilerOpenHeight="spoilerHeight[key]"
 				:spoilerID="key"
 				:style="'--fullheight:'+spoilerHeight[key]+'px'"
 			/>
@@ -54,7 +55,6 @@ export default {
     getAbsolventenGroups (category) {
     	var absolventsObject = {};
       if (category == 'MASTER') {
-      	console.log(this.content.body.groups.MD, this.content.body.groups.MEMW);
       	absolventsObject = this.content.body.groups.MD.concat(this.content.body.groups.MEMW);
       } else {
         absolventsObject = this.content.body.groups[category] || [];

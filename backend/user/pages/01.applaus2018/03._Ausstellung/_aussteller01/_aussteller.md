@@ -4,6 +4,7 @@ headertext: 'Der Dramentext und die inszenierende Typografie'
 category: MD
 authors: 5bbe65be11689
 supervisors: 'Prof. Dr. Nico Heise,Prof. Dr. Jan Distelmeyer'
+thumbSize: s
 media_order: '1.jpg,2.jpg,3.jpg,4.jpg'
 headerimage: 03-01.png
 template_format: json

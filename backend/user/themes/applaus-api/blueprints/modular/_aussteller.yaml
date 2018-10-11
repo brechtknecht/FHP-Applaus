@@ -51,6 +51,7 @@ form:
                             EMW: Europäische Medienwissenschaften
                             MD: Master Design
                             MEMW: Master Europäische Medienwissenschaften
+
                         header.authors:
                           type: selectizeapplaus
                           label: Authoren
@@ -69,7 +70,18 @@ form:
                           style: vertical
                           selectize:
                             @data-options: '\Grav\Theme\ApplausApi::betreuer'
-                            
+
+                        header.thumbSize:
+                          type: radio
+                          label: Thumbnail Größe
+                          default: s
+                          style: vertical
+                          options:
+                            s: Klein
+                            m: Mittel
+                            l: Groß
+
+
                         header.media_order:
                           type: pagemedia
                           label: Bilder

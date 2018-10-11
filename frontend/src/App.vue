@@ -85,9 +85,9 @@ export default {
 	}
 
 	#start {
-		border-bottom: 1.5rem solid var(--color1);
-		border-right: 1.5rem solid var(--color1);
-		border-left: 1.5rem solid var(--color1);
+		border-bottom: 1.5rem solid var(--color6);
+		border-right: 1.5rem solid var(--color6);
+		border-left: 1.5rem solid var(--color6);
 		text-rendering: optimizeLegibility;
 		font-family: abril-text;
 		color: var(--color4);

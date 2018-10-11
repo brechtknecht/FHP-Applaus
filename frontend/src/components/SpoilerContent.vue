@@ -14,16 +14,29 @@
 </template>
 <script>
 import Absolvent from '@/components/Absolvent.vue'
+import { Easing, Tween, autoPlay } from 'es6-tween'
 
 export default {
   name: 'spoilerContent',
+  data() {
+  	return {
+  		spoilerHeight: 0
+  	}
+  },
   props: {
     absolventenGroups: Object,
     spoilerOpen: Boolean,
+    spoilerOpenHeight: Number,
     spoilerID: String
   },
   components: {
     Absolvent
+  },
+  watch: {
+  	// spoilerOpen: function(state) {
+
+  	// 	TweenLite.to(this.$data, 0.5, { spoilerHeight: this.spoilerOpenHeight });
+  	// }
   }
 }
 </script>
@@ -37,6 +50,7 @@ export default {
 		box-sizing: content-box;
 		height: 0;
 		transition: height .3s;
+		
 		.column-outer {
 			display: flex;
 			align-items: stretch;

@@ -59,7 +59,7 @@ export default {
 		position: relative;
 		height: calc(100vh - 4rem - 1.5rem);
 		overflow: hidden;
-		border-top: 1.5rem solid var(--color1);
+		border-top: 1.5rem solid var(--color6);
 
 		@include bp(XL) {
 			border: none;
