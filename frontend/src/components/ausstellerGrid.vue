@@ -15,7 +15,7 @@
 				<img
 					:srcset="content.body.list[aussteller].images[0].srcset"
 					:src="content.body.list[aussteller].images[0].url"
-					sizes="50vw"
+					sizes="1vw"
 				>
 			</div>
 				<span class="beschriftung">
@@ -47,9 +47,14 @@
 import IconBase from './IconBase.vue'
 
 export default {
-  name: 'Aussteler',
+  name: 'AustellerGrid',
   data () {
     return {
+    	sizes: {
+    		s: "(max-width: 1699px) ,(max-width: 1219px) ,(max-width: 900px) ",
+    		m: "",
+    		l: ""
+    	},
       grid: {
         'ID': {
           0: {

@@ -12,16 +12,16 @@
 					</em>
 				</h4>
 			</div>
-			<austellerGrid :categorySlug="item.slug" :content="content" />
+			<ausstellerGrid :categorySlug="item.slug" :content="content" />
 		</div>
 	</div>
 </template>
 
 <script>
-import austellerGrid from './austellerGrid'
+import ausstellerGrid from './ausstellerGrid'
 
 export default {
-	name: 'Aussteler',
+	name: 'Aussteller',
 	data () {
 		return {
 		}
