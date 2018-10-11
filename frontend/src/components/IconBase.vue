@@ -11,6 +11,8 @@
 <script>
 import IconSignet from '../icons/IconSignet.vue'
 import IconApplaus from '../icons/IconApplaus.vue'
+import IconUniPotsdam from '../icons/IconUniPotsdam.vue'
+import IconFhPotsdam from '../icons/IconFHPotsdam.vue'
 import IconSignetNav from '../icons/IconSignetNav.vue'
 import IconSignetBoxBottom from '../icons/IconSignetBoxBottom.vue'
 import IconSignetBoxTop from '../icons/IconSignetBoxTop.vue'
@@ -31,6 +33,8 @@ export default {
     IconApplaus,
     IconSignet,
     IconSignetNav,
+    IconUniPotsdam,
+    IconFhPotsdam,
     IconSignetBoxBottom,
     IconSignetBoxTop,
     IconArrowDown,
