@@ -33,26 +33,41 @@ export default {
 </script>
 
 <style lang="scss">
+	@import '@/scss/mediaqueries.scss';
+
 	#kontakt footer {
 		display: flex;
-		direction: row;
+		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
 		align-items: flex-start;
 		padding-top: 5.5rem;
 		padding-bottom: 6rem;
-
+		@include bp(M) {
+			flex-direction: column;
+			padding-top: 0;
+		}
 		.section {
 			flex-basis: calc(20% - 2.272727273rem);
-							h4 {
+				h4 {
 					text-transform: uppercase;
 					letter-spacing: .05em;
+					@include bp(M) {
+						margin-bottom: .5rem;
+					}
 				}
 			.text {
-				font-size: .875rem;
+				@include bp(M) {
+					font-size: 1rem;
+					margin-bottom: 2.5rem;
+				}
 				p {
 					margin-bottom: 1.5em;
-				}
+					@include bp(M) {
+						line-height: 1.5rem;
+						margin-bottom: 0rem;
+					}
+				}	
 
 			}
 		}
