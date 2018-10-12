@@ -91,12 +91,25 @@ import ApplausData from '../../public/applaus2018.json'
 export default {
   name: 'Aussteller',
   data () {
-    let _aussteller = this.$root.$options.ausstellung.body.list[this.$route.params.id]
+		let _aussteller  = this.$root.$options.ausstellung.body.list[this.$route.params.id]
+		let _currentGrid = _aussteller.category;
+		let category     = this.$root.$options.config.categoryorder;
+		
+		let _index        = [];
+
+
+		for (const key of Object.keys(category)) {
+			if(category[key].slug == _currentGrid){
+				_index[key] = true;
+			} else if (category[key].slug == 'MASTER' && (_currentGrid == 'MEMW' || _currentGrid == 'MD')){
+				_index[6] = true;
+			}
+		}
 
     return {
 			aussteller: _aussteller,
-			isActive: [true, false],
-			currentGridView: 'ID'
+			currentGridView: _currentGrid,
+			isActive: _index
     }
   },
   computed: {
@@ -116,9 +129,9 @@ export default {
       let _betreuer = _aussteller.supervisors.split(',')
 
       return _betreuer
-    },
+		},
     studiengang () {
-      let _studiengang = []
+			let _studiengang = []
       this.absolventen.forEach(function (absolvent) {
         let _category = absolvent.category
         switch (_category) {
@@ -186,6 +199,7 @@ export default {
 			return name
 		},
 		toggleTab(key, slug){
+
 			if(this.isActive[key]){
 				return;
 			}
