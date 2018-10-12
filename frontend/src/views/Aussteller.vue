@@ -37,7 +37,7 @@
 								</p>
 								<p>
 									<strong v-if="absolvent.website" class="content-title">WEB</strong>&nbsp;
-									<em><a v-bind:href="absolvent.website">{{ absolvent.website }}</a></em>
+									<em><a v-bind:href="absolvent.website" target="_blank"> {{ absolvent.website }} </a></em>
 								</p>
 							</div>
 						</div>
@@ -331,15 +331,15 @@ export default {
 		grid-row-gap: 2rem;
 		grid-column-gap: 2rem;
 		img {
-			width: 100%;
-			max-width: 100%;
+			height: 100%;
 		}
 	}
 
 	img {
 		height: 100%;
 		width: 100%;
-		object-fit: cover
+		object-fit: cover;
+		object-position: 50% 50%;
 	}
 
 	.thumbnail {
