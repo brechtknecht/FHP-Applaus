@@ -137,7 +137,7 @@ export default {
 			width: calc(50% - 1.136363636rem);
 			&.general {
 				width: 100%;
-				border-top: 3px dotted var(--color2);
+				border-top: 1px solid var(--color2);
 				padding-top: 1rem;
 			}
 			@include bp(M) {

@@ -29,7 +29,7 @@ new Vue({
       this.viewportWidth = window.innerWidth
     },
 
-    getImageCoverWidth: function (ratioImage, boundingBox_width, boundingBox_height) {
+    getImageCoverWidth: function (ratioImage, boundingBox_width, boundingBox_height, viewportUnits) {
       let ratioBoundingBox = boundingBox_width / boundingBox_height
 
       if (ratioBoundingBox > ratioImage) {
@@ -39,8 +39,14 @@ new Vue({
         var imageWidth = ratioImage * boundingBox_height
       }
 
-      let viewportWidthUnits = (imageWidth / boundingBox_width) * 100
-      return viewportWidthUnits + 'vw'
+      if(viewportUnits) {
+        let viewportWidthUnits = (imageWidth / boundingBox_width) * 100
+        return viewportWidthUnits + 'vw'
+      } else {
+        return imageWidth;
+      }
+      
+      
     },
 
     getAbsolventFullname: function (id) {

@@ -51,108 +51,16 @@ export default {
   name: 'AusstellerGrid',
   data () {
     return {
-    	sizes: {
-    		s: "(max-width: 1699px) ,(max-width: 1219px) ,(max-width: 900px) ",
+    }
+  },
+  computed: {
+  	sizes: function() {
+  		return {
+    		s: "(max-width: 1699px) "+$root.getImageCoverWidth()+",(max-width: 1219px) ,(max-width: 900px) ",
     		m: "",
     		l: ""
-    	},
-      grid: {
-        'ID': {
-          0: {
-            x: 1,
-            y: 1,
-            dx: 2,
-            dy: 1
-          }
-        },
-        'PD': {
-	        0: {
-	            x: 1,
-	            y: 1,
-	            dx: 2,
-	            dy: 2
-	        },
-	        1: {
-	            x: 3,
-	            y: 1,
-	            dx: 1,
-	            dy: 2
-	        },
-			2: {
-				x: 4,
-				y: 1,
-				dx: 1,
-				dy: 2
-			}
-        },
-        'KD': {
-	        0: {
-	            x: 1,
-	            y: 1,
-	            dx: 2,
-	            dy: 2
-	        },
-	        1: {
-	            x: 3,
-	            y: 1,
-	            dx: 1,
-	            dy: 2
-	        },
-			2: {
-				x: 4,
-				y: 1,
-				dx: 1,
-				dy: 2
-			}
-        },
-        'EMW': {
-	        0: {
-	            x: 1,
-	            y: 1,
-	            dx: 2,
-	            dy: 2
-	        },
-	        1: {
-	            x: 3,
-	            y: 1,
-	            dx: 1,
-	            dy: 2
-	        },
-			2: {
-				x: 4,
-				y: 1,
-				dx: 1,
-				dy: 2
-			}
-        },
-        'MASTER': {
-	        0: {
-	            x: 1,
-	            y: 1,
-	            dx: 2,
-	            dy: 2
-	        },
-	        1: {
-	            x: 3,
-	            y: 1,
-	            dx: 1,
-	            dy: 2
-	        },
-			2: {
-				x: 4,
-				y: 1,
-				dx: 1,
-				dy: 2
-			},
-			3: {
-				x: 5,
-				y: 3,
-				dx: 1,
-				dy: 2
-			}
-        }
-      }
-    }
+    	}
+  	}
   },
   components: {
     IconBase
@@ -365,5 +273,31 @@ export default {
 			}
 		}
 	}
+
+	// ====================== GRID LAYOUT IMPROVEMENT ============================
+	.category_3 a:nth-child(10) {
+		grid-column-start: 4;
+		grid-row-start: 3;
+	}
+	.category_0 a:nth-child(2) {
+		grid-column-start: 3;
+		grid-row-start: 3;
+	}
+	.category_1 a:nth-child(5) {
+		grid-column-start: 3;
+		grid-row-start: 1;
+	}
+	.category_1 a:nth-child(9) {
+		grid-column-start: 3;
+		grid-row-start: 5;
+	}
+	.category_2 a:nth-child(5) {
+		grid-column-start: 1;
+		grid-row-start: 3;
+	}
+	// .category_6 a:nth-child(5) {
+	// 	grid-column-start: 1;
+	// 	grid-row-start: 1;
+	// }
 
 </style>

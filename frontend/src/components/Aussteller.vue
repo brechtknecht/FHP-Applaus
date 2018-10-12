@@ -1,7 +1,7 @@
 <template>
 	<div class="wrapper">
 		<h3 class="subtitle">{{ $root.numberOfExhibitiors }} Aussteller</h3>
-		<div v-for="(item, key) in $root.$options.config.categoryorder" :class="key" class="category">
+		<div v-for="(item, key) in $root.$options.config.categoryorder" :class="'category_'+key" class="category">
 			<div class="title">
 				<span>
 					{{ item.slug }}
