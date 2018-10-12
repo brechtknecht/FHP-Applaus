@@ -229,16 +229,16 @@ export default {
 
 	}
 }
-@include bp(min-S) { 
-	.grid {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		.article {
-			
-		}
-	}
-}
+// @include bp(min-S) { 
+// 	.grid {
+// 		display: flex;
+// 		flex-direction: row;
+// 		flex-wrap: wrap;
+// 		.article {
+// 			flex-basis: 30%;
+// 		}
+// 	}
+// }
 	@include bp(M) {
 		.article {
 			border: 0;
