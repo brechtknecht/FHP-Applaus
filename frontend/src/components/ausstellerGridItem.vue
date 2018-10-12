@@ -16,7 +16,6 @@
 				>
 			</div>
 				<span class="beschriftung" :class="{noImage: noImage(aussteller)}">
-					{{ noImage(aussteller) }}
 						<div class="vignette">
 							<icon-base icon-name="signet-box-top" viewBox="0 0 220 66.621"/>
 						</div>

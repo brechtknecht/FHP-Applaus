@@ -62,23 +62,37 @@ export default {
 			--gap: 1.428571429rem;
 
 			.beschriftung {
-				@include bp (M) {
+				@include bp (XL) {
 					.group {
-						margin-top: 1rem;
-						margin-bottom: 1.7rem;
+						margin-top: 0;
+						margin-bottom: 0;
 					}
 					.titel {
-						line-height: 1.2	rem;
+						line-height: 1.2rem;
+						display: none;
+					}
+					.authoren {
+						padding: 0;
 					}
 				}
-				.authoren {
-					padding: 0;
+				@include bp (L) {
+					.group {
+						margin-top: .8rem;
+						margin-bottom: 2rem;
+					}
+					.titel {
+						line-height: 1.4rem;
+						display: inherit;
+					}
+					.authoren {
+						padding: 0;
+					}
 				}
+				
 			}
 		}
 	}
 @include bp(min-L) {
-
 	.grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -155,7 +169,7 @@ export default {
 						margin-bottom: 1rem;
 					}
 				}
-				.group {
+				.group, .noImage .group {
 					opacity: 1;
 				}
 
@@ -197,6 +211,9 @@ export default {
 			opacity: 0;
 			transition: opacity .4s;
 		}
+		&.noImage .group {
+			opacity: .5;
+		}
 		.authoren {
 			padding: 0 0 .5rem;
 			h5 {
@@ -210,6 +227,16 @@ export default {
 			}
 		}
 
+	}
+}
+@include bp(min-S) { 
+	.grid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		.article {
+			
+		}
 	}
 }
 	@include bp(M) {
