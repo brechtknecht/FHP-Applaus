@@ -278,7 +278,7 @@ export default {
 		.fh-potsdam {
 			height: 49px;
 			margin-left: 1rem;
-			margin-top: 5px
+			margin-top: 5px;
 		} 
 	}
 	

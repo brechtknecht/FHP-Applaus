@@ -32,7 +32,7 @@
 									<em>{{ studiengang[++index - 1] }}</em>
 								</p>
 								<p>
-									<strong v-if="absolvent.mail" class="content-title">E-MAIL</strong>&nbsp;
+									<strong class="content-title">E-MAIL</strong>&nbsp;
 									<em><a v-bind:href=" `mailto:${absolvent.email}` ">{{ absolvent.email }}</a></em>
 								</p>
 								<p>
@@ -45,14 +45,13 @@
 				</div>
 			</section>
 			<section class="images">
-				{{ this.aussteller.template }}
 				<div class="images-grid-inner" :class="this.aussteller.template">
 					<div class="image" v-for="image in images" :key="image.key">
 						<img :srcset="image.srcset" :src="image.url" />
 					</div>
 				</div>
 			</section>
-			<section class="content-inner">
+			<section class="content-inner mobile-none">
 				<div class="overview">
 					<h3 class="subtitle dark">Weitere</h3>
 					<h4 class="small-title">Abschlussarbeiten</h4>
@@ -220,11 +219,16 @@ export default {
 		opacity: 0;
 	}
 
-
-
 	.wrapper-content {
 		background: var(--color5);
 	}
+
+	.mobile-none {
+		@include bp(M){
+			display: none;
+		}
+	}
+
 	.aussteller {
 
 		.section {

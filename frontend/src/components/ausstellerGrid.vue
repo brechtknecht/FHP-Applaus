@@ -96,11 +96,17 @@ export default {
 			--gap: 1.428571429rem;
 
 			.beschriftung {
+				@include bp (M) {
+					.group {
+						margin-top: 1rem;
+						margin-bottom: 1.7rem;
+					}
+					.titel {
+						line-height: 1.2	rem;
+					}
+				}
 				.authoren {
 					padding: 0;
-				}
-				.titel {
-					display: none;
 				}
 			}
 		}
