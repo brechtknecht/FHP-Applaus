@@ -294,6 +294,10 @@ export default {
 			margin-bottom: .10rem;
 		}
 
+		.content-subtitle {
+			line-height: 1.5rem;
+		}
+
 		.authors {
 			.absolvent {
 				margin-bottom: 1.5rem;
