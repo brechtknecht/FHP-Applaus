@@ -1,8 +1,10 @@
 <template>
 	<section class="wrapper" :class="{ 'aussteller': contentIsGiven}">
-
+		<div class="logos">
+			<icon-base icon-name="uni-potsdam" view-box="0 0 45 45" class="uni-potsdam"/>
+			<icon-base icon-name="fh-potsdam" view-box="0 0 12 45" class="fh-potsdam"/>
+		</div>
 		<section class="content-inner" v-if="!contentIsGiven">
-
 				<icon-base icon-name="signet" viewBox="0 0 300 155" />
 
 				<div class="group">
@@ -264,4 +266,20 @@ export default {
 			font-weight: 600;
 		}
 	}
+	.logos {
+		position: absolute;
+		display: flex;
+		top: 1.5rem;
+		right: 2.5rem;
+		.uni-potsdam {
+			width: 45px;
+			height: 45px;
+		}
+		.fh-potsdam {
+			height: 49px;
+			margin-left: 1rem;
+			margin-top: 5px
+		} 
+	}
+	
 </style>
