@@ -75,7 +75,7 @@ export default {
 						padding: 0;
 					}
 				}
-				@include bp (L) {
+				@include bp (M) {
 					.group {
 						margin-top: .8rem;
 						margin-bottom: 2rem;
@@ -229,16 +229,27 @@ export default {
 
 	}
 }
-// @include bp(min-S) { 
-// 	.grid {
-// 		display: flex;
-// 		flex-direction: row;
-// 		flex-wrap: wrap;
-// 		.article {
-// 			flex-basis: 30%;
-// 		}
-// 	}
-// }
+@include bp(M) {
+	@include bp(min-M) { 
+		.grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+			box-sizing: border-box;
+			grid-auto-flow: row dense;
+			grid-column-gap: var(--gap);
+			grid-row-gap: var(--gap);
+			grid-template-rows: repeat(auto-fill);
+			
+			.article {
+				grid-column-start: inherit !important;
+				grid-row-start: inherit !important;
+				grid-column-end: span 1 !important;
+				grid-row-end: span 1 !important;
+			}
+		}
+	}
+}
 	@include bp(M) {
 		.article {
 			border: 0;
