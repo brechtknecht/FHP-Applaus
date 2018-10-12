@@ -37,7 +37,7 @@
 								</p>
 								<p>
 									<strong v-if="absolvent.website" class="content-title">WEB</strong>&nbsp;
-									<em><a v-bind:href="absolvent.website">{{ absolvent.website }}</a></em>
+									<em><a v-bind:href="absolvent.website" target="_blank"> {{ absolvent.website }} </a></em>
 								</p>
 							</div>
 						</div>
@@ -91,12 +91,25 @@ import ApplausData from '../../public/applaus2018.json'
 export default {
   name: 'Aussteller',
   data () {
-    let _aussteller = this.$root.$options.ausstellung.body.list[this.$route.params.id]
+		let _aussteller  = this.$root.$options.ausstellung.body.list[this.$route.params.id]
+		let _currentGrid = _aussteller.category;
+		let category     = this.$root.$options.config.categoryorder;
+		
+		let _index        = [];
+
+
+		for (const key of Object.keys(category)) {
+			if(category[key].slug == _currentGrid){
+				_index[key] = true;
+			} else if (category[key].slug == 'MASTER' && (_currentGrid == 'MEMW' || _currentGrid == 'MD')){
+				_index[6] = true;
+			}
+		}
 
     return {
 			aussteller: _aussteller,
-			isActive: [true, false],
-			currentGridView: 'ID'
+			currentGridView: _currentGrid,
+			isActive: _index
     }
   },
   computed: {
@@ -116,9 +129,9 @@ export default {
       let _betreuer = _aussteller.supervisors.split(',')
 
       return _betreuer
-    },
+		},
     studiengang () {
-      let _studiengang = []
+			let _studiengang = []
       this.absolventen.forEach(function (absolvent) {
         let _category = absolvent.category
         switch (_category) {
@@ -186,6 +199,7 @@ export default {
 			return name
 		},
 		toggleTab(key, slug){
+
 			if(this.isActive[key]){
 				return;
 			}
@@ -317,31 +331,48 @@ export default {
 		grid-row-gap: 2rem;
 		grid-column-gap: 2rem;
 		img {
-			width: 100%;
-			max-width: 100%;
+			height: 100%;
 		}
 	}
 
 	img {
 		height: 100%;
 		width: 100%;
-		object-fit: cover
+		object-fit: cover;
+		object-position: 50% 50%;
 	}
 
 	.thumbnail {
 		grid-template-columns: 1fr 1fr;
 		grid-auto-rows: auto;
-		& > .image:first-child {
+		.image:first-child {
+			display: none;
+		}
+		.image:nth-child(2) {
+			grid-column: 1 / span 2;
+		}
+		.image:last-child,
+		.image:nth-last-child(2):nth-child(odd) {
 			grid-column: 1 / span 2;
 		}
 	}
 
 	.imageBig {
 		grid-template-columns: 1fr;
+		.image:first-child {
+			display: none;
+		}
 	}
 
 	.imageSmall {
 		grid-template-columns: 1fr 1fr;
+		.image:first-child {
+			display: none;
+		}
+		.image:last-child,
+		.image:nth-last-child(2):nth-child(even) {
+			grid-column: 1 / span 2;
+		}	
 	}
 
 	.overview {
