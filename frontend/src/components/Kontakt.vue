@@ -45,7 +45,6 @@ export default {
 		padding-bottom: 6rem;
 		@include bp(M) {
 			flex-direction: column;
-			padding-top: 0;
 		}
 		.section {
 			flex-basis: calc(20% - 2.272727273rem);
