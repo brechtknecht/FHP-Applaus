@@ -345,17 +345,34 @@ export default {
 	.thumbnail {
 		grid-template-columns: 1fr 1fr;
 		grid-auto-rows: auto;
-		& > .image:first-child {
+		.image:first-child {
+			display: none;
+		}
+		.image:nth-child(2) {
+			grid-column: 1 / span 2;
+		}
+		.image:last-child,
+		.image:nth-last-child(2):nth-child(odd) {
 			grid-column: 1 / span 2;
 		}
 	}
 
 	.imageBig {
 		grid-template-columns: 1fr;
+		.image:first-child {
+			display: none;
+		}
 	}
 
 	.imageSmall {
 		grid-template-columns: 1fr 1fr;
+		.image:first-child {
+			display: none;
+		}
+		.image:last-child,
+		.image:nth-last-child(2):nth-child(even) {
+			grid-column: 1 / span 2;
+		}	
 	}
 
 	.overview {
