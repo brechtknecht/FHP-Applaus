@@ -10,7 +10,7 @@
 			:reactiveNav="reactiveNav"
 		/>
 		<!-- <transition name="routerTransition"> -->
-			<router-view></router-view>
+			<router-view :key="$route.fullPath"></router-view>
 		<!-- </transition> -->
 	</div>
 </template>
