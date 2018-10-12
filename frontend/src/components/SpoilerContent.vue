@@ -41,6 +41,8 @@ export default {
 }
 </script>
 <style lang="scss">
+	@import '@/scss/mediaqueries.scss';
+
 	.spoilerActive .spoilerContent {
 		height: var(--fullheight);
 	}
@@ -61,12 +63,19 @@ export default {
 			justify-content: space-between;
 			width: 100%;
 			position: absolute;
-
+			@include bp(M) {
+				flex-direction: column;
+			}
 		}
 		.column {
 		    margin-bottom: 2.5rem;
-		    flex: 0 1 calc(25% - 1.772727273rem);
-
+			flex: 0 1 calc(25% - 1.772727273rem);
+			@include bp(M) {
+				margin-bottom: 0;
+				&:last-child {
+					margin-bottom: 2rem;
+				}
+			}
 		    div {
 		    	margin-top: 2rem;
 		    }
