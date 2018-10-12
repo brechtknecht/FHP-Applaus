@@ -1,5 +1,5 @@
 <template>
-	<div class="teaser">
+	<div class="teaser" :class="{ noImage: backgroundImage[0].url }">
 		<div class="meta-data-inner" v-if="!contentIsGiven">
 			<router-link :to="'aussteller/'+teaser.slug">
 				<span class="authors">
@@ -55,6 +55,7 @@ export default {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
+		z-index: -1;
 
 		.meta-data-inner {
 			margin: 0 auto;
@@ -110,7 +111,7 @@ export default {
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
-		z-index: -1;
+		background-color: var(--color6);
 		// animation: moveImage 60s cubic-bezier(.18,.01,.85,1) both infinite;
 	}
 </style>

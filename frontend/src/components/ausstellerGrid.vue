@@ -1,51 +1,17 @@
 <template>
 	<div class="grid">
-		<router-link
-			:to="'/aussteller/'+aussteller"
+		<ausstellerGridItem
 			v-for="(aussteller, key) in getAusstellerGroups(categorySlug)"
-			
 			:key="categorySlug + key"
-			class="article"
-			:class="'thumbSize--'+content.body.list[aussteller].thumbSize"
-		>
-			<div class="background">
-				<div class="gradient_changer"/>
-				<div class="gradient"/>
-				 <!-- ATTENTION — ToDo ! Insert media queries here in this img tag! (sizes)  -->
-				<img
-					v-if="content.body.list[aussteller].images[0]"
-					:srcset="content.body.list[aussteller].images[0].srcset"
-					:src="content.body.list[aussteller].images[0].url"
-					sizes="1vw"
-				>
-			</div>
-				<span class="beschriftung">
-						<div class="vignette">
-							<icon-base icon-name="signet-box-top" viewBox="0 0 220 66.621"/>
-						</div>
-
-						<div class="group">
-							<div class="authoren">
-								<h5 class="author" v-for="author in content.body.list[aussteller].authors.split(',')">
-									<span class="forename">{{$root.getAbsolventFullname(author).forename}} </span><span class="lastname">{{$root.getAbsolventFullname(author).lastname}}</span>
-								</h5>
-							</div>
-							<em class="titel">
-								{{ content.body.list[aussteller].title }}
-							</em>
-						</div>
-
-						<div class="vignette">
-							<icon-base icon-name="signet-box-bottom" viewBox="0 0 220 66.621"/>
-						</div>
-				</span>
-		</router-link>
+			:ausstellerContent="content.body.list[aussteller]"
+			:aussteller="aussteller"
+		/>
 	</div>
 
 </template>
 
 <script>
-import IconBase from './IconBase.vue'
+import ausstellerGridItem from './ausstellerGridItem.vue'
 
 export default {
   name: 'AusstellerGrid',
@@ -63,7 +29,7 @@ export default {
   	}
   },
   components: {
-    IconBase
+    ausstellerGridItem
   },
   props: {
     categorySlug: String,
