@@ -21,14 +21,14 @@ new Vue({
   absolventen: ApplausData.pages.absolventen,
   data: {
     viewportHeight: 0,
-    viewportWidth: 0
+    viewportWidth: 0,
+    animation: false
   },
   methods: {
     resize () {
       this.viewportHeight = window.innerHeight
       this.viewportWidth = window.innerWidth
     },
-
     getImageCoverWidth: function (ratioImage, boundingBox_width, boundingBox_height, viewportUnits) {
       let ratioBoundingBox = boundingBox_width / boundingBox_height
 

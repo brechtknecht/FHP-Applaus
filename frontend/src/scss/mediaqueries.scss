@@ -74,6 +74,9 @@
 	// @else if $point == S { 
 	// 	@media (max-width: 660px)  { @content; }
 	// }
+	@else if $point == HS { 
+		@media (max-height: 800px)  { @content; }
+	}
 	@else if $point == HXS { 
 		@media (max-height: 580px)  { @content; }
 	}

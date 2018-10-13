@@ -10,11 +10,11 @@
 				<div class="subbar short" />
 			</div>
 			<SpoilerContent
+				:id="'spoilerContent_'+key"
 				:absolventenGroups="getAbsolventenGroups(item.slug)"
 				:spoilerOpen="spoilerActive[key]"
 				:spoilerOpenHeight="spoilerHeight[key]"
 				:spoilerID="key"
-				:style="'--fullheight:'+spoilerHeight[key]+'px'"
 			/>
 			<div class="subbar long" />
 		</div>
@@ -24,13 +24,17 @@
 <script>
 import SpoilerContent from '@/components/SpoilerContent.vue'
 import IconBase from './IconBase.vue'
+
 export default {
   name: 'Absolventen',
   data () {
     return {
       categories: this.$root.$options.config.categoryorder,
       spoilerActive: [],
-      spoilerHeight: []
+      spoilerHeight: [],
+      testHeight: {
+      	height: 0
+      }
     }
   },
   components: {
@@ -48,9 +52,14 @@ export default {
   },
   methods: {
     toggleSpoiler (key) {
-      let height = document.getElementById('spoilercontent-' + key).offsetHeight
-      this.$set(this.spoilerHeight, key, height)
-      this.$set(this.spoilerActive, key, !this.spoilerActive[key])
+		let height = document.getElementById('spoilercontent-' + key).offsetHeight
+		this.$set(this.spoilerActive, key, !this.spoilerActive[key])
+		if(this.spoilerActive[key]) {
+			this.$set(this.spoilerHeight, key, height)
+		} else {
+			this.$set(this.spoilerHeight, key, 0)
+		}
+      
     },
     getAbsolventenGroups (category) {
     	var absolventsObject = {};

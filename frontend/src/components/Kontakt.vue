@@ -7,8 +7,14 @@
 				<abbr>Haus D</abbr>
 				</em>Kiepenheuerallee 5<br>
 				14469 Potsdam
+				{{ color1_80 }}
 			</div>
-			<icon-base icon-name="Map" viewBox="0 -136 1650 1200" />
+			<icon-base 
+				icon-name="Map" 
+				viewBox="0 -136 1650 1200" 
+				:class="{ hide: $root.animation }"
+				:style="'--color1_80:'+darken(colors['--color1'], 7)+'; --color1_70:'+darken(colors['--color1'], 17)"
+			/>
 		</div>
 		<footer class="inner">
 			<div class="section" v-for="section in content.body" :key="section.template">
@@ -21,9 +27,21 @@
 
 <script>
 import IconBase from './IconBase.vue'
+import tinycolor from "tinycolor2"
+
 export default {
   props: {
     content: Object
+  },
+  data() {
+  	return {
+  		colors: this.$root.$options.styling
+  	}
+  },
+  methods: {
+  	darken: function(color, by) {
+  		return tinycolor(color).darken(by).desaturate(by)
+  	}
   },
   components: {
   	IconBase
@@ -82,7 +100,7 @@ export default {
 			box-sizing: border-box;
 			// top: calc(2vh - 138px);
 			margin: 0 auto;
-			bottom: 32.5vh;
+			bottom: 32.8vh;
 			position: absolute;
 			left: 0; right: 0;
 			width: 13.636363636rem;
@@ -93,6 +111,22 @@ export default {
 			text-align: center;
 			z-index: 2;
 			line-height: 1.5;
+
+			@include bp(HS) {
+				display: none;
+			}
+
+			@include bp(XXL) { 
+				display: block;
+				@include bp(HXS) {
+					display: none;
+				}
+			}
+
+			// @include bp(S) { 
+			// 	display: none;
+			// }
+
 			h4 {
 				margin-bottom: .5rem;
 				font-family: johnston,sans-serif;
@@ -135,10 +169,25 @@ export default {
 	.Map {
 		z-index: 1;
 		position: absolute;
+		/* Portrait */
+		@media (orientation:portrait) {
+		/* Portrait styles */
+		height: 100%;
+		min-width:100%;
+		}
+		/* Landscape */
+		@media (orientation:landscape) {
+		/* Landscape styles */
+		min-height:100%;
 		width: 100%;
+		}
 		left: 50%;
 		top: 50%;
 		transform: translateY(-50%) translateX(-50%);
+
+		&.hide {
+			display: none;
+		}
 
 		.mainColor {
 			&[fill=none] {
@@ -158,21 +207,21 @@ export default {
 		}
 		.thirdColor {
 			&[fill=none] {
-				stroke: var(--color1);
+				stroke: var(--color1_80);
 			}
 			&:not([fill=none]) {
-				fill: var(--color1);
+				fill: var(--color1_80);
 			}
-			filter: brightness(80%) contrast(80%);
+			// filter: brightness(80%) contrast(80%);
 		}
 		.fourthColor {
 			&[fill=none] {
-				stroke: var(--color1);
+				stroke: var(--color1_70);
 			}
 			&:not([fill=none]) {
-				fill: var(--color1);
+				fill: var(--color1_70);
 			}
-			filter: brightness(70%) contrast(70%);
+			// filter: brightness(70%) contrast(70%);
 		}	
 	}
 </style>

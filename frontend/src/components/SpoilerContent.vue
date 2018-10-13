@@ -1,5 +1,5 @@
 <template>
-	<div class="spoilerContent" >
+	<div class="spoilerContent" :style="'height:'+spoilerHeight+'px'">
 		<div class="column-outer" :id="'spoilercontent-'+spoilerID">
 			<div class="column" v-for="(item, index) in absolventenGroups">
 				<Absolvent
@@ -14,13 +14,13 @@
 </template>
 <script>
 import Absolvent from '@/components/Absolvent.vue'
-import { Easing, Tween, autoPlay } from 'es6-tween'
-
+import { TweenLite } from "gsap/TweenLite"
 export default {
   name: 'spoilerContent',
   data() {
   	return {
-  		spoilerHeight: 0
+  		spoilerHeight: '0'
+  		
   	}
   },
   props: {
@@ -33,10 +33,17 @@ export default {
     Absolvent
   },
   watch: {
-  	// spoilerOpen: function(state) {
-
-  	// 	TweenLite.to(this.$data, 0.5, { spoilerHeight: this.spoilerOpenHeight });
-  	// }
+  	spoilerOpen: function(state) {
+  		// var el = document.getElementById('spoilerContent_'+this.spoilerID);
+  		// console.log(el);
+  		this.spoilerHeight = this.spoilerOpenHeight;
+  		// TweenLite.to(this.$data, 0.5, { spoilerHeight: this.spoilerOpenHeight })
+  	}
+  },
+  methods: {
+  	animationHappening: function(state) {
+  		this.$root.animation = state
+  	}
   }
 }
 </script>
@@ -51,7 +58,7 @@ export default {
 		overflow: hidden;
 		box-sizing: content-box;
 		height: 0;
-		transition: height .3s;
+		transition: height .5s;
 		
 		.column-outer {
 			display: flex;
