@@ -9,3 +9,4 @@ media_order: 'TITLEPAGE-01.jpg,sketchesprezi.jpg,storyboardpsd.jpg,proxemics-01.
 template_format: json
 ---
 
+In this thesis, I addressed the problem of finding happiness, purpose, and belonging in life through design. The main focus of my research was on improving the lives of my surroundings with an emphasis on happiness.

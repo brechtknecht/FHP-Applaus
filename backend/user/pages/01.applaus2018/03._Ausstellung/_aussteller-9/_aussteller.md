@@ -10,3 +10,4 @@ media_order: '01 Still aus looking for moore 2018.jpg,a01 Still aus looking for 
 template_format: json
 ---
 
+Die vorgelegte Bachelorarbeit in Projektform nähert sich dem Verhältnis zwischen Queerness und Dokumentarfilm in Form eines Kurzportäts über Madison Moore. Der Dokumentarfilm mit dem Namen »looking for moore« stellt eine Möglichkeit für das Publikum dar, den queeren Kulturkritiker, Autor und Künstler sowie seine Geschichte als queere Person of color durch Momentaufnahmen aus seinem Leben sowie in Form von Interviews kennenzulernen. Im schriftlichen Teil der Arbeit werden sowohl die theoretischen Grundlagen zur Queer Theory und zum Dokumentarfilm als auch die persönlichen Reflexionsprozesse dargelegt.

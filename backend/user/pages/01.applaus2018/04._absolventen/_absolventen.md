@@ -105,7 +105,7 @@ absolventen:
         id: 5bbfb7377c650
         email: zuz_ka@gmx.de
         website: 'https://www.handzondesign.de'
-        category: ID
+        category: MD
         title: ''
         subtitle: ''
     -

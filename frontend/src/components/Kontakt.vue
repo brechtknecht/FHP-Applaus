@@ -7,7 +7,6 @@
 				<abbr>Haus D</abbr>
 				</em>Kiepenheuerallee 5<br>
 				14469 Potsdam
-				{{ color1_80 }}
 			</div>
 			<icon-base 
 				icon-name="Map" 

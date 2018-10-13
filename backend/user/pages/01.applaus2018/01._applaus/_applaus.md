@@ -8,7 +8,7 @@ bodysections:
         content: "##### Ort\r\n\r\n_Fachhochschule Potsdam  \r\nCampus Fachhochschule  \r\nKiepenheuerallee 5  \r\n 14469 Potsdam_\r\n"
     -
         name: right
-        content: "##### Freier Eintritt\r\n\r\n_zur Ausstellung und zum Symposium_"
+        content: "##### Freier Eintritt\r\n\r\n_zur Ausstellung und zum  \r\nSymposium_"
     -
         content: 'Charakter&shy;istisch für den Fach&shy;be&shy;reich Design ist die enge Ver&shy;zah&shy;nung seiner Studien&shy;gänge Interface-, Kom&shy;muni&shy;kations- und Produkt&shy;design sowie Euro&shy;päische Medien&shy;wissen&shy;schaft, einem Studien&shy;gang in Koope&shy;ration mit der <abbr>Universität Potsdam</abbr>. Diese Ver&shy;netz&shy;ung ermög&shy;licht ein einzig&shy;art&shy;iges, fächer&shy;über&shy;greifen&shy;des Aus&shy;bildungs&shy;profil mit starkem Forsch&shy;ungs- und Praxis&shy;be&shy;zug, das sich in den Ab&shy;schluss&shy;arbei&shy;ten wider&shy;spiegelt.'
 template_format: json

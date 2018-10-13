@@ -78,7 +78,7 @@
 		@media (max-height: 800px)  { @content; }
 	}
 	@else if $point == HXS { 
-		@media (max-height: 580px)  { @content; }
+		@media (max-height: 560px)  { @content; }
 	}
 	@else if $point == HXXS { 
 		@media (max-height: 460px)  { @content; }

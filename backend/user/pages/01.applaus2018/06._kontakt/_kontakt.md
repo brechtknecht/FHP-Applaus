@@ -3,7 +3,7 @@ title: Kontakt
 bodysections:
     -
         name: Ort
-        content: "_Fest&shy;akt der Design&shy;studien&shy;gänge_\r\nHauptgebäude / Großer Hörsaal\r\n    \r\n_Fest&shy;akt der Europä&shy;ischen Medien&shy;wissen&shy;schaft_\r\nHaus D & Casino\r\n"
+        content: "Fest&shy;akt der Design&shy;studien&shy;gänge<br>\r\n<em>Großer Hörsaal</em> · </abbr>Hauptgebäude</abbr>\r\n    \r\nFest&shy;akt der Europä&shy;ischen Medien&shy;wissen&shy;schaft<br>\r\n<abbr>Haus D & Casino</abbr>\r\n"
     -
         name: Anfahrt
         content: "Bei Ankunft per Bahn:\r\nAb Potsdam Haupt­bahnhof mit der Tram 92 oder 96 bis Campus Fach­hochschule. Parkplätze am Campus sind vorhanden. "

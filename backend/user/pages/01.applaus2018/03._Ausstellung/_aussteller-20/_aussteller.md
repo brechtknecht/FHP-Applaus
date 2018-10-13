@@ -10,3 +10,4 @@ media_order: 'SHoericke_WerdWert.jpg,SHoericke_WerdWert1.jpg,SHoericke_WerdWert2
 template_format: json
 ---
 
+Kommunikationsdesign im Jahr 2018, was bedeutet das eigentlich? Wird unsere Arbeit überhaupt noch wertgeschätzt? Digitalisierung, Globalisierung und Preisdumping haben auf unsere Arbeit mehr Einfluss, als den meisten Auftraggebern/innen bewusst ist. WERD WERT geht dieser Tatsache in zwei Formaten auf den Grund – mit Text und Bild. Hauptziel dieser Auseinandersetzung ist es ein Bewusstsein dafür zu schaffen, welchen Anforderungen und Problemen die Arbeit heutiger Kommunikationsdesigner/innen ausgesetzt ist. Idealerweise erwächst aus dem erlangten Bewusstsein auch eine neue Wertschätzung, doch am Ende ist jeder selbst seines Glückes Schmied: Werd wert!

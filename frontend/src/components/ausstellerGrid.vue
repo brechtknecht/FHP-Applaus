@@ -285,25 +285,37 @@ export default {
 	}
 
 	// ====================== GRID LAYOUT IMPROVEMENT ============================
-	.category_3 a:nth-child(10) {
-		grid-column-start: 4;
-		grid-row-start: 3;
-	}
-	.category_0 a:nth-child(2) {
+	.category_0 .article:nth-child(3) {
 		grid-column-start: 3;
 		grid-row-start: 3;
 	}
-	.category_1 a:nth-child(5) {
+	.category_3 .article:nth-child(7) {
+		grid-column-start: 1;
+		grid-row-start: 3;
+	}
+	.category_2 .article:nth-child(5) {
+		grid-column-start: 1;
+		grid-row-start: 3;
+	}
+	.category_6 .article:nth-child(8) {
+		grid-column-start: 1;
+		grid-row-start: 3;
+	}	
+	.category_6 .article:nth-child(9) {
+		grid-column-start: 3;
+		grid-row-start: 5;
+	}	
+	.category_6 .article:nth-child(5) {
 		grid-column-start: 3;
 		grid-row-start: 1;
 	}
-	.category_1 a:nth-child(9) {
-		grid-column-start: 3;
-		grid-row-start: 5;
-	}
-	.category_2 a:nth-child(5) {
+	.category_1 .article:nth-child(5) {
 		grid-column-start: 1;
 		grid-row-start: 3;
+	}
+	.category_1 .article:nth-child(9) {
+		grid-column-start: 3;
+		grid-row-start: 5;
 	}
 	// .category_6 a:nth-child(5) {
 	// 	grid-column-start: 1;

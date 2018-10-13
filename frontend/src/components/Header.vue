@@ -2,10 +2,10 @@
 	<section class="wrapper" :class="{ 'aussteller': contentIsGiven}">
 		<div class="logos">
 			<a href="https://www.uni-potsdam.de/" target="_blank" style="border: 0">
-				<icon-base icon-name="uni-potsdam" view-box="0 0 45 45" class="uni-potsdam"/>
+				<icon-base icon-name="uni-potsdam" view-box="0 0 45 45"/>
 			</a>
 			<a href="https://www.fh-potsdam.de/" target="_blank" style="border: 0">
-				<icon-base icon-name="fh-potsdam" view-box="0 0 12 45" class="fh-potsdam"/>
+				<icon-base icon-name="fh-potsdam" view-box="0 0 12 45"/>
 			</a>
 		</div>
 		<section class="content-inner" v-if="!contentIsGiven">
@@ -225,6 +225,17 @@ export default {
 
 			fill: var(--color3);
 
+			@include bp(XXL) {
+				@include bp(HXS) {
+					display: none;
+				}
+			}
+
+			@include bp(XL) {
+				@include bp(HXXS) {
+					display: none;
+				}
+			}
 			@include bp(M) {
 				width: 35%;
 			}
@@ -233,6 +244,7 @@ export default {
 				height: auto;
 				margin-bottom: 3rem;
 			}
+
 			@include bp(XXS) {
 				width: 50%;
 			    height: auto;
@@ -275,14 +287,15 @@ export default {
 		display: flex;
 		top: 1.5rem;
 		right: 2.5rem;
+		z-index: 2;
+
 		.uni-potsdam {
-			width: 45px;
-			height: 45px;
+			width: 2.045454545rem;
 		}
 		.fh-potsdam {
-			height: 49px;
-			margin-left: 1rem;
-			margin-top: 5px;
+			width: .681818182rem;
+			margin-left: .75rem;
+			margin-top: .227272727rem;
 		} 
 	}
 	

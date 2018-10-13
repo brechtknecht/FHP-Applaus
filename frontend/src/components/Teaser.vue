@@ -1,5 +1,5 @@
 <template>
-	<div class="teaser" :class="{ noImage: backgroundImage[0].url }">
+	<div class="teaser" :class="">
 		<div class="meta-data-inner" v-if="!contentIsGiven">
 			<router-link :to="'aussteller/'+teaser.slug">
 				<span class="authors">
@@ -15,7 +15,12 @@
 
 		<div class="gradient" />
 		<!-- ATTENTION — ToDo ! Insert media queries here in this img tag! (sizes) -->
-		<img class="teaser-image"  :src="backgroundImage[0].url" :srcset="backgroundImage[0].srcset" :sizes="$root.getImageCoverWidth(backgroundImage[0].aspect_ratio, $root.viewportWidth, $root.viewportHeight, true)">
+		<img class="teaser-image"  
+		:src="backgroundImage[0].url" 
+		:srcset="backgroundImage[0].srcset" 
+		:sizes="$root.getImageCoverWidth(backgroundImage[0].aspect_ratio, $root.viewportWidth, $root.viewportHeight, true)"
+		v-if="this.backgroundImage.length"
+		>
 	</div>
 </template>
 

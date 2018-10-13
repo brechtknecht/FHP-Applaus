@@ -291,11 +291,12 @@ export default {
 			font-size: .875rem;
 			text-decoration: none;
 			margin-top: .318rem;
-			margin-bottom: .10rem;
+			// margin-bottom: .10rem;
 		}
 
 		.content-subtitle {
 			line-height: 1.5rem;
+			margin-top: -0.5rem;
 		}
 
 		.authors {
@@ -319,7 +320,10 @@ export default {
 			}
 		}
 	}
-
+	.text {
+		word-wrap: break-word;
+		hyphens: auto;
+	}
 	.author {
 		display: block;
 	}
