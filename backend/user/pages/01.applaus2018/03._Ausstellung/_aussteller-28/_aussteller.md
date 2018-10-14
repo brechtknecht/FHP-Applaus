@@ -1,5 +1,6 @@
 ---
 title: 'Material Network'
+headertext: 'An Investigation into the Relationship of Design and Research in Theory and Praxis'
 category: PD
 authors: 5bbfb781a4c42
 supervisors: 'Prof. Alexandra Martini,Prof. Christiane Sauer'

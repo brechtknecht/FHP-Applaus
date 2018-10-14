@@ -1,5 +1,5 @@
 ---
-title: 'WERD WERT'
+title: 'Werd Wert'
 headertext: 'Über die Wertschätzung von Kommunikationsdesign'
 category: KD
 authors: 5bbfb749afd96

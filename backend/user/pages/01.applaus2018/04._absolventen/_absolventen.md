@@ -434,7 +434,7 @@ absolventen:
         lastname: Feltner
         id: 5bc30337e7bbf
         category: EMW
-        title: '»Auf den zweite Blick«'
+        title: 'Auf den zweite Blick'
         subtitle: 'Kinderfilme der DEFA als Spiegel der gesellschaftlichen Verhältnisse der DDR'
     -
         forename: Antje
@@ -449,7 +449,7 @@ absolventen:
         id: 5bc3039c94707
         category: EMW
         title: 'IM O.'
-        subtitle: 'eine inszenatorische Auseinandersetzung mit Überwachungsphänomenen und –apparaten '
+        subtitle: 'Eine inszenatorische Auseinandersetzung mit Überwachungsphänomenen und –apparaten '
     -
         forename: Christiane
         lastname: Jordan
@@ -463,13 +463,13 @@ absolventen:
         id: 5bc304612dff7
         category: EMW
         title: Obaasima
-        subtitle: 'eine experimentelle Annäherung an das Portrait als Film und Frauen in Ghana'
+        subtitle: 'Eine experimentelle Annäherung an das Portrait als Film und Frauen in Ghana'
     -
         forename: Stefan
         lastname: Kallert
         id: 5bc3049f073b8
         category: EMW
-        title: 'Zwischen social media und Liveperformance'
+        title: 'Zwischen Social Media und Liveperformance'
         subtitle: 'Musikalisches (er)leben von Produzent und Konsument im Kontext der Digitalisierung'
     -
         forename: 'Miriam Mey'
@@ -483,29 +483,29 @@ absolventen:
         lastname: Kreth
         id: 5bc3055f6a2c2
         category: EMW
-        title: 'The Audience - Der Drang nach Selbstinszenierung in Zeiten von Social Media'
-        subtitle: 'eine filmische Auseinandersetzung'
+        title: 'The Audience – Der Drang nach Selbstinszenierung in Zeiten von Social Media'
+        subtitle: 'Eine filmische Auseinandersetzung'
     -
         forename: Ronja
         lastname: Lipp
         id: 5bc3059264235
         category: EMW
         title: Zukunftsvisionen
-        subtitle: 'Versprechungen und Befürchtungen zu sozialen Medien. Eine Analyse anhand der Serie „Black Mirror“'
+        subtitle: 'Versprechungen und Befürchtungen zu sozialen Medien. Eine Analyse anhand der Serie »Black Mirror«'
     -
         forename: Tasya
         lastname: Martin
         id: 5bc305c409a30
         category: EMW
-        title: 'The Audience - Der Drang nach Selbstinszenierung in Zeiten von Social Media'
-        subtitle: 'eine filmische Auseinandersetzung'
+        title: 'The Audience – Der Drang nach Selbstinszenierung in Zeiten von Social Media'
+        subtitle: 'Eine filmische Auseinandersetzung'
     -
         forename: David
         lastname: Mertens
         id: 5bc3061e96d43
         category: EMW
         title: 'Geschichte und Identität'
-        subtitle: 'Über eine postkoloniale und gendergerechte Ausstellungspraxis in historischen MuseenÜber eine postkoloniale und gendergerechte Ausstellungspraxis in historischen Museen'
+        subtitle: 'Über eine postkoloniale und gendergerechte Ausstellungspraxis in historischen Museen'
     -
         forename: Konstantin
         lastname: Münzel
@@ -530,7 +530,7 @@ absolventen:
     -
         forename: Carolin
         lastname: Schramm
-        id: 5bc30622395a1
+        id: 5bc3ac1d55645
         category: EMW
         title: 'Die Gestalt der Ungestalt'
         subtitle: 'Ein audiovisuelles Experiment zur filmischen Groteske'
@@ -551,7 +551,7 @@ absolventen:
     -
         forename: Tom
         lastname: Wiedemann
-        id: 5bc30622395a1
+        id: 5bc3ac169782e
         category: EMW
         title: 'Dokumentarfilm über Sprache als kulturelles Werkzeug am Beispiel integrativer Projekte in DGS'
         subtitle: ''
@@ -584,13 +584,6 @@ absolventen:
         title: 'Mit Mooswesten gegen Feinstaub'
         subtitle: 'Das Zusammenspiel von Fiktionalität und Realität in Mockumentaries'
     -
-        forename: Hannes
-        lastname: Höpfner
-        id: 5bc30843cd8c6
-        category: ID
-        title: 'Diggin`it - Explorationsvisualisierungen für Musikdaten'
-        subtitle: 'Untersuchungen des Potenzials zwischen den analogen und digitalen Polen des Musikkonsums'
-    -
         forename: 'Adina Paloma'
         lastname: Dutz
         id: 5bc30808bf867
@@ -602,7 +595,7 @@ absolventen:
         lastname: Höpfner
         id: 5bc3142e16550
         category: ID
-        title: 'Diggin`it - Explorationsvisualisierungen für Musikdaten'
+        title: 'Diggin’it · Explorationsvisualisierungen für Musikdaten'
         subtitle: 'Untersuchungen des Potenzials zwischen den analogen und digitalen Polen des Musikkonsums'
     -
         forename: Jonathan
@@ -624,7 +617,7 @@ absolventen:
         id: 5bc31967bace2
         category: ID
         title: 'Visualizing Patient Reported Outcomes'
-        subtitle: 'Entwicklung einer interaktiven Datenvisualisierung, für Ärzte im Krankenhaus, zur Auswertung bestehender Therapieverfahren anhand von Patient'
+        subtitle: 'Entwicklung einer interaktiven Datenvisualisierung für Ärzte im Krankenhaus zur Auswertung bestehender Therapieverfahren anhand von Patient'
     -
         forename: Max
         lastname: Tillich
@@ -637,8 +630,8 @@ absolventen:
         lastname: Veitengruber
         id: 5bc319803191b
         category: ID
-        title: HERBITOPIA
-        subtitle: 'MEDICINAL PLANTS GETTING DIGITAL'
+        title: 'Herbitopia'
+        subtitle: 'Medicinal Plants Getting Digital'
     -
         forename: Alex
         lastname: Wieland
@@ -658,7 +651,7 @@ absolventen:
         lastname: Albert
         id: 5bc319b8dda7d
         category: KD
-        title: 'Wie können Partizipative Gestaltungsprozesse im Stadtbild durchgeführt werden? Welche Rolle hat der/die Designer*in dabei?'
+        title: 'Wie können partizipative Gestaltungsprozesse im Stadtbild durchgeführt werden? Welche Rolle hat der/die Designer*in dabei?'
         subtitle: ''
     -
         forename: Miriam
@@ -679,7 +672,7 @@ absolventen:
         lastname: Buder
         id: 5bc319f4310ea
         category: KD
-        title: ZERUS
+        title: Zerus
         subtitle: 'Ein diegetischer Prototyp'
     -
         forename: Jule
@@ -707,7 +700,7 @@ absolventen:
         lastname: Götze
         id: 5bc31a24cafae
         category: KD
-        title: 'SCHWARZ AUF WEISS'
+        title: 'Schwarz auf Weiß'
         subtitle: ''
     -
         forename: Jasmin
@@ -735,7 +728,7 @@ absolventen:
         lastname: Hoffmann
         id: 5bc31a6236405
         category: KD
-        title: KLANGSCHAFFEN
+        title: Klangschaffen
         subtitle: 'Wie sich Musik auf den kreativen Denkprozess auswirkt'
     -
         forename: Elia
@@ -743,14 +736,7 @@ absolventen:
         id: 5bc31a7abdcaa
         category: KD
         title: 'Lateral Tracking Shot'
-        subtitle: 'narrative Strategien audiovisueller Formate'
-    -
-        forename: Moritz
-        lastname: Jekat
-        id: 5bc31a88b6c17
-        category: KD
-        title: 'MULTINATIONALE FAMILIENGRÜNDUNG'
-        subtitle: 'Eine theoretische und fotografische Auseinandersetzung'
+        subtitle: 'Narrative Strategien audiovisueller Formate'
     -
         forename: Mario
         lastname: Klemm
@@ -777,7 +763,7 @@ absolventen:
         lastname: Kuchenbuch
         id: 5bc31ab323091
         category: KD
-        title: 'FUCK THE SYSTEM and design a better world'
+        title: 'Fuck the System and Design a Better World'
         subtitle: ''
     -
         forename: Fabian
@@ -785,7 +771,7 @@ absolventen:
         id: 5bc31abb16aff
         category: KD
         title: 'Kinder für alle'
-        subtitle: 'Für: Eine offene und tolerante Gesellschaft'
+        subtitle: 'Für eine offene und tolerante Gesellschaft'
     -
         forename: Anne
         lastname: Lehmann
@@ -812,8 +798,8 @@ absolventen:
         lastname: Missal
         id: 5bc31afbc0b5b
         category: KD
-        title: 'SUPER, KIND!'
-        subtitle: 'ein Phänomen zwischen Wille und Geistesgröße'
+        title: 'Super, Kind!'
+        subtitle: 'Ein Phänomen zwischen Wille und Geistesgröße'
     -
         forename: Rene
         lastname: Möller
@@ -833,7 +819,7 @@ absolventen:
         lastname: Müller
         id: 5bc31b278c426
         category: KD
-        title: MANDOMIN
+        title: Mandomin
         subtitle: 'Konzeption und Gestaltung eines digitalen Kinderbuches'
     -
         forename: Johanna
@@ -841,7 +827,7 @@ absolventen:
         id: 5bc31b627d083
         category: KD
         title: 'Alles Platte?'
-        subtitle: 'gestalterische Auseinandersetzung zum individuellen, kreativen Ausdruck der Architektur in der „Ostmoderne“'
+        subtitle: 'Gestalterische Auseinandersetzung zum individuellen, kreativen Ausdruck der Architektur in der »Ostmoderne«'
     -
         forename: Philipp
         lastname: Pusch
@@ -861,7 +847,7 @@ absolventen:
         lastname: Ritter
         id: 5bc31b8de36f4
         category: KD
-        title: 'I want to be a part of it, New York (1980), New York (2017)'
+        title: 'I Want to Be a Part of it, New York (1980), New York (2017)'
         subtitle: ''
     -
         forename: Lily
@@ -904,21 +890,21 @@ absolventen:
         id: 5bc31bdea046e
         category: KD
         title: Ausstellungsvisualisierung
-        subtitle: 'Das Potential der Unreal Egine zur Visualisierung von Ausstellungen'
+        subtitle: 'Das Potential der »Unreal Engine« zur Visualisierung von Ausstellungen'
     -
         forename: Philipp
         lastname: Strixner-Weber
         id: 5bc31c2e2bb46
         category: KD
-        title: 'Stadt aus Licht. Ein Portrait.'
-        subtitle: ''
+        title: 'Stadt aus Licht'
+        subtitle: 'Ein Portrait'
     -
         forename: Svenja
         lastname: Teitge
         id: 5bc31c347df8e
         category: KD
-        title: 'Atlas der Ausreden - Auf der Suche nach Erklärungen für die mangelnde Umsetzung von Nachhaltigkeit'
-        subtitle: ''
+        title: 'Atlas der Ausreden'
+        subtitle: 'Auf der Suche nach Erklärungen für die mangelnde Umsetzung von Nachhaltigkeit'
     -
         forename: Lisa
         lastname: Tobschall
@@ -946,7 +932,7 @@ absolventen:
         id: 5bc31c759c55a
         category: KD
         title: 'Russland. Meine fremde Heimat'
-        subtitle: 'ein zweisprachiges Buchprojekt'
+        subtitle: 'Ein zweisprachiges Buchprojekt'
     -
         forename: Franziska
         lastname: 'von Trenspolde'
@@ -967,14 +953,7 @@ absolventen:
         id: 5bc31cba6eea4
         category: KD
         title: Paradise
-        subtitle: 'ein animiertes Musikvideo'
-    -
-        forename: Samira
-        lastname: Akhavan
-        id: 5bc31ccc7348a
-        category: PD
-        title: 'Material Network'
-        subtitle: 'an Investigation into the Relationship of Design and Research in Theory and Praxis'
+        subtitle: 'Ein animiertes Musikvideo'
     -
         forename: Melina
         lastname: Andree
@@ -987,7 +966,7 @@ absolventen:
         lastname: Croissant
         id: 5bc31cebc3298
         category: PD
-        title: 'NOCH EIN WASCHBECKEN'
+        title: 'Noch ein Waschbecken'
         subtitle: 'Ökologische Gestaltung im Design'
     -
         forename: Antonia
@@ -1008,8 +987,8 @@ absolventen:
         lastname: Krüger
         id: 5bc31d28accc2
         category: PD
-        title: 'Subtile Interaktionen: Physische Interaktionsprinzipien für das Internet der Dinge'
-        subtitle: ''
+        title: 'Subtile Interaktionen'
+        subtitle: 'Physische Interaktionsprinzipien für das Internet der Dinge'
     -
         forename: Martin
         lastname: Lindner
@@ -1022,7 +1001,7 @@ absolventen:
         lastname: Lücke
         id: 5bc31d45b45b8
         category: PD
-        title: 'More than „pink or blue“'
+        title: 'More than »pink or blue«'
         subtitle: 'Eltern, Kind, Design'
     -
         forename: Danai
@@ -1043,7 +1022,7 @@ absolventen:
         lastname: Richter
         id: 5bc31d797d96e
         category: PD
-        title: 'ICH FREU`MICH AUF DEN HEIMWEG'
+        title: 'Ich freu’ mich auf den Heimweg'
         subtitle: 'Eine neue Mobilität'
     -
         forename: 'Marc Philip'
@@ -1071,14 +1050,14 @@ absolventen:
         lastname: Steingräber
         id: 5bc31dbeae0d5
         category: PD
-        title: 'FEEDBACK 2.0'
-        subtitle: 'SCHULE IM WANDEL DURCH BIG DATA'
+        title: 'Feddback 2.0'
+        subtitle: 'Schule im Wandel durch Big Data'
     -
         forename: Oriana
         lastname: Striebeck
         id: 5bc31dce13e24
         category: PD
-        title: 'SEREN DI PI WAS?'
+        title: 'Seren di pi was?'
         subtitle: 'Die Erfassung eines Phänomens'
     -
         forename: Jeffrey
@@ -1099,7 +1078,7 @@ absolventen:
         lastname: 'von Schwerin'
         id: 5bc31df45c91b
         category: PD
-        title: 'RAUM GEST ALTEN'
+        title: 'Raum Gestalten'
         subtitle: ''
     -
         forename: Daniela
@@ -1120,8 +1099,8 @@ absolventen:
         lastname: 'Abdul Karim'
         id: 5bc31e5851092
         category: MD
-        title: 'animation in dokumentary film'
-        subtitle: 'from the shadow'
+        title: 'Animation in Dokumentary Film'
+        subtitle: 'From the Shadow'
     -
         forename: Mareike
         lastname: Bode
@@ -1148,8 +1127,8 @@ absolventen:
         lastname: Dietrich
         id: 5bc31e8178660
         category: MD
-        title: 'DIGITAL TOOLING'
-        subtitle: 'entwurfsorientierte Entwicklung digitaler Werkzeuge'
+        title: 'Digital Tooling'
+        subtitle: 'Entwurfsorientierte Entwicklung digitaler Werkzeuge'
     -
         forename: Clara
         lastname: Felsner
@@ -1169,14 +1148,14 @@ absolventen:
         lastname: Kim
         id: 5bc31eb73198b
         category: MD
-        title: 'Neues Besteck - 15 Minuten Konzentration am Esstisch'
+        title: 'Neues Besteck — 15-Minuten Konzentration am Esstisch'
         subtitle: 'Wie man Kinder zu einem gesünderen, nachhaltigerem Essensverhalten bringen kann.'
     -
         forename: Carsten
         lastname: Kummer
         id: 5bc31ec90e35c
         category: MD
-        title: CHIFFRE
+        title: Chiffre
         subtitle: 'Interaktives Printmedium zum Decodieren, Entschlüsseln und Rätseln'
     -
         forename: Bobin
@@ -1211,21 +1190,21 @@ absolventen:
         lastname: Sollmann
         id: 5bc31f051de32
         category: MD
-        title: 'HELP ... How I find my doctor'
+        title: 'Help … How I Find my Doctor'
         subtitle: 'Eine interaktive Anwendung zur Entlastung in deutschen Notaufnahmen'
     -
         forename: Janis
         lastname: Specks
         id: 5bc31f1163f0e
         category: MD
-        title: 'DESIGNING TRUSTWORTHINESS'
+        title: 'Designing Trustworthiness'
         subtitle: 'Designprinzipien zur Vertrauensbildung im Internet der Dinge'
     -
         forename: Raphael
         lastname: Zimmermann
         id: 5bc31f27aa839
         category: MD
-        title: 'How to interact with autonomous machines'
+        title: 'How to Interact with Autonomous Machines'
         subtitle: 'Konzept zur Verständigung zwischen Mensch und autonomem Fahrzeug'
     -
         forename: Nora
@@ -1233,7 +1212,7 @@ absolventen:
         id: 5bc31f34d566f
         category: MD
         title: 'Interfer in Designsystems'
-        subtitle: 'ein individueller Entwurf um sich in die Systeme von Design einzumischen und durch Recherche und Experiment die Wirkung alternativer Modelle zu erproben und neue Materialien oder Produkte zu gewinnen'
+        subtitle: 'Ein individueller Entwurf um sich in die Systeme von Design einzumischen und durch Recherche und Experiment die Wirkung alternativer Modelle zu erproben und neue Materialien oder Produkte zu gewinnen'
     -
         forename: Jana
         lastname: Kodadova
@@ -1267,8 +1246,8 @@ absolventen:
         lastname: Thümmler
         id: 5bc31fafd9260
         category: MEMW
-        title: Kabakon
-        subtitle: "Vertraute Bilder der Fremde –\LEine filmische Annäherung an die Repräsentation von Exotik und Exotismus"
+        title: 'Kabakon — Vertraute Bilder der Fremde'
+        subtitle: 'Eine filmische Annäherung an die Repräsentation von Exotik und Exotismus'
     -
         forename: Jennifer
         lastname: Wergin
@@ -1276,6 +1255,48 @@ absolventen:
         category: MEMW
         title: 'Die Auflösung der Minimap'
         subtitle: 'Eine Analyse des Paradigmentwechsels bei Orientierungshilfen in Open-World-Games'
+    -
+        forename: Reiko
+        lastname: Moeller
+        id: 5bc3a365985c7
+        category: ID
+        title: 'Interaktionskonzept für die Nutzung vollautomatisierter kooperativer Fahrten im Rahmen des Öffentlichen Nahverkehres'
+        subtitle: ''
+    -
+        forename: Adina
+        lastname: Radke
+        id: 5bc3a372349ee
+        category: ID
+        title: 'Rethinking Calendars'
+        subtitle: ''
+    -
+        forename: Jens
+        lastname: Rauenbusch
+        id: 5bc3a3819a8a7
+        category: ID
+        title: 'Visualisierung von Design Thinking im Spannungsfeld zwischen Design Thinking und Design'
+        subtitle: ''
+    -
+        forename: José Ernesto
+        lastname: Rodrígues
+        id: 5bc3a39505f47
+        category: ID
+        title: 'Fluid Living'
+        subtitle: ''
+    -
+        forename: Jessica
+        lastname: Brown
+        id: 5bc3a3a217455
+        category: KD
+        title: 'Wir sind auch Fremde'
+        subtitle: 'Konditionierung im Alltag'
+    -
+        forename: Jenny
+        lastname: Oeser
+        id: 5bc3a3bf81409
+        category: KD
+        title: 'Blank Sheet'
+        subtitle: 'Die Angst vor dem weißen Blatt'
 template_format: json
 ---
 
