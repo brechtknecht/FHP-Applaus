@@ -6,6 +6,7 @@ authors: 5bbfb72a5f6da
 supervisors: 'Torsten Schöbel,Prof. Dr. Jan Distelmeyer'
 thumbSize: s
 imageTemplate: thumbnail
+media_order: '01.png,01 Kopie.png,04.png'
 template_format: json
 ---
 

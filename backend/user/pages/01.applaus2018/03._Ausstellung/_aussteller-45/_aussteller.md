@@ -6,6 +6,7 @@ authors: 5bc26b972975d
 supervisors: 'Prof. Constanze Langer,Prof. Alexander Müller-Rakow'
 thumbSize: m
 imageTemplate: thumbnail
+media_order: 'MA_Rahel Flechtner_1.JPG,MA_Rahel Flechtner_1 Kopie.JPG,MA_Rahel Flechtner_2.JPG,MA_Rahel Flechtner_3.JPG'
 template_format: json
 ---
 
