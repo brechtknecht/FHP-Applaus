@@ -67,7 +67,7 @@
         <p class="fatspace">Aussteller*innen</p>
 
         <h3> Haftungsausschluss </h3>
-        <p>Eine Haftung für die Richtigkeit, Vollständigkeit und Aktualität dieser Webseiten kann trotz sorgfältiger Prüfung nicht übernommen werden. Die Fachhochschule Potsdam übernimmt insbesondere keine Haftung für eventuelle Schäden oder Konsequenzen, die durch eine direkte oder indirekte Nutzung der angebotenen Inhalte entstehen.</p>
+        <p>Eine Haftung für die Richtigkeit, Vollständigkeit und Aktualität dieser Webseiten kann trotz sorgfältiger Prüfung nicht übernommen werden. Der Fachbereich Design übernimmt insbesondere keine Haftung für eventuelle Schäden oder Konsequenzen, die durch eine direkte oder indirekte Nutzung der angebotenen Inhalte entstehen.</p>
         <p>Es wird ausdrücklich darauf hingewiesen, dass für den Inhalt verlinkter Seiten ausschließlich deren Betreiber verantwortlich ist. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für Schäden, die aus der Nutzung oder Nichtnutzung dieser Informationen entstehen, haftet ausschließlich der Betreiber der Seite, auf die verwiesen wurde.</p>
         <p class="fatspace">Sollten Sie Kenntnis von verlinkten Seiten mit rechtswidrigen Inhalten erlangen, bitten wir Sie, uns dies mitzuteilen.</p>
 
