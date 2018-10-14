@@ -1,5 +1,5 @@
 <template>
-	<div class="teaser" :class="">
+	<div class="teaser" v-bind:class="{ headerHidden: this.$root.headerActive }">
 		<div class="meta-data-inner" v-if="!contentIsGiven">
 			<router-link :to="'aussteller/'+teaser.slug">
 				<span class="authors">
@@ -118,5 +118,9 @@ export default {
 		object-fit: cover;
 		background-color: var(--color6);
 		// animation: moveImage 60s cubic-bezier(.18,.01,.85,1) both infinite;
+	}
+
+	.headerHidden {
+		display: none;
 	}
 </style>

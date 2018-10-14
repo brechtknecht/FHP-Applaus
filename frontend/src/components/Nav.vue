@@ -67,7 +67,7 @@ export default {
   computed: {
     showMeSignet: function () {
       if (this.reactiveNav) {
-        return this.signetshow
+        return this.signetshow 
       } else {
         return true
       }

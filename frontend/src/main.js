@@ -22,7 +22,8 @@ new Vue({
   data: {
     viewportHeight: 0,
     viewportWidth: 0,
-    animation: false
+    animation: false,
+    headerActive: false
   },
   methods: {
     resize () {
