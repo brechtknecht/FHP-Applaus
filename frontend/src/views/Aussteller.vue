@@ -44,7 +44,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="images" v-if="images.length > 0">
+			<section class="images" v-if="images.length > 1">
 				<div class="images-grid-inner" :class="this.aussteller.template">
 					<div class="image" v-for="image in images" :key="image.key">
 						<img :srcset="image.srcset" :src="image.url" />
@@ -94,7 +94,7 @@ export default {
 		let _aussteller  = this.$root.$options.ausstellung.body.list[this.$route.params.id]
 		let _currentGrid = _aussteller.category;
 		let category     = this.$root.$options.config.categoryorder;
-		let _index        = [];
+		let _index       = [];
 
 		for (const key of Object.keys(category)) {
 			if(category[key].slug == _currentGrid){

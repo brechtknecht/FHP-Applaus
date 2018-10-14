@@ -81,7 +81,7 @@ export default {
 
 	body {
 		text-rendering: optimizeLegibility;
-		-webkit-font-smoothing: antialiased;
+		-webkit-font-smoothing: antialiased; 
 	}
 
 	#start {
