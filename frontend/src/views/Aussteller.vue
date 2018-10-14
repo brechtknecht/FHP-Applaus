@@ -94,9 +94,7 @@ export default {
 		let _aussteller  = this.$root.$options.ausstellung.body.list[this.$route.params.id]
 		let _currentGrid = _aussteller.category;
 		let category     = this.$root.$options.config.categoryorder;
-		
 		let _index        = [];
-
 
 		for (const key of Object.keys(category)) {
 			if(category[key].slug == _currentGrid){
@@ -104,6 +102,10 @@ export default {
 			} else if (category[key].slug == 'MASTER' && (_currentGrid == 'MEMW' || _currentGrid == 'MD')){
 				_index[6] = true;
 			}
+		}
+
+		if(_currentGrid == 'MD' || _currentGrid == 'MEMW') {
+			_currentGrid = 'MASTER';
 		}
 
     return {
@@ -209,6 +211,7 @@ export default {
 			}
 
 			this.$set(this.isActive, key, !this.isActive[key]);
+
 
 			this.currentGridView = slug;
 		}
