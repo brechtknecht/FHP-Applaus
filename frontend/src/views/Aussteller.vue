@@ -32,7 +32,7 @@
 									<em>{{ studiengang[++index - 1] }}</em>
 								</p>
 								<p>
-									<strong class="content-title">E-MAIL</strong>&nbsp;
+									<strong v-if="absolvent.email" class="content-title">E-MAIL</strong>&nbsp;
 									<em><a v-bind:href=" `mailto:${absolvent.email}` ">{{ absolvent.email }}</a></em>
 								</p>
 								<p>
