@@ -100,13 +100,13 @@ export default {
       var secondel = document.getElementById('FakeNavItem1').getBoundingClientRect()
       this.spaceBetween = secondel.x - (firstel.x + firstel.width)
     },
-  			onItemChanged (event, currentItem, lastActiveItem) {
-  				if (this.reactiveNav) {
-  					this.navheight = document.getElementById('nav').clientHeight
-  					this.activeItem = currentItem
-  					this.getSpaceBetweenNavItems()
-  				}
-  			},
+	onItemChanged (event, currentItem, lastActiveItem) {
+		if (this.reactiveNav) {
+			this.navheight = document.getElementById('nav').clientHeight
+			this.activeItem = currentItem
+			// this.getSpaceBetweenNavItems()
+		}
+	},
     /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
     toggleMobileNav () {
       this.navOpen = !this.navOpen				// console.log('cliiick')
