@@ -1,5 +1,6 @@
 <template>
-	<div class="teaser" v-bind:class="{ headerHidden: !this.$root.headerActive }">
+	<!-- <div class="teaser" v-bind:class="{ headerHidden: !this.$root.headerActive }"> -->
+		<div class="teaser">
 		<div class="meta-data-inner" v-if="!contentIsGiven">
 			<router-link :to="'aussteller/'+teaser.slug">
 				<span class="authors">
@@ -60,7 +61,17 @@ export default {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		z-index: -1;
+
+		img {
+			left: 1.5rem;
+			width: calc(100% - 3rem);
+			height: calc(100% - 3rem);
+			@include bp(M) {
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
 
 		.meta-data-inner {
 			margin: 0 auto;

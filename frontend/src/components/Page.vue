@@ -79,7 +79,7 @@ export default {
 		margin-bottom: 3rem;
 	}
 	section.wrapper {
-		// min-height: 100vh;
+		position: relative;
 		&.landing {
 			height: calc(100vh - 4rem - 1.5rem);
 		}
@@ -90,6 +90,12 @@ export default {
 			background: var(--color3)
 		}
 	}
+
+	.wrapper-content {
+		position: relative;
+	}
+
+
 	section.content-inner {
 		padding-top: 5.5rem;
 		padding-bottom: 6rem;
