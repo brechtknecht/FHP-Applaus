@@ -1,5 +1,5 @@
 <template>
-	<div class="grid">
+	<div class="grid" :class="categorySlug">
 		<ausstellerGridItem
 			v-for="(aussteller, key) in getAusstellerGroups(categorySlug)"
 			:key="categorySlug + key"
@@ -285,36 +285,40 @@ export default {
 	}
 
 	// ====================== GRID LAYOUT IMPROVEMENT ============================
-	.category_0 .article:nth-child(3) {
+	.ID .article:nth-child(3) {
 		grid-column-start: 3;
 		grid-row-start: 3;
 	}
-	.category_3 .article:nth-child(7) {
+	// .EMW .article:nth-child(7) {
+	// 	grid-column-start: 1;
+	// 	grid-row-start: 3;
+	// }
+	.PD .article:nth-child(5) {
 		grid-column-start: 1;
 		grid-row-start: 3;
 	}
-	.category_2 .article:nth-child(5) {
-		grid-column-start: 1;
-		grid-row-start: 3;
-	}
-	.category_6 .article:nth-child(8) {
+	.MASTER .article:nth-child(8) {
 		grid-column-start: 1;
 		grid-row-start: 3;
 	}	
-	.category_6 .article:nth-child(9) {
+	.MASTER .article:nth-child(9) {
 		grid-column-start: 3;
 		grid-row-start: 5;
-	}	
-	.category_6 .article:nth-child(5) {
+	}
+	.MASTER .article:nth-child(5) {
 		grid-column-start: 3;
 		grid-row-start: 1;
 	}
-	.category_1 .article:nth-child(5) {
+	.KD .article:nth-child(5) {
 		grid-column-start: 1;
 		grid-row-start: 3;
 	}
-	.category_1 .article:nth-child(9) {
-		grid-column-start: 3;
+	.KD .article:nth-child(9) {
+		grid-column-start: 1;
+		grid-row-start: 5;
+	}
+	.KD .article:nth-child(11) {
+		grid-column-start: 4;
 		grid-row-start: 5;
 	}
 	// .category_6 a:nth-child(5) {

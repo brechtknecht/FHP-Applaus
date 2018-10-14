@@ -29,7 +29,7 @@ new Vue({
       this.viewportHeight = window.innerHeight
       this.viewportWidth = window.innerWidth
     },
-    getImageCoverWidth: function (ratioImage, boundingBox_width, boundingBox_height, viewportUnits) {
+    getImageCoverWidth: function (ratioImage, boundingBox_width, boundingBox_height, viewportUnits = false) {
       let ratioBoundingBox = boundingBox_width / boundingBox_height
 
       if (ratioBoundingBox > ratioImage) {

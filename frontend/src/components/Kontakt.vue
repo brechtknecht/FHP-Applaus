@@ -64,7 +64,7 @@ export default {
 			flex-direction: column;
 		}
 		.section {
-			flex-basis: calc(20% - 2.272727273rem);
+			flex-basis: calc(20% - 1.815454545rem);
 				h4 {
 					text-transform: uppercase;
 					letter-spacing: .05em;

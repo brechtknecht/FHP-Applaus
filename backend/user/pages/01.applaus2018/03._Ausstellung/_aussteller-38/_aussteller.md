@@ -4,7 +4,7 @@ headertext: 'Ansätze negativer Medientheorie als Lektürepraxis'
 category: MEMW
 authors: 5bbfb7af3fe78
 supervisors: 'Dr. Bernd Bösel,Prof. Dr. Michael Mayer'
-thumbSize: s
+thumbSize: m
 imageTemplate: thumbnail
 media_order: 'MA HK 1.jpg,MA HK 1 Kopie.jpg,MA HK 2.jpg,MA HK 3.jpg,MA HK 4.jpg'
 template_format: json

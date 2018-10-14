@@ -3,19 +3,19 @@ title: Kontakt
 bodysections:
     -
         name: Ort
-        content: "Fest&shy;akt der Design&shy;studien&shy;gänge<br>\r\n<em>Großer Hörsaal</em> · </abbr>Hauptgebäude</abbr>\r\n    \r\nFest&shy;akt der Europä&shy;ischen Medien&shy;wissen&shy;schaft<br>\r\n<abbr>Haus D & Casino</abbr>\r\n"
+        content: "Fest&shy;akt der Design&shy;studien&shy;gänge<br>\r\n<em>Großer Hörsaal</em> · <abbr>Hauptgebäude</abbr>\r\n<br><br>\r\nFest&shy;akt der Europä&shy;ischen Medien&shy;wissen&shy;schaft<br>\r\n<abbr>Haus D & Casino</abbr>\r\n"
     -
         name: Anfahrt
         content: "Bei Ankunft per Bahn:\r\nAb Potsdam Haupt­bahnhof mit der Tram 92 oder 96 bis Campus Fach­hochschule. Parkplätze am Campus sind vorhanden. "
     -
         name: Kontakt
-        content: "Allgemeine Anfragen\r\n[Ulrike Weichelt](mailto:weichelt@fh-potsdam.de)\r\n0331 – 580 10 62\r\n\r\nPresseanfragen\r\nPascal Hanke\r\n& Miriam Kugland\r\n\r\n[Impressum](http://www.applaus-potsdam.de/2018/impressum/)"
+        content: "Allgemeine Anfragen  \r\n[Ulrike Weichelt](mailto:weichelt@fh-potsdam.de)  \r\n<a href=\"tel:+493315801062\">0331 – 580 10 62</a>\r\n\r\nPresseanfragen  \r\nPascal Hanke  \r\n& Miriam Kugland  \r\n\r\n[Impressum](http://www.applaus-potsdam.de/2018/impressum/)"
     -
         name: Archiv
-        content: "Alle Applaus Webseiten der vergangenen Jahre:\r\n\r\n[2013](http://www.applaus-potsdam.de/2013) · [2012](http://www.applaus-potsdam.de/2012) · [2011](http://www.applaus-potsdam.de/2011) ·\r\n[2010](http://www.applaus-potsdam.de/2010) · [2009](http://www.applaus-potsdam.de/2009) · [2008](http://www.applaus-potsdam.de/2008) ·\r\n[2007](http://www.applaus-potsdam.de/2007) · [2006](http://www.applaus-potsdam.de/2006)"
+        content: "Alle Applaus Webseiten der vergangenen Jahre:\r\n\r\n<abbr>\r\n<a href=\"http://www.applaus-potsdam.de/2017\">2017</a> · <a href=\"http://www.applaus-potsdam.de/2016\">2016</a> · <a href=\"http://www.applaus-potsdam.de/2015\">2015</a> · <a href=\"http://www.applaus-potsdam.de/2014\">2014</a> · <a href=\"http://www.applaus-potsdam.de/2013\">2013</a> · <a href=\"http://www.applaus-potsdam.de/2012\">2012</a> · <a href=\"http://www.applaus-potsdam.de/2011\">2011</a> · <a href=\"http://www.applaus-potsdam.de/2010\">2010</a> · <a href=\"http://www.applaus-potsdam.de/2009\">2009</a> · <a href=\"http://www.applaus-potsdam.de/2008\">2008</a> · <a href=\"http://www.applaus-potsdam.de/2007\">2007</a> · <a href=\"http://www.applaus-potsdam.de/2006\">2006</a>\r\n</abbr>"
     -
         name: Gestaltung
-        content: "Phillip Kortlang &  \r\nChris Magiera\r\n\r\nPowered by Incom"
+        content: "<a href=\"http://knisterwerk.com/\" target=\"_blank\">Phillip Kortlang &  \r\nChris Magiera</a>\r\n\r\nPowered by <a href=\"https://incom.org/\" target=\"_blank\">Incom</a>"
 template_format: json
 ---
 

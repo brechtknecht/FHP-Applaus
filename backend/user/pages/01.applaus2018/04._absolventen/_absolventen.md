@@ -95,7 +95,7 @@ absolventen:
         lastname: Hildebrandt
         id: 5bbfb734c4846
         email: hello@lennerd.com
-        website: 'https://lennerd.github.io/git-for-beginners/'
+        website: 'https://lennerd.github.io'
         category: ID
         title: ''
         subtitle: ''
@@ -113,7 +113,6 @@ absolventen:
         lastname: Klöpping
         id: 5bbfb73a1e321
         email: wiebke.kloepping@gmail.com
-        website: 'https://fhp.incom.org/project/10292'
         category: ID
         title: ''
         subtitle: ''
@@ -122,7 +121,6 @@ absolventen:
         lastname: Kosmowski
         id: 5bbfb73c9c054
         email: kosmail@gmx.de
-        website: 'https://www.dropbox.com/s/j7xuhcmxxrqn4sv/Memoage_Bachelor-Thesis_Vadim-Kosmowski_digital.pdf?dl=0'
         category: ID
         title: ''
         subtitle: ''
@@ -131,7 +129,7 @@ absolventen:
         lastname: Schiller
         id: 5bbfb73e73340
         email: arthur@schillerberlin.de
-        website: 'http://arthurschiller.de/projects/scavengar'
+        website: 'http://arthurschiller.de/'
         category: ID
         title: ''
         subtitle: ''
@@ -210,7 +208,6 @@ absolventen:
         lastname: 'Nguyen Phuong'
         id: 5bbfb754c714a
         email: hello@thainnp.com
-        website: 'https://www.sorge87.de'
         category: KD
         title: ''
         subtitle: ''
@@ -227,7 +224,7 @@ absolventen:
         lastname: Schultz
         id: 5bbfb75a4825f
         email: mschultz@typelover.de
-        website: 'https://fhp.incom.org/action/open-file/270544'
+        website: 'http://typelover.de'
         category: KD
         title: ''
         subtitle: ''
@@ -252,6 +249,7 @@ absolventen:
         lastname: Braun
         id: 5bbfb78566164
         email: mail@bastianbraun.com
+        website: 'http://bastianbraun.com'
         category: PD
         title: ''
         subtitle: ''
@@ -285,6 +283,7 @@ absolventen:
         lastname: Schuster
         id: 5bbfb79ed66db
         email: hello@paula-schuster.de
+        website: 'http://paula-schuster.de'
         category: PD
         title: ''
         subtitle: ''
@@ -301,7 +300,7 @@ absolventen:
         lastname: Otto
         id: 5bbfb7a546f72
         email: hello@thomas-otto.net
-        website: 'https://designhumandata.net/'
+        website: 'http://thomas-otto.net'
         category: MD
         title: ''
         subtitle: ''
@@ -310,7 +309,7 @@ absolventen:
         lastname: Rauscher
         id: 5bbfb7a90991e
         email: mail@christophrauscher.de
-        website: 'https://www.christophrauscher.de/aestheticresearch'
+        website: 'https://www.christophrauscher.de/'
         category: MD
         title: ''
         subtitle: ''
@@ -319,7 +318,6 @@ absolventen:
         lastname: 'Yoffe Schiff'
         id: 5bbfb7ac982c4
         email: kerenshai@hotmail.com
-        website: 'https://fhp.incom.org/project/10563'
         category: MD
         title: ''
         subtitle: ''
@@ -369,6 +367,24 @@ absolventen:
         id: 5bbfb7be50c63
         email: schahrzad.zamankhan@posteo.de
         category: MEMW
+        title: ''
+        subtitle: ''
+    -
+        forename: Moritz
+        lastname: Jekat
+        id: 5bc269a4d2e16
+        email: info@moritzjekat.de
+        website: 'http://moritzjekat.de/'
+        category: KD
+        title: ''
+        subtitle: ''
+    -
+        forename: Rahel
+        lastname: Flechtner
+        id: 5bc26b972975d
+        email: rahel.flechtner@web.de
+        website: 'https://www.rahelflechtner.com/'
+        category: MD
         title: ''
         subtitle: ''
 template_format: json

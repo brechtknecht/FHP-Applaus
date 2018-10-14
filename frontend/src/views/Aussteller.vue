@@ -44,7 +44,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="images">
+			<section class="images" v-if="images.length > 0">
 				<div class="images-grid-inner" :class="this.aussteller.template">
 					<div class="image" v-for="image in images" :key="image.key">
 						<img :srcset="image.srcset" :src="image.url" />
@@ -303,7 +303,7 @@ export default {
 			.absolvent {
 				margin-bottom: 1.5rem;
 				strong {
-					margin-right: .3rem;
+					// margin-right: .3rem;
 				}
 			}
 			.absolventen-name {
@@ -321,8 +321,8 @@ export default {
 		}
 	}
 	.text {
-		word-wrap: break-word;
-		hyphens: auto;
+		// word-wrap: break-word;
+		// hyphens: auto;
 	}
 	.author {
 		display: block;

@@ -4,7 +4,7 @@ headertext: 'Kindermöbel nach den Gestaltungsprinzipien der Reformpädagogik un
 category: MD
 authors: 5bbfb7377c650
 supervisors: 'Prof. Detlef Saalfeld,Prof. Jörg Hundertpfund'
-thumbSize: l
+thumbSize: s
 imageTemplate: thumbnail
 template_format: json
 ---
