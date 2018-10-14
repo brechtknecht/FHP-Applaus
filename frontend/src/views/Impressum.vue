@@ -1,7 +1,14 @@
 <template>
 	<div class="impressum">
-		<!-- <Header class="header" :content="this.$root.$options.config"></Header> -->
-		<!-- <Navigation :items="this.$root.$options.navigation" reactiveNav></Navigation> -->
+		<div class="logos">
+			<a href="https://www.uni-potsdam.de/" target="_blank" style="border: 0">
+				<icon-base icon-name="uni-potsdam" view-box="0 0 45 45"/>
+			</a>
+			<a href="https://www.fh-potsdam.de/" target="_blank" style="border: 0">
+				<icon-base icon-name="fh-potsdam" view-box="0 0 12 45"/>
+			</a>
+		</div>
+
 		<h3>Applaus 2018</h3>
         <h2>IMPRESSUM</h2>
 
@@ -80,11 +87,13 @@
 
 <script>
 import Navigation from '@/components/Nav.vue'
+import IconBase from '@/components/IconBase.vue'
 
 export default {
   name: 'Impressum',
   components: {
-    Navigation
+    Navigation,
+    IconBase
   }
 }
 </script>
@@ -108,6 +117,12 @@ export default {
             margin: 0 auto;
             margin-bottom: .7rem;
             max-width: 360px;
+        }
+
+        .logos {
+            svg {
+                filter: brightness(20%);
+            }
         }
 
         .fatspace {
