@@ -1,0 +1,24 @@
+title: Unterstützer Page
+extends@:
+  type: partials/pages
+  context: blueprints://
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            columns:
+              fields:
+                column2:
+                  fields:
+                    specific:
+                      fields:
+                        header.media_order:
+                          type: pagemedia
+                          label: Unterstützer
+
+

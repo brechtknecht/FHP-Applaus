@@ -637,7 +637,7 @@ absolventen:
         lastname: Veitengruber
         id: 5bc319803191b
         category: ID
-        title: 'HERBITOPIA'
+        title: HERBITOPIA
         subtitle: 'MEDICINAL PLANTS GETTING DIGITAL'
     -
         forename: Alex
@@ -665,7 +665,7 @@ absolventen:
         lastname: Becker
         id: 5bc319c76391e
         category: KD
-        title: 'Kiezstruktur'
+        title: Kiezstruktur
         subtitle: 'Warum bist du hier'
     -
         forename: Lisa-Marie
@@ -679,14 +679,14 @@ absolventen:
         lastname: Buder
         id: 5bc319f4310ea
         category: KD
-        title: 'ZERUS'
+        title: ZERUS
         subtitle: 'Ein diegetischer Prototyp'
     -
         forename: Jule
         lastname: Erner
         id: 5bc31a0388571
         category: KD
-        title: 'Bildlegenden'
+        title: Bildlegenden
         subtitle: ''
     -
         forename: Judith
@@ -700,7 +700,7 @@ absolventen:
         lastname: Friese
         id: 5bc31a1f1d4e8
         category: KD
-        title: 'Geburtsfotografie'
+        title: Geburtsfotografie
         subtitle: ''
     -
         forename: Inga
@@ -721,7 +721,7 @@ absolventen:
         lastname: Haschke
         id: 5bc31a31a9110
         category: KD
-        title: 'Verbraucherschutz'
+        title: Verbraucherschutz
         subtitle: 'Lebensmittelkennzeichnung im Einzelhandel'
     -
         forename: Theresa
@@ -735,7 +735,7 @@ absolventen:
         lastname: Hoffmann
         id: 5bc31a6236405
         category: KD
-        title: 'KLANGSCHAFFEN'
+        title: KLANGSCHAFFEN
         subtitle: 'Wie sich Musik auf den kreativen Denkprozess auswirkt'
     -
         forename: Elia
@@ -773,7 +773,7 @@ absolventen:
         title: 'Belle Arti e Corporate Design: Die Suche nach dem Verständnis'
         subtitle: 'Gestaltung mit Kunst bei Marken'
     -
-        forename: Gestaltung mit Kunst bei Marken
+        forename: Annika
         lastname: Kuchenbuch
         id: 5bc31ab323091
         category: KD
@@ -798,14 +798,14 @@ absolventen:
         lastname: Lichtenberg
         id: 5bc31ad7e58a8
         category: KD
-        title: 'Gedankenfutter'
+        title: Gedankenfutter
         subtitle: 'Illustrative Appetithäppchen für den philosophischen Diskurs mit Kindern'
     -
-        forename: Carla Selva
+        forename: 'Carla Selva'
         lastname: Matthes
         id: 5bc31aec7d87c
         category: KD
-        title: 'Archive.org/Search'
+        title: Archive.org/Search
         subtitle: 'Universeller Zugang zu kulturellen Gütern'
     -
         forename: Anne
@@ -833,7 +833,7 @@ absolventen:
         lastname: Müller
         id: 5bc31b278c426
         category: KD
-        title: 'MANDOMIN'
+        title: MANDOMIN
         subtitle: 'Konzeption und Gestaltung eines digitalen Kinderbuches'
     -
         forename: Johanna
@@ -857,7 +857,7 @@ absolventen:
         title: 'Die Rechnung'
         subtitle: 'Eine gestalterische und technische Hürde an der Schnittstelle zwischen Kommunikations- und Interfacedesign'
     -
-        forename: Lola Marella
+        forename: 'Lola Marella'
         lastname: Ritter
         id: 5bc31b8de36f4
         category: KD
@@ -871,11 +871,11 @@ absolventen:
         title: 'Ich wusste gar nicht, dass ich eine andere Hautfarbe habe'
         subtitle: 'Eine Kindheit in der DDR'
     -
-        forename: Eine Kindheit in der DDR
-        lastname: Christian
+        forename: Christian
+        lastname: Rühlmann
         id: 5bc31ba77d9f4
-        category: Rühlmann
-        title: 'CabinAfloat'
+        category: KD
+        title: CabinAfloat
         subtitle: 'Entwicklung eines zeitgemäßen Wohnkonzepts auf dem Wasser'
     -
         forename: Stefan
@@ -903,7 +903,7 @@ absolventen:
         lastname: Schubach
         id: 5bc31bdea046e
         category: KD
-        title: 'Ausstellungsvisualisierung'
+        title: Ausstellungsvisualisierung
         subtitle: 'Das Potential der Unreal Egine zur Visualisierung von Ausstellungen'
     -
         forename: Philipp
@@ -924,14 +924,14 @@ absolventen:
         lastname: Tobschall
         id: 5bc31c4a81d1f
         category: KD
-        title: 'emotionen'
+        title: emotionen
         subtitle: 'Entwicklung eines emotionalen Werbespots für Sky Fernsehen'
     -
         forename: Nina
         lastname: Tschirner
         id: 5bc31c5a682c6
         category: KD
-        title: 'Waidmannsglück'
+        title: Waidmannsglück
         subtitle: 'Entwicklung einer Corporate Identity'
     -
         forename: Claire
@@ -949,13 +949,13 @@ absolventen:
         subtitle: 'ein zweisprachiges Buchprojekt'
     -
         forename: Franziska
-        lastname: von Trenspolde
+        lastname: 'von Trenspolde'
         id: 5bc31c833b603
         category: KD
         title: 'Der Einfluss der Klassenraumgestaltung in Grundschulen auf das Lernen'
         subtitle: ''
     -
-        forename: Hua Vi
+        forename: 'Hua Vi'
         lastname: Vu
         id: 5bc31c8da5658
         category: KD
@@ -966,7 +966,7 @@ absolventen:
         lastname: Zhang
         id: 5bc31cba6eea4
         category: KD
-        title: 'Paradise'
+        title: Paradise
         subtitle: 'ein animiertes Musikvideo'
     -
         forename: Samira
@@ -1004,7 +1004,7 @@ absolventen:
         title: 'Weiterentwicklung eines Wohnmoduls für eine Mikro-Architektur'
         subtitle: ''
     -
-        forename: Tilo Julian
+        forename: 'Tilo Julian'
         lastname: Krüger
         id: 5bc31d28accc2
         category: PD
@@ -1032,7 +1032,7 @@ absolventen:
         title: 'Die neuen Ansprüche im Design'
         subtitle: 'Ein Methodikexperiment am Projekt'
     -
-        forename: Anton Fabian
+        forename: 'Anton Fabian'
         lastname: Rahlwes
         id: 5bc31d659d024
         category: PD
@@ -1046,7 +1046,7 @@ absolventen:
         title: 'ICH FREU`MICH AUF DEN HEIMWEG'
         subtitle: 'Eine neue Mobilität'
     -
-        forename: Marc Philip
+        forename: 'Marc Philip'
         lastname: Sommer
         id: 5bc31d8986112
         category: PD
@@ -1064,7 +1064,7 @@ absolventen:
         lastname: Steffan
         id: 5bc31db321cd8
         category: PD
-        title: 'Wahrnehmung'
+        title: Wahrnehmung
         subtitle: 'Die Aneignung der Dinge'
     -
         forename: Lisa
@@ -1092,11 +1092,11 @@ absolventen:
         lastname: Veicht
         id: 5bc31de47c74f
         category: PD
-        title: 'Wahrnehmung'
+        title: Wahrnehmung
         subtitle: 'Die Aneignung der Dinge'
     -
         forename: Clara
-        lastname: von Schwerin
+        lastname: 'von Schwerin'
         id: 5bc31df45c91b
         category: PD
         title: 'RAUM GEST ALTEN'
@@ -1106,7 +1106,7 @@ absolventen:
         lastname: Bowitz
         id: 5bc31dffbe828
         category: MD
-        title: 'Schlammschlacht'
+        title: Schlammschlacht
         subtitle: 'Entwicklung und Umsetzung eines analogen Autorenbrettspieles zum Thema Wahlkampf'
     -
         forename: Andre
@@ -1117,7 +1117,7 @@ absolventen:
         subtitle: ''
     -
         forename: Diana
-        lastname: Abdul Karim
+        lastname: 'Abdul Karim'
         id: 5bc31e5851092
         category: MD
         title: 'animation in dokumentary film'
@@ -1142,7 +1142,7 @@ absolventen:
         id: 5bc31e7591208
         category: MD
         title: 'Signaletik in Gesundheitsbauten'
-        subtitle: 'Handbuch'
+        subtitle: Handbuch
     -
         forename: Franz
         lastname: Dietrich
@@ -1176,24 +1176,24 @@ absolventen:
         lastname: Kummer
         id: 5bc31ec90e35c
         category: MD
-        title: 'CHIFFRE'
+        title: CHIFFRE
         subtitle: 'Interaktives Printmedium zum Decodieren, Entschlüsseln und Rätseln'
     -
         forename: Bobin
         lastname: Lee
         id: 5bc31ed50d285
         category: MD
-        title: 'ARLS'
+        title: ARLS
         subtitle: 'Augmented Reality Language-learning System'
     -
-        forename: Antonia Renate
+        forename: 'Antonia Renate'
         lastname: Lorz
         id: 5bc31ee209f02
         category: MD
         title: 'alma - Product Development and User Experience Testing for Products of Specialized Ambulant Palliative Care'
         subtitle: ''
     -
-        forename: Clemens Felix
+        forename: 'Clemens Felix'
         lastname: Schipper
         id: 5bc31ef2d7625
         category: MD
@@ -1253,22 +1253,22 @@ absolventen:
         lastname: Paschen
         id: 5bc31f892040a
         category: MEMW
-        title: 'Blackboxhacking'
+        title: Blackboxhacking
         subtitle: 'Eine Untersuchung anhand von Circuit Bending und Tonträgermanipulationen in Theorie und Praxis'
     -
         forename: Polina
         lastname: Polovnikova
         id: 5bc31f9fba48e
         category: MEMW
-        title: 'Gedenk-Räume'
+        title: Gedenk-Räume
         subtitle: 'Emotionalisierungsstrategien im Kontext jüdischer Erinnerungskultur'
     -
         forename: Marc
         lastname: Thümmler
         id: 5bc31fafd9260
         category: MEMW
-        title: 'Kabakon'
-        subtitle: 'Vertraute Bilder der Fremde – Eine filmische Annäherung an die Repräsentation von Exotik und Exotismus'
+        title: Kabakon
+        subtitle: "Vertraute Bilder der Fremde –\LEine filmische Annäherung an die Repräsentation von Exotik und Exotismus"
     -
         forename: Jennifer
         lastname: Wergin
@@ -1278,3 +1278,4 @@ absolventen:
         subtitle: 'Eine Analyse des Paradigmentwechsels bei Orientierungshilfen in Open-World-Games'
 template_format: json
 ---
+

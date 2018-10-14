@@ -18,6 +18,10 @@
 					<aussteller :content="content"></aussteller>
 				</div>
 
+				<div v-if="content.template == 'unterstuetzer'">
+					<Unterstuetzer :content="content"></Unterstuetzer>
+				</div>
+
 				<div v-else-if="content.template == 'absolventen'">
 					<Absolventen :content="content"></Absolventen>
 				</div>
@@ -39,6 +43,7 @@
 import Aussteller from '@/components/Aussteller.vue'
 import Absolventen from '@/components/Absolventen.vue'
 import Kontakt from '@/components/Kontakt.vue'
+import Unterstuetzer from '@/components/unterstuetzer.vue'
 
 
 export default {
@@ -49,7 +54,8 @@ export default {
   components: {
     Aussteller,
     Absolventen,
-    Kontakt
+    Kontakt,
+    Unterstuetzer
   },
   computed: {
     IndexMod: function () {

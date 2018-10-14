@@ -1,3 +1,19 @@
+{% set image_sizes = [100, 200, 300, 400, 500, 600] %}
+
+{% set images = [] %}
+
+	{% for image in media.images %}
+		{% set image_set = "" %}
+
+		{% for size in image_sizes %}
+			{% set image_set = image_set ~ '../..' ~ image.cropResize(size, size).url() ~ ' ' ~ size ~ 'w, ' %}
+		{% endfor %}
+
+		{% set images = images|merge({ (loop.index): {url: '../..' ~ image.url, srcset: image_set|rtrim(', '), aspect_ratio: image.width / image.height } }) %} 
+	{% endfor %}
+
+
+
 {% set template = page.template|split('/_')[1] %}
 
-{{ {template: template, slug: page.slug|ltrim('_'), title: header.title, headertext: header.headertext, body: collection}|json_encode|raw }}
+{{ {template: template, slug: page.slug|ltrim('_'), title: header.title, headertext: header.headertext, body: { images: images }}|json_encode|raw }}
