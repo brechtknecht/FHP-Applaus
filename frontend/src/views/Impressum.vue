@@ -50,7 +50,7 @@
         <h5>Gestaltung</h5>
         <a href="http://knisterwerk.com" title="Website von Knisterwerk" target="_blank">Phillip Kortlang &amp; Chris Magiera</a>
 
-        <h5>Gestaltung</h5>
+        <h5>Webentwicklung</h5>
         <p><a href="http://knisterwerk.com" title="Website von Knisterwerk" target="_blank">Chris Magiera</a>, <a href="http://about.incom.org" title="Website von Incom" target="_blank">Incom</a> &amp; Juri Wolf</p>
 
         <h5>Fotografien</h5>
@@ -80,13 +80,11 @@
 
 <script>
 import Navigation from '@/components/Nav.vue'
-import Header from '@/components/Header.vue'
 
 export default {
-  name: 'home',
+  name: 'Impressum',
   components: {
-    Navigation,
-    Header
+    Navigation
   }
 }
 </script>
@@ -102,6 +100,9 @@ export default {
         h3 {
             margin-top: .25rem;
             margin-bottom: 1.2rem;
+        }
+        h5 {
+            margin-top: 1.4rem;
         }
         p {
             margin: 0 auto;

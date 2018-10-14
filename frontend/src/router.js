@@ -16,14 +16,14 @@ export default new Router({
       component: Home
     },
     {
-      path: '/aussteller/:id',
-      name: 'Aussteller',
-      component: Aussteller
-    },
-    {
       path: '/impressum',
       name: 'Impressum',
       component: Impressum
+    },
+    {
+      path: '/aussteller/:id',
+      name: 'Aussteller',
+      component: Aussteller
     }
   ],
   scrollBehavior (to, from, savedPosition) {
