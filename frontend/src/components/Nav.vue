@@ -67,8 +67,10 @@ export default {
   computed: {
     showMeSignet: function () {
       if (this.reactiveNav) {
+		this.$root.headerActive = !this.$root.headerActive; 
         return this.signetshow 
       } else {
+		this.$root.headerActive = true;
         return true
       }
     },
@@ -175,12 +177,14 @@ export default {
  		margin-left: 0;
  		padding: 0 0 0 0;
  		opacity: 1;
+		will-change: width;
 	}
 	.signethide-enter, .signethide-leave-to {
-	 	opacity: 0;
+	 	opacity: 0;	
 	 	width: 0;
 	 	margin-left: calc(-3 * var(--signet-width));
 	 	padding: 0 calc(3* var(--signet-width) - var(--space)) 0 0;
+		will-change: width;
 
 	}
 		ul {

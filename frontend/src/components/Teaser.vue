@@ -1,5 +1,5 @@
 <template>
-	<div class="teaser" v-bind:class="{ headerHidden: this.$root.headerActive }">
+	<div class="teaser" v-bind:class="{ headerHidden: !this.$root.headerActive }">
 		<div class="meta-data-inner" v-if="!contentIsGiven">
 			<router-link :to="'aussteller/'+teaser.slug">
 				<span class="authors">
@@ -110,7 +110,7 @@ export default {
 		z-index: 1;
 	}
 	.teaser-image {
-		filter: brightness(80%) saturate(60%);
+	 	//filter: brightness(80%) saturate(60%);
 		position: fixed;
 		top: 0; left: 0; bottom: 0; right: 0;
 		height: 100%;
