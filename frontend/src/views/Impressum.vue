@@ -50,18 +50,21 @@
             Tel. +49 331 580 1004
         </p>
 
-        <h3> Gestaltung &amp; Entwicklung </h3>
+        <h3>Gestaltung &amp; Entwicklung</h3>
         <h5>Projektleitung</h5>
-        <p>Prof. Matthias Beyrow</p>
+        <p>Constanze Langer & Jan Distelmeyer</p>
+
+        <h5>Redaktion & Koordination</h5>
+        <p>Sophie Ehrmanntraut</p>
 
         <h5>Gestaltung</h5>
-        <a href="http://knisterwerk.com" title="Website von Knisterwerk" target="_blank">Phillip Kortlang &amp; Chris Magiera</a>
+        <p><a href="http://knisterwerk.com" title="Website von Knisterwerk" target="_blank">Phillip Kortlang &amp; Chris Magiera</a></p>
 
         <h5>Webentwicklung</h5>
-        <p><a href="http://knisterwerk.com" title="Website von Knisterwerk" target="_blank">Chris Magiera</a>, <a href="http://about.incom.org" title="Website von Incom" target="_blank">Incom</a> &amp; Juri Wolf</p>
+        <p><a href="http://knisterwerk.com" title="Website von Knisterwerk" target="_blank">Chris Magiera</a>, <a href="einfach-neu.de" target="_blank">Gustav Neustadt</a> & <a href="http://mrfesch.com/" target="_blank">Felix Tesche</a></p>
 
         <h5>Fotografien</h5>
-        <p>Aussteller</p>
+        <p class="fatspace">Aussteller*innen</p>
 
         <h3> Haftungsausschluss </h3>
         <p>Eine Haftung für die Richtigkeit, Vollständigkeit und Aktualität dieser Webseiten kann trotz sorgfältiger Prüfung nicht übernommen werden. Die Fachhochschule Potsdam übernimmt insbesondere keine Haftung für eventuelle Schäden oder Konsequenzen, die durch eine direkte oder indirekte Nutzung der angebotenen Inhalte entstehen.</p>
@@ -69,8 +72,8 @@
         <p class="fatspace">Sollten Sie Kenntnis von verlinkten Seiten mit rechtswidrigen Inhalten erlangen, bitten wir Sie, uns dies mitzuteilen.</p>
 
         <h3> Urheberrecht </h3>
-        <p>Alle im Internetangebot der Fachhochschule Potsdam veröffentlichten Inhalte (Layout, Texte, Bilder, Grafiken usw.) unterliegen dem Urheberrecht. Jede vom Urheberrechtsgesetz nicht zugelassene Verwertung bedarf vorheriger ausdrücklicher Zustimmung. Dies gilt insbesondere für Vervielfältigung, Bearbeitung, Übersetzung, Einspeicherung, Verarbeitung bzw. Wiedergabe von Inhalten in Datenbanken oder anderen elektronischen Medien und Systemen. Fotokopien und Downloads von Webseiten für den privaten, wissenschaftlichen und nicht kommerziellen Gebrauch dürfen hergestellt werden.</p>
-        <p class="fatspace">Wir erlauben ausdrücklich und begrüßen das Zitieren unserer Dokumente und Webseiten sowie das Setzen von Links auf unsere Website.</p>
+        <p>Alle veröffentlichten Inhalte (Layout, Texte, Bilder, Grafiken usw.) wurden – soweit nicht anders ersichtlich – von der Redaktion und den Aussteller*innen erstellt und unterliegen dem Urheberrecht. Die Inhalte dürfen damit zum Beispiel nur mit ausdrücklicher vorheriger Zustimmung durch die Urheber*innen kopiert, vervielfältigt, bearbeitet oder übersetzt werden. Auch die Speicherung, Verarbeitung bzw. Wiedergabe von Inhalten in Datenbanken oder anderen elektronischen Medien und Systemen ist nur mit Genehmigung des Rechteinhabers zulässig. Unberührt davon bleibt das »Kopieren« der Dateien auf den eigenen Rechner, um sich die WWW-Seiten in einem Browser anzuschauen. Die Nutzung der anderen allgemein zugänglichen Texte – auch auszugsweise – durch Dritte ausschließlich zum privaten, wissenschaftlichen und nichtgewerblichen Gebrauch ist nur unter der Bedingung gestattet, dass der Fachbereich Design bzw. die Aussteller*innen als Urheber*innen genannt werden. </p>
+        <p class="fatspace">Die Nutzung der anderen Inhalte, wie beispielsweise der Bilder und Grafiken, ist nicht gestattet. Sollten Sie jedoch Interesse an einem Nutzungsrecht haben, wenden Sie sich an die Aussteller*innen.</p>
 
         <h3> Datenschutzerklärung </h3>
         <p>Die Fachhochschule Potsdam unterliegt den Bestimmungen des Brandenburgischen Datenschutzgesetzes sowie den einschlägigen gesetzlichen Grundlagen mit Bestimmungen zum Schutz des Rechtes auf informationelle Selbstbestimmung.</p>
@@ -116,7 +119,8 @@ export default {
         p {
             margin: 0 auto;
             margin-bottom: .7rem;
-            max-width: 360px;
+            max-width: 680px;
+            padding: 0 2rem;
         }
 
         .logos {
