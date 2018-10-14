@@ -32,8 +32,9 @@
 					<h3 class="subtitle">{{content.subtitle}}</h3>
 				</div>
 		</section>
-
-		<teaser :contentIsGiven="contentIsGiven" :content="content.images"/>
+		<div class="teeaser">
+			<teaser :contentIsGiven="contentIsGiven" :content="content.images"/>
+		</div>
 	</section>
 </template>
 
