@@ -1,5 +1,5 @@
 ---
-title: 'Tante Emma gibt''s nicht mehr!'
+title: 'Tante Emma gibt’s nicht mehr!'
 headertext: 'Architekturnutzung sichtbar machen'
 category: KD
 authors: 5bbfb75c5f0e3

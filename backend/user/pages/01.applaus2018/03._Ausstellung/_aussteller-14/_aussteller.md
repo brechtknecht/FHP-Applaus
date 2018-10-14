@@ -1,5 +1,5 @@
 ---
-title: MEMOAGE
+title: Memoage
 headertext: 'Erinnerungsverarbeitung und -konservierung im Informations[überfluss]zeitalter'
 category: ID
 authors: 5bbfb73c9c054

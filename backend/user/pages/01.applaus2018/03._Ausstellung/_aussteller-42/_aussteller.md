@@ -1,6 +1,6 @@
 ---
 title: '»Les Rouflaquettes«'
-headertext: 'performing the self as the other in me! Trauma and identity transition in experimental documentary techniques'
+headertext: 'Performing the Self as the Other in Me! Trauma and Identity Transition in Experimental Documentary Techniques'
 category: MEMW
 authors: 5bbfb7bb660b2
 supervisors: 'Prof. Dr. Marie-Luise Angerer,Prof. Anne Quirynen'

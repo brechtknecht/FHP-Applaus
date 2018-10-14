@@ -1,5 +1,5 @@
 ---
-title: NAOTILUS
+title: Naotilus
 category: PD
 authors: 5bbfb7984adef
 supervisors: 'Prof. Hermann Weizenegger,Prof. Dr. Rainer Funke'
@@ -9,4 +9,4 @@ media_order: '20180615_Leon Jiang_Naotilus_Bachelorarbeit8-min.jpg,20180615_Leon
 template_format: json
 ---
 
-ENTWICKLUNG UND GESTALTUNG EINES SCHULRANZENS FÜR KINDER IM URBANEN RAUM
+Entwicklung und Gestaltung eines Schulranzens für Kinder im urbanen Raum.

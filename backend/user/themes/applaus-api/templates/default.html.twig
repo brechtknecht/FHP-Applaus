@@ -1,17 +1,16 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-{# 	{% for absolvent in header.absolventen %}
-    	name {{ absolvent.forename }} {{ absolvent.lastname }} <br>
-    	arbeit {{ absolvent.projekt }}<br>
-    {% endfor %} #}
+	{% for absolvent in header.absolventen %}
+    	{{ absolvent.lastname }}<br>
+    {% endfor %}
 
-	{% set absolventen = [] %}
+{# 	{% set absolventen = [] %}
     {% for absolvent in header.absolventen %}
     	{% set absolventen = absolventen|merge([absolvent.forename ~ ' ' ~ absolvent.lastname]) %}
     {% endfor %}
 
     {% for absolvent in absolventen|sort %}
     	{{ absolvent }}<br>
-    {% endfor %}
+    {% endfor %} #}
 {% endblock %}

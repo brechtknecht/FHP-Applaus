@@ -1,5 +1,6 @@
 ---
-title: 'Dekonstruktion gestalten Interventionen gegen Heteronormativität in der visuellen Kommunikation'
+title: 'Dekonstruktion gestalten'
+headertext: 'Interventionen gegen Heteronormativität in der visuellen Kommunikation'
 category: KD
 authors: 5bbfb75232f6a
 supervisors: 'Prof. Marion Godau,Prof. Franziska Morlok'
