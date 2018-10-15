@@ -20,13 +20,6 @@ export default {
     }
   },
   computed: {
-  	sizes: function() {
-  		return {
-    		s: "(max-width: 1699px) "+$root.getImageCoverWidth()+",(max-width: 1219px) ,(max-width: 900px) ",
-    		m: "",
-    		l: ""
-    	}
-  	}
   },
   components: {
     ausstellerGridItem

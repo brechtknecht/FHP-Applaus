@@ -14,7 +14,7 @@
 </template>
 <script>
 import Absolvent from '@/components/Absolvent.vue'
-import { TweenLite } from "gsap/TweenLite"
+
 export default {
   name: 'spoilerContent',
   data() {

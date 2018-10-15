@@ -144,7 +144,7 @@ absolventen:
         subtitle: ''
     -
         forename: Liqiong
-        lastname: WANG
+        lastname: Wang
         id: 5bbfb74330912
         email: niw0222@gmail.com
         website: 'https://www.liqiongwang.com/'

@@ -113,7 +113,7 @@ debugger:
     close_connection: true
   twig: true
 images:
-  default_image_quality: 100
+  default_image_quality: 59
   cache_all: false
   cache_perms: '0755'
   debug: false

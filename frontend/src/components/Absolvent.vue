@@ -1,8 +1,8 @@
 <template>
     <div :class="'absolvent' + absolventId">
 
-        <h5 v-if="absolventObject.website">
-          <a :href="'mailto:' + absolventObject.website">{{ absolventObject.forename }} {{ absolventObject.lastname }}</a>
+        <h5 v-if="absolventObject.email">
+          <a :href="'mailto:' + absolventObject.email">{{ absolventObject.forename }} {{ absolventObject.lastname }}</a>
         </h5>
 
       <h5 v-else>{{ absolventObject.forename }} {{ absolventObject.lastname }}</h5>

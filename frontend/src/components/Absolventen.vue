@@ -107,27 +107,27 @@ export default {
 			    content: "";
 			    position: absolute;
 			    border-style: solid;
-			    border-width: calc(4 * var(--strokewidth)) calc(4 * var(--strokewidth)) 0;
+			    border-width: 12px 12px 0;
 			    border-color: var(--color1) transparent;
 			    display: block;
 			    width: 0;
 			    z-index: 0;
 			    left: 50%;
-			    margin-left: calc(-4 * var(--strokewidth));
-			    bottom: calc(-4 * var(--strokewidth));
+			    margin-left: -12px;
+			    bottom: -12px;
 			}
 			&:after {
 			    clear: both;
 			    content: "";
 			    position: absolute;
 			    border-style: solid;
-			    border-width: calc(4 * var(--strokewidth) - calc(var(--strokewidth) - 1px)) calc(4 * var(--strokewidth) - calc(var(--strokewidth) - 1px)) 0;
+			    border-width: 11px 11px 0;
 			    border-color: #fff transparent;
 			    display: block;
 			    width: 0;
 			    z-index: 1;
 			    left: 50%;
-			    margin-left: calc(-4 * var(--strokewidth) + calc(var(--strokewidth) - 1px) );
+			    margin-left: -11px;
 			}
 		}
 	}

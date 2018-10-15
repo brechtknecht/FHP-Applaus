@@ -9,7 +9,7 @@ bodysections:
         content: "Bei Ankunft per Bahn:\r\nAb Potsdam Haupt­bahnhof mit der Tram 92 oder 96 bis Campus Fach­hochschule. Parkplätze am Campus sind vorhanden. "
     -
         name: Kontakt
-        content: "Allgemeine Anfragen  \r\n[Sophie Ehrmanntraut](mailto:applaus@fh-potsdam.de)  \r\n\r\n[Impressum](http://www.applaus-potsdam.de/2018/impressum/)\r\n[Datenschutzhinweis](https://www.fh-potsdam.de/datenschutzhinweis/)"
+        content: "Allgemeine Anfragen  \r\n[Sophie Ehrmanntraut](mailto:applaus@fh-potsdam.de)  \r\n\r\n[Impressum](/impressum/)\r\n[Datenschutzhinweis](https://www.fh-potsdam.de/datenschutzhinweis/)"
     -
         name: Archiv
         content: "Alle Applaus Webseiten der vergangenen Jahre:\r\n\r\n<abbr>\r\n<a href=\"http://www.applaus-potsdam.de/2017\">2017</a> · <a href=\"http://www.applaus-potsdam.de/2016\">2016</a> · <a href=\"http://www.applaus-potsdam.de/2015\">2015</a> · <a href=\"http://www.applaus-potsdam.de/2014\">2014</a> · <a href=\"http://www.applaus-potsdam.de/2013\">2013</a> · <a href=\"http://www.applaus-potsdam.de/2012\">2012</a> · <a href=\"http://www.applaus-potsdam.de/2011\">2011</a> · <a href=\"http://www.applaus-potsdam.de/2010\">2010</a> · <a href=\"http://www.applaus-potsdam.de/2009\">2009</a> · <a href=\"http://www.applaus-potsdam.de/2008\">2008</a> · <a href=\"http://www.applaus-potsdam.de/2007\">2007</a> · <a href=\"http://www.applaus-potsdam.de/2006\">2006</a>\r\n</abbr>"

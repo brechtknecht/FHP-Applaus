@@ -49,17 +49,53 @@
 
 <style lang="scss">
 	@import '@/scss/mediaqueries.scss';
+		.meta-data-inner {
+			position: absolute;
+			z-index: 10;
+			bottom: 2rem;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			animation: fading 1s ease-in 1.8s backwards;
 
-	.meta-data-inner {
-		position: absolute;
-		z-index: 10;
-		bottom: 2rem;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		animation: fading 1s ease-in 1.8s backwards;
+		@include bp(XL) {
+			width: 100%;
+			padding-left: 2rem;
+			box-sizing: border-box;
+		}
+
+		@include bp(S) {
+			display: none;
+		}
+
+		a {
+			text-decoration: none;
+			border: none;
+		}
+
+		.authors span,
+		.title {
+			color: var(--color3);
+			font-family: johnston, sans-serif;
+			font-size: .75rem;
+			margin: 0;
+			line-height: 0rem;
+			font-style: normal;
+
+			@include bp(XXL) {
+				font-size: .875rem;
+			}
+		}
+
+		.authors {
+			margin-bottom: 0;
+		}
+
+		.authors span {
+			text-transform: uppercase;
+			letter-spacing: .05rem;
+		}
 	}
-
 	.teaser {
 		position: absolute;
 		overflow: hidden;
@@ -72,50 +108,6 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		z-index: -1;
-
-		.meta-data-inner {
-			z-index: 9;
-			margin-bottom: 2rem;
-			
-
-			@include bp(XL) {
-				width: 100%;
-				padding-left: 2rem;
-				box-sizing: border-box;
-			}
-
-			@include bp(S) {
-				display: none;
-			}
-
-			a {
-				text-decoration: none;
-				border: none;
-			}
-
-			.authors span,
-			.title {
-				color: var(--color3);
-				font-family: johnston, sans-serif;
-				font-size: .75rem;
-				margin: 0;
-				line-height: 0rem;
-				font-style: normal;
-
-				@include bp(XXL) {
-					font-size: .875rem;
-				}
-			}
-
-			.authors {
-				margin-bottom: 0;
-			}
-
-			.authors span {
-				text-transform: uppercase;
-				letter-spacing: .05rem;
-			}
-		}
 	}
 
 	.gradient {
