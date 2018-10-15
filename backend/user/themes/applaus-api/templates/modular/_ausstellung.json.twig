@@ -1,7 +1,14 @@
 {% set category_list = [] %}
 {% set collection = [] %}
 {% set one2one_list = [] %}
-{% set image_sizes = [250, 500, 750, 1000, 1250, 1500, 1750, 2000] %}
+{% set image_sizes = [250, 350, 500, 750, 1000, 1250, 1500, 1750, 2000] %}
+{% set thumbnailsizes = {
+	s: 1.5,
+	m: {
+	},
+	l: {
+	}
+} %}
 
 
 {% for module in page.collection %}

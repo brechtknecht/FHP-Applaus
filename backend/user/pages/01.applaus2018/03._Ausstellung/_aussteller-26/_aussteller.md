@@ -1,6 +1,5 @@
 ---
 title: Design.Politik.Jetzt!
-headertext: 'Der Bundesbeauftragte für Design: Schaffung einer Instanz zur Vermittlung zwischen Gesellschaft und politischer Verwaltung durch Methoden und Techniken des Designs'
 category: KD
 authors: 5bbfb75a4825f
 supervisors: 'Prof. Matthias Beyrow,Prof. Boris Müller'

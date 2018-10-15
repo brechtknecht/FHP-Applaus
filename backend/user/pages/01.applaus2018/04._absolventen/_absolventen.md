@@ -630,7 +630,7 @@ absolventen:
         lastname: Veitengruber
         id: 5bc319803191b
         category: ID
-        title: 'Herbitopia'
+        title: Herbitopia
         subtitle: 'Medicinal Plants Getting Digital'
     -
         forename: Alex
@@ -1277,7 +1277,7 @@ absolventen:
         title: 'Visualisierung von Design Thinking im Spannungsfeld zwischen Design Thinking und Design'
         subtitle: ''
     -
-        forename: José Ernesto
+        forename: 'José Ernesto'
         lastname: Rodrígues
         id: 5bc3a39505f47
         category: ID

@@ -2,7 +2,7 @@
 	<div class="absolventen">
 		<!-- <h1> {{ AbsolventenTitle }} </h1> -->
 		<!-- <p> {{ AbsolventenHeadertext }} </p> -->
-		<h3 class="subtitle">{{ $root.numberOfStudents }} Absolventen</h3>
+		<h3 class="subtitle">{{ $root.numberOfStudents }} Absolvent*innen</h3>
 		<div class="spoiler" v-for="(item, key) in categories" v-bind:class="{ spoilerActive: spoilerActive[key] }">
 			<div class="spoilerToggle" v-on:click="toggleSpoiler(key)">
 				<span> {{ item.slug }} </span>

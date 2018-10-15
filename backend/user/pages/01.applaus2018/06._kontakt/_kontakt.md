@@ -3,7 +3,7 @@ title: Kontakt
 bodysections:
     -
         name: Ort
-        content: "Fest&shy;akt der Design&shy;studien&shy;gänge<br>\r\n<em>Großer Hörsaal</em> · <abbr>Hauptgebäude</abbr>\r\n<br><br>\r\nFest&shy;akt der Europä&shy;ischen Medien&shy;wissen&shy;schaft<br>\r\n<abbr>Haus D / Raum 011 und Foyer</abbr>\r\n"
+        content: "Cam&shy;pus Fach&shy;hoch&shy;schule Potsdam  \r\nKiepen&shy;heuer&shy;allee 5  \r\n14469 Potsdam\r\n\r\nFest&shy;akt der Design&shy;studien&shy;gänge<br>\r\n<em>Großer Hörsaal</em> · <abbr>Hauptgebäude</abbr>\r\n<br><br>\r\nFest&shy;akt der Europä&shy;ischen Medien&shy;wissen&shy;schaft<br>\r\n<em>Raum 011</em> · <abbr>Haus D</abbr>\r\n"
     -
         name: Anfahrt
         content: "Bei Ankunft per Bahn:\r\nAb Potsdam Haupt­bahnhof mit der Tram 92 oder 96 bis Campus Fach­hochschule. Parkplätze am Campus sind vorhanden. "
