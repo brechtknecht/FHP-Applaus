@@ -37,7 +37,6 @@ export default {
   		// var el = document.getElementById('spoilerContent_'+this.spoilerID);
   		// console.log(el);
   		this.spoilerHeight = this.spoilerOpenHeight;
-  		// TweenLite.to(this.$data, 0.5, { spoilerHeight: this.spoilerOpenHeight })
   	}
   },
   methods: {

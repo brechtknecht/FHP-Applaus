@@ -2,7 +2,7 @@
 	<router-link
 			:to="'/aussteller/'+aussteller"
 			class="article"
-			:class="'thumbSize--'+ausstellerContent.thumbSize"
+			:class="'thumbSize--'+ausstellerContent.thumbSize+' indexAbsolute_'+ausstellerContent.index"
 		>
 			<div class="background">
 				<div class="gradient_changer"/>

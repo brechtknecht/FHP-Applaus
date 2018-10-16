@@ -2,7 +2,11 @@
 	<div class="aussteller">
 		<!-- Navigation needs to dont be »ScrollActive« -->
 		<!-- <Navigation :items="this.$root.$options.navigation" routerNav></Navigation> -->
-		<Header class="header" :content="aussteller" contentIsGiven></Header>
+		<Header class="header" :content="aussteller" contentIsGiven ></Header>
+
+		<router-link :to="'/aussteller/'+nextAusstellerSlug" class="next"><icon-base icon-name="arrow-next" viewBox="0 0 20 25" /></router-link>
+		<router-link :to="'/aussteller/'+prevAusstellerSlug" class="prev"><icon-base icon-name="arrow-prev" viewBox="0 0 20 25" /></router-link>
+
 		<section class="wrapper-content">
 			<section class="content-inner" style="padding-bottom: 4.5rem;">
 
@@ -47,7 +51,7 @@
 			<section class="images" v-if="images.length > 1">
 				<div class="images-grid-inner" :class="this.aussteller.template">
 					<div class="image" v-for="image in images" :key="image.key">
-						<img :srcset="image.srcset" :src="image.url" />
+						<img :srcset="image.srcset" :src="image.url" sizes="90vw" />
 					</div>
 				</div>
 			</section>
@@ -74,6 +78,7 @@
 						:categorySlug="this.currentGridView" 
 						:content="$root.$options.ausstellung" class="ausstellerGrid"
 						:key="this.currentGridView"
+						:activeItem="indexAbsolute"
 					/>
 				</transition>
 
@@ -86,7 +91,8 @@
 import Navigation from '@/components/Nav.vue'
 import Header from '@/components/Header.vue'
 import ausstellerGrid from '../components/ausstellerGrid.vue'
-import ApplausData from '../../public/applaus2018.json'
+
+import IconBase from '@/components/IconBase.vue'
 
 export default {
   name: 'Aussteller',
@@ -110,11 +116,24 @@ export default {
 
     return {
 			aussteller: _aussteller,
+			indexAbsolute: _aussteller.index,
 			currentGridView: _currentGrid,
 			isActive: _index
     }
   },
   computed: {
+  	nextAusstellerSlug() {
+  		let allAussteller = this.$root.$options.ausstellung.body.list
+  		let newAusstellerKey =  this.mod((this.indexAbsolute + 1), Object.keys(allAussteller).length)
+  		let parseToKeys = Object.keys(allAussteller)
+  		return parseToKeys[newAusstellerKey]
+  	},
+  	prevAusstellerSlug() {
+  		let allAussteller = this.$root.$options.ausstellung.body.list
+  		let newAusstellerKey =  this.mod((this.indexAbsolute - 1), Object.keys(allAussteller).length)
+  		let parseToKeys = Object.keys(allAussteller)
+  		return parseToKeys[newAusstellerKey]
+  	},
     absolventen () {
       let _aussteller = this.aussteller
       let _ref = _aussteller.authors.split(',')
@@ -167,9 +186,15 @@ export default {
   components: {
     Navigation,
     Header,
-	ausstellerGrid
+	ausstellerGrid,
+	IconBase
 	},
   methods: {
+  	mod: function(n, m) {
+  		return ((n % m) + m) % m;
+
+  		// MODULO BUG IN JS :-(
+	},
     getDegree: function (category) {
       switch (category) {
         case 'ID':
@@ -247,6 +272,42 @@ export default {
 	}
 
 	.aussteller {
+		position: relative;
+		a.prev, a.next {
+			z-index: 10;
+			position: fixed;
+			top: calc(50% - 2rem);
+			border: none;
+			padding: 1.5rem;
+			opacity: .3;
+			transition: opacity .3s;
+			svg {
+				height: 1.59rem;
+			}
+			&:hover {
+				opacity: 1;
+			}
+			@include bp(XL) {
+				opacity: 1;
+				top: 0;
+				box-sizing: border-box;
+				height: 4rem;
+				width: 4rem;
+				padding: 1.15rem;
+				text-align: center;
+				vertical-align: middle;
+				svg {
+					height: 1.7rem;
+				}
+			}
+
+		}
+		a.prev {
+			left: 1rem;
+		}
+		a.next {
+			right: 1rem;
+		}
 
 		.section {
 			width: 50%;
@@ -488,4 +549,5 @@ export default {
 	.ausstellerGrid {
 		margin: 2rem 0;
 	}
+
 </style>

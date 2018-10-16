@@ -14,9 +14,10 @@ import IconApplaus from '../icons/IconApplaus.vue'
 import IconUniPotsdam from '../icons/IconUniPotsdam.vue'
 import IconFhPotsdam from '../icons/IconFHPotsdam.vue'
 import IconSignetNav from '../icons/IconSignetNav.vue'
+import IconArrowPrev from '../icons/IconArrowPrev.vue'
+import IconArrowNext from '../icons/IconArrowNext.vue'
 import IconSignetBoxBottom from '../icons/IconSignetBoxBottom.vue'
 import IconSignetBoxTop from '../icons/IconSignetBoxTop.vue'
-import IconArrowDown from '../icons/IconArrowDown.vue'
 import IconMap from '../icons/IconMap.vue'
 export default {
   props: {
@@ -37,8 +38,9 @@ export default {
     IconFhPotsdam,
     IconSignetBoxBottom,
     IconSignetBoxTop,
-    IconArrowDown,
-    IconMap
+    IconMap,
+    IconArrowNext,
+    IconArrowPrev
   }
 }
 </script>

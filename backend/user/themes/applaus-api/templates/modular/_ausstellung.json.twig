@@ -29,7 +29,7 @@
 	{% endfor %}
 
 	{% set project_slug = module.title|hyphenize%}
-	{% set collection = collection|merge({ (project_slug): { slug: project_slug, title: module.title, thumbSize: module.header.thumbSize, template: module.header.imageTemplate, category: module.header.category, subtitle: module.header.headertext, authors: module.header.authors, supervisors: module.header.supervisors, content: module.content, images: images}}) %}
+	{% set collection = collection|merge({ (project_slug): { slug: project_slug, index: loop.index0, title: module.title, thumbSize: module.header.thumbSize, template: module.header.imageTemplate, category: module.header.category, subtitle: module.header.headertext, authors: module.header.authors, supervisors: module.header.supervisors, content: module.content, images: images}}) %}
 
 	{% set authors_to_project_list = [] %}
 	{% for author in module.header.authors|split(',') %}

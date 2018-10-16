@@ -5,6 +5,7 @@
 			:key="categorySlug + key"
 			:ausstellerContent="content.body.list[aussteller]"
 			:aussteller="aussteller"
+			:class="{activeItem: isCurrentItemActive(content.body.list[aussteller].index)}"
 		/>
 	</div>
 
@@ -26,9 +27,13 @@ export default {
   },
   props: {
     categorySlug: String,
-    content: Object
+    content: Object,
+    activeItem: Number
   },
   methods: {
+  	isCurrentItemActive: function(index) {
+    	return index == this.activeItem ? true : false
+  	},
     getAusstellerGroups (category) {
       if (category == 'MASTER') {
         return this.content.body.groups.MEMW.concat(this.content.body.groups.MD)
@@ -146,7 +151,7 @@ export default {
 				}
 			}
 
-			&:hover {
+			&:hover, &.activeItem {
 
 				.gradient_changer {
 					opacity: 1;
