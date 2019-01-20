@@ -35,6 +35,11 @@
 		@media (max-width: 480px)  { @content; }
 	}
 	// ================== MIN ======================
+
+	@if $point == min-XXXL { 
+		@media (min-width: 1700px) { @content; }
+	}
+
 	@if $point == min-XXL { 
 		@media (min-width: 1220px) { @content; }
 	}
@@ -82,6 +87,9 @@
 	}
 	@else if $point == HXXS { 
 		@media (max-height: 460px)  { @content; }
+	}
+	@else if $point == HXXXS { 
+		@media (max-height: 400px)  { @content; }
 	}
 }
 // 1699

@@ -61,7 +61,7 @@
         <p><a href="http://knisterwerk.com" title="Website von Knisterwerk" target="_blank">Phillip Kortlang &amp; Chris Magiera</a></p>
 
         <h5>Webentwicklung</h5>
-        <p><a href="http://knisterwerk.com" title="Website von Knisterwerk" target="_blank">Chris Magiera</a>, <a href="einfach-neu.de" target="_blank">Gustav Neustadt</a> & <a href="http://mrfesch.com/" target="_blank">Felix Tesche</a></p>
+        <p><a href="http://knisterwerk.com" title="Website von Knisterwerk" target="_blank">Chris Magiera</a>, <a href="http://einfach-neu.de" target="_blank">Gustav Neustadt</a> & <a href="http://mrfesch.com/" target="_blank">Felix Tesche</a></p>
 
         <h5>Fotografien</h5>
         <p class="fatspace">Aussteller*innen</p>

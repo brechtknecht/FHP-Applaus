@@ -226,17 +226,30 @@ export default {
 
 			fill: var(--color3);
 
-			@include bp(XXL) {
+			@include bp(min-XXXL) {
+				@include bp(HS) {
+					display: none;
+				}
+			}
+
+			@include bp(min-XXL) {
 				@include bp(HXS) {
 					display: none;
 				}
 			}
 
-			@include bp(XL) {
+			@include bp(min-S) {
 				@include bp(HXXS) {
 					display: none;
 				}
 			}
+
+			@include bp(XS) {
+				@include bp(HXXXS) {
+					display: none;
+				}
+			}
+
 			@include bp(M) {
 				width: 35%;
 			}
@@ -282,14 +295,16 @@ export default {
 			animation-delay: 900ms;
 			font-weight: 600;
 		}
-	}
+	} 
 	.logos {
 		position: absolute;
 		display: flex;
 		top: 1.5rem;
 		right: 2.5rem;
 		z-index: 2;
-
+		@include bp(S) {
+			display: none;
+		}
 		.uni-potsdam {
 			width: 2.045454545rem;
 		}

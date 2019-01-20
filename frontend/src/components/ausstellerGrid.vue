@@ -287,10 +287,6 @@ export default {
 		grid-column-start: 3;
 		grid-row-start: 3;
 	}
-	// .EMW .article:nth-child(7) {
-	// 	grid-column-start: 1;
-	// 	grid-row-start: 3;
-	// }
 	.PD .article:nth-child(5) {
 		grid-column-start: 1;
 		grid-row-start: 3;
@@ -319,9 +315,9 @@ export default {
 		grid-column-start: 4;
 		grid-row-start: 5;
 	}
-	// .category_6 a:nth-child(5) {
-	// 	grid-column-start: 1;
-	// 	grid-row-start: 1;
-	// }
+	.EMW .article:nth-child(8) {
+		grid-column-start: 1;
+		grid-row-start: 3;
+	}
 
 </style>

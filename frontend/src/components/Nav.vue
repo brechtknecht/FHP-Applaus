@@ -200,7 +200,7 @@ export default {
 		z-index: 10;
 
 		@media screen and (max-width: 1219px) {
-			--height: 2rem;
+			--height: 3rem;
 			display: block;
 			height: 0;
 			overflow: hidden;

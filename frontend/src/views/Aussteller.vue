@@ -466,12 +466,14 @@ export default {
 		justify-content: space-around;
 		border-bottom: var(--color1) solid 3px;
 		.tab {
-			margin-bottom: 1.5rem;
+			margin-bottom: 3rem;
 			cursor: pointer;
+			position: relative;
+			top: 0;
 			&:hover {
 				span,
 				h4 {
-					color: var(--color1)
+					color: var(--color1);
 				}
 			}
 			span {
@@ -486,7 +488,7 @@ export default {
 				color: var(--color4);
 				text-decoration: none;
 				margin: 0;
-				transition: color .2s;
+				transition: opacity .3s, color .2s;
 		}
 			h4 {
 				font-family: abril-text,serif;
@@ -498,7 +500,7 @@ export default {
 				color: var(--color4);
 				opacity: .5;
 				margin: 0;
-				transition: color .2s;
+				transition: opacity .35s, color .2s;
 				em {
 					white-space: pre-wrap;
 				}
@@ -506,43 +508,43 @@ export default {
 		}
 		.active {
 				span {
-					top: 0;
 					opacity: 1 !important;
-					color: var(--color4);
 				}
 				h4 {
 					opacity: 1 !important;
-					color: var(--color4);
 				}
-				cursor: auto;
-				--strokewidth: 3px;
-				&:before {
-					clear: both;
-					content: "";
-					position: relative;
-			    border-style: solid;
-			    border-width: calc(4 * var(--strokewidth)) calc(4 * var(--strokewidth)) 0;
-			    border-color: var(--color1) transparent;
-			    display: block;
-			    width: 0;
-			    z-index: 0;
-			    left: 50%;
-			    margin-left: calc(-4 * var(--strokewidth));
-			    bottom: calc(-100% - 1.5rem);
+				&:hover {
+					cursor: default;
+					span, h4 {
+						color: var(--color4);
+					}
+				}
+			&:before {
+			    content: "";
+				position: absolute;
+				border-style: solid;
+				border-width: 12px 12px 0;
+				border-color: var(--color1) transparent;
+				display: block;
+				width: 0;
+				z-index: 0;
+				left: 50%;
+				margin-left: -12px;
+				bottom: calc(-1* 3rem - 15px);
 			}
 			&:after {
 			    clear: both;
-			    content: "";
-			    position: relative;
-			    border-style: solid;
-			    border-width: calc(4 * var(--strokewidth) - calc(var(--strokewidth) - 1px)) calc(4 * var(--strokewidth) - calc(var(--strokewidth) - 1px)) 0;
-			    border-color: var(--color5) transparent;
-			    display: block;
-					width: 0;
-					bottom: calc(-1.5rem + var(--strokewidth) - 11px);
-			    z-index: 1;
-			    left: 50%;
-			    margin-left: calc(-4 * var(--strokewidth) + calc(var(--strokewidth) - 1px) );
+				content: "";
+				position: absolute;
+				border-style: solid;
+				border-width: 11px 11px 0;
+				border-color: var(--color5) transparent;
+				display: block;
+				width: 0;
+				z-index: 1;
+				left: 50%;
+				margin-left: -11px;
+				bottom: calc(-1* 3rem - 11px);
 			}
 		}
 	}

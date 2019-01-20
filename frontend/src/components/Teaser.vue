@@ -123,12 +123,12 @@
 	.teaser-image {
 		filter: brightness(80%) saturate(60%);
 		position: fixed;
-		top: 0;
+		// top: 0;
 		left: 0;
-		bottom: 0;
+		// bottom: 0;
 		right: 0;
-		height: 100%;
-		width: 100%;
+		height: 110vh;
+		width: 100vw;
 		object-fit: cover;
 		background-color: var(--color6);
 		// animation: moveImage 60s cubic-bezier(.18,.01,.85,1) both infinite;
